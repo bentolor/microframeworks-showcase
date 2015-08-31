@@ -19,3 +19,8 @@ Spark Java
 ----------
 [Spark](http://sparkjava.com/) is a tiny Sinatra inspired framework for 
 creating web applications in Java 8 with minimal effort
+
+
+Starting the demo application
+-----------------------------
+Run the demo with `gradle :spark:run`.
