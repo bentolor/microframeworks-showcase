@@ -7,14 +7,14 @@ import java.util.List;
 
 /** A collection of grocery shopping lists. */
 @Data
-public class Repository {
+public class GroceryLists {
 
     private List<GroceryList> groceryLists;
 
-    public Repository() {
+    public GroceryLists() {
     }
 
-    public Repository(GroceryList... groceryLists) {
+    public GroceryLists(GroceryList... groceryLists) {
         this.groceryLists = Arrays.asList(groceryLists);
     }
 

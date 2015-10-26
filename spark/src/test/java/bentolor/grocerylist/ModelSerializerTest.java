@@ -1,8 +1,8 @@
 package bentolor.grocerylist;
 
 import bentolor.grocerylist.model.GroceryList;
+import bentolor.grocerylist.model.GroceryLists;
 import bentolor.grocerylist.model.Item;
-import bentolor.grocerylist.model.Repository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import static bentolor.grocerylist.model.Unit.Pcs;
 
 public class ModelSerializerTest {
 
-    private Repository repository;
+    private GroceryLists groceryLists;
     private ModelSerializer serializer;
 
     @Before
@@ -35,16 +35,16 @@ public class ModelSerializerTest {
         GroceryList novemberList = new GroceryList(uuid1, date1, "My November shopping list", true, apples, flour, soyMilk);
         GroceryList decemberList = new GroceryList(uuid2, date2, "December shopping List", false);
 
-        repository = new Repository(novemberList, decemberList);
+        groceryLists = new GroceryLists(novemberList, decemberList);
         serializer = new ModelSerializer();
     }
 
     @Test
     public void testReadWriteCycle() throws Exception {
-        String jsonText = serializer.writeRepository(repository);
+        String jsonText = serializer.writeRepository(groceryLists);
         Assert.assertNotNull(jsonText);
-        Repository deserialized = serializer.readRepository(jsonText);
+        GroceryLists deserialized = serializer.readRepository(jsonText);
         System.out.println(jsonText);
-        Assert.assertEquals(repository, deserialized);
+        Assert.assertEquals(groceryLists, deserialized);
     }
 }
