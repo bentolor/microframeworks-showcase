@@ -10,7 +10,7 @@ Prerequisites
 -------------
 - Java 8+
 - Gradle 1.8+
-- Optional: IntelliJ IDEA
+- Lombok Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
 
 Included Microframeworks
 ========================
