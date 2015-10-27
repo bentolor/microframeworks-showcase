@@ -1,7 +1,7 @@
 dependencies {
 
     apply plugin: 'application'
-    mainClassName = "bentolor.grocerylist.GroceryService"
+    mainClassName = "bentolor.grocerylist.GroceryListResource"
 
     compile        'com.sparkjava:spark-core:2.3',
                    'com.sparkjava:spark-template-jade:2.3',

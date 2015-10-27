@@ -1,4 +1,4 @@
-package bentolor.grocerylist;
+package bentolor.hellospark;
 
 import spark.ModelAndView;
 import spark.Request;

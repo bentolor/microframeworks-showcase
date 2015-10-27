@@ -4,7 +4,7 @@ import lombok.Data;
 
 /** A item to buy on a grocery list. */
 @Data
-public class Item {
+public class Item implements ModelElement {
 
     private int quantity;
     private Unit unit;

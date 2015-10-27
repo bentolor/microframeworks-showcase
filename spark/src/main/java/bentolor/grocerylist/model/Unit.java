@@ -1,7 +1,7 @@
 package bentolor.grocerylist.model;
 
 /** Unit classification for groceries. */
-public enum Unit {
+public enum Unit implements ModelElement {
 
     Pcs("pcs"),
     Kilogram("kg"),

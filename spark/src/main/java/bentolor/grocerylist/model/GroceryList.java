@@ -9,7 +9,7 @@ import java.util.UUID;
 
 /** A shopping list for groceries. */
 @Data
-public class GroceryList {
+public class GroceryList implements ModelElement {
 
     private UUID id;
     private List<Item> shoppingItems;

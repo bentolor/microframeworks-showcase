@@ -3,10 +3,12 @@ package bentolor.grocerylist;
 import bentolor.grocerylist.model.GroceryList;
 import bentolor.grocerylist.model.GroceryLists;
 import bentolor.grocerylist.model.Item;
+import bentolor.grocerylist.persistence.ModelSerializer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -41,10 +43,18 @@ public class ModelSerializerTest {
 
     @Test
     public void testReadWriteCycle() throws Exception {
-        String jsonText = serializer.writeRepository(groceryLists);
+        String jsonText = serializer.serialize(groceryLists);
         Assert.assertNotNull(jsonText);
-        GroceryLists deserialized = serializer.readRepository(jsonText);
+        GroceryLists deserialized = serializer.deserialize(jsonText, GroceryLists.class);
         System.out.println(jsonText);
+        Assert.assertEquals(groceryLists, deserialized);
+    }
+
+    @Test
+    public void testFileReadWriteCycle() throws Exception {
+        File tmpFile = File.createTempFile("ModelSerializerTest",".json");
+        serializer.serialize(tmpFile, groceryLists);
+        GroceryLists deserialized = serializer.deserialize(tmpFile);
         Assert.assertEquals(groceryLists, deserialized);
     }
 }
