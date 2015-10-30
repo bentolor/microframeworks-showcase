@@ -1,0 +1,14 @@
+configurations.all {
+    it.exclude group: 'commons-logging'
+}
+
+dependencies {
+
+    apply plugin: 'application'
+    mainClassName = 'ninja.standalone.NinjaJetty'
+
+    compile 'org.ninjaframework:ninja-standalone:5.2.1',
+            'org.projectlombok:lombok:1.16.6'
+
+    testCompile 'org.ninjaframework:ninja-test-utilities:5.2.1'
+}
