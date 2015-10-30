@@ -17,6 +17,7 @@ public class GroceryListResource {
         post("/list", map((req, res) -> service.createGroceryList(req.body())));
         get("/list/:id", map((req, res) -> service.getGroceryList(req.params("id"))));
         put("/list/:id", map((req, res) -> service.updateGroceryList(req.params("id"), req.body())));
+        delete("/list/:id", map((req, res) -> service.deleteGroceryList(req.params("id"))));
         get("/list", map((req, res) -> service.getAllGroceryLists()));
     }
 

@@ -50,4 +50,9 @@ public class GroceryService {
         } else
             return notFound("Could not find a grocery list with id:" + id);
     }
+
+    public Route deleteGroceryList(String id) {
+        boolean ok = repository.deleteList(UUID.fromString(id));
+        return ok ? ok("List deleted") : notFound("List not found");
+    }
 }
