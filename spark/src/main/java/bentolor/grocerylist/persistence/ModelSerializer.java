@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * Reads and writes JSON models into/from POJO models.
@@ -16,7 +18,9 @@ public class ModelSerializer {
     private final ObjectMapper mapper;
 
     public ModelSerializer() {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         mapper = new ObjectMapper();
+        mapper.setDateFormat(df);
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 
