@@ -3,6 +3,7 @@ plugins {
 }
 subprojects {
     apply plugin : "java"
+    apply plugin: 'com.github.johnrengelman.shadow'
 
     sourceCompatibility = 1.8
     group 'bentolor.microframeworks'
