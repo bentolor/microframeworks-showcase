@@ -15,22 +15,22 @@
         var admin = nga.application('My Grocery Lists')
                 .baseApiUrl('http://localhost:8080/');
 
-        var configureFields = function(view) {
+        var configureFields = function (view) {
             return view.fields([
                 nga.field('id').editable(false),
                 nga.field('comment'),
-                nga.field('settled','boolean'),
-                nga.field('date','date'),
-                nga.field('shoppingItems','embedded_list')
+                nga.field('settled', 'boolean'),
+                nga.field('date', 'date'),
+                nga.field('shoppingItems', 'embedded_list')
                         .targetFields([
-                            nga.field('quantity','number'),
-                            nga.field('unit','choice').choices([
-                                { value: 'pcs', label: 'pieces' },
-                                { value: 'kg', label: 'kilogram' },
-                                { value: 'g', label: 'gram' },
-                                { value: 'l', label: 'litre' }
+                            nga.field('quantity', 'number'),
+                            nga.field('unit', 'choice').choices([
+                                {value: 'pcs', label: 'pieces'},
+                                {value: 'kg', label: 'kilogram'},
+                                {value: 'g', label: 'gram'},
+                                {value: 'l', label: 'litre'}
                             ]),
-                            nga.field('name','string')
+                            nga.field('name', 'string')
                         ])
             ]);
         };
@@ -38,16 +38,19 @@
         // lists entity
         var list = nga.entity('list');
 
-        list.listView().fields([
-            nga.field('comment'),
-            nga.field('settled','boolean'),
-            nga.field('date','date')
-            //, nga.field('shoppingItems','embedded_list')
-        ]).listActions(['show', 'edit', 'delete']);
+        list.listView()
+                .fields([
+                    nga.field('comment'),
+                    nga.field('settled', 'boolean'),
+                    nga.field('date', 'date')])
+                .listActions(['show', 'edit', 'delete'])
+                .title("My shopping lists");
 
         configureFields(list.editionView())
+                .title('Edit "{{ entry.values.comment }}"')
                 .actions(['show', 'list', 'delete']);
-        configureFields(list.showView());
+        configureFields(list.showView())
+                .title('View "{{ entry.values.comment }}"');
         configureFields(list.creationView());
 
         admin.addEntity(list);
