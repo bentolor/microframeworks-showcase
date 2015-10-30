@@ -46,10 +46,13 @@ public class Repository {
 
     public boolean updateList(UUID uuid, GroceryList updatedList) {
         groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
+        save();
         return groceryLists.contains(updatedList);
     }
 
     public boolean deleteList(UUID uuid) {
-        return groceryLists.removeIf(list -> uuid.equals(list.getId()));
+        boolean success = groceryLists.removeIf(list -> uuid.equals(list.getId()));
+        save();
+        return success;
     }
 }

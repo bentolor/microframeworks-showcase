@@ -46,7 +46,7 @@ public class GroceryService {
         if (repository.getList(UUID.fromString(id)).isPresent()) {
             GroceryList updatedList = serializer.deserialize(listJson, GroceryList.class);
             boolean ok = repository.updateList(UUID.fromString(id), updatedList);
-            return ok ? ok("List updated") : badRequest("Update failed");
+            return ok ? noContent() : badRequest("Update failed");
         } else
             return notFound("Could not find a grocery list with id:" + id);
     }

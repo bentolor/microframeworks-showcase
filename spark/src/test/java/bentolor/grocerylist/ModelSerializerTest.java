@@ -10,11 +10,10 @@ import org.junit.Test;
 
 import java.io.File;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.UUID;
 
-import static bentolor.grocerylist.model.Unit.kg;
-import static bentolor.grocerylist.model.Unit.l;
-import static bentolor.grocerylist.model.Unit.pcs;
+import static bentolor.grocerylist.model.Unit.*;
 
 public class ModelSerializerTest {
 
@@ -29,8 +28,8 @@ public class ModelSerializerTest {
 
         soyMilk.getName();
 
-        LocalDate date1 = LocalDate.of(2015, 11, 23);
-        LocalDate date2 = LocalDate.of(2015, 12, 10);
+        Date date1 = new Date(LocalDate.of(2015, 11, 23).toEpochDay());
+        Date date2 = new Date(LocalDate.of(2015, 12, 10).toEpochDay());
         UUID uuid1 = UUID.randomUUID();
         UUID uuid2 = UUID.randomUUID();
 
