@@ -3,9 +3,9 @@ package bentolor.grocerylist.model;
 /** Unit classification for groceries. */
 public enum Unit implements ModelElement {
 
-    Pcs("pcs"),
-    Kilogram("kg"),
-    Liter("l");
+    pcs("pieces"),
+    kg("kilogram"),
+    l("litre");
 
     private final String name;
 

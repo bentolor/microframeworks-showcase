@@ -12,9 +12,9 @@ import java.io.File;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import static bentolor.grocerylist.model.Unit.Kilogram;
-import static bentolor.grocerylist.model.Unit.Liter;
-import static bentolor.grocerylist.model.Unit.Pcs;
+import static bentolor.grocerylist.model.Unit.kg;
+import static bentolor.grocerylist.model.Unit.l;
+import static bentolor.grocerylist.model.Unit.pcs;
 
 public class ModelSerializerTest {
 
@@ -23,9 +23,9 @@ public class ModelSerializerTest {
 
     @Before
     public void setUp() throws Exception {
-        Item apples = new Item(3, Pcs, "Red apples");
-        Item flour = new Item(2, Kilogram, "Flour");
-        Item soyMilk = new Item(1, Liter, "Soy milk");
+        Item apples = new Item(3, pcs, "Red apples");
+        Item flour = new Item(2, kg, "Flour");
+        Item soyMilk = new Item(1, l, "Soy milk");
 
         soyMilk.getName();
 
