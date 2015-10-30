@@ -27,7 +27,7 @@ public class GroceryService {
     public Route createGroceryList(String listJson) {
         GroceryList groceryList = serializer.deserialize(listJson, GroceryList.class);
         UUID newId = repository.createList(groceryList);
-        return ok("{ id: '" + newId.toString() + "'}");
+        return ok(serializer.serialize(groceryList));
     }
 
     public Route getGroceryList(String id) {
