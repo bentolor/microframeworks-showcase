@@ -12,14 +12,20 @@ public class GroceryListResource {
     public static void main(String[] args) {
         port(8080);
 
-        final GroceryService service = new GroceryService();
+        GroceryService service = new GroceryService();
 
         post("/list", map((req, res) -> service.createGroceryList(req.body())));
         get("/list/:id", map((req, res) -> service.getGroceryList(req.params("id"))));
+        put("/list/:id", map((req, res) -> service.updateGroceryList(req.params("id"), req.body())));
+        get("/list", map((req, res) -> service.getAllGroceryLists()));
     }
 
+    /**
+     * Wrap/Delegate Spark route handling to allow decoupling of Service Logic
+     * from Spark API via {@link bentolor.grocerylist.service.ResponseCreator}
+     */
     private static Route map(Processor processor) {
-        return (req, res) -> processor.process(req, res).handle(req,res);
+        return (req, res) -> processor.process(req, res).handle(req, res);
     }
 
     private interface Processor {

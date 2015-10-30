@@ -3,6 +3,7 @@ package bentolor.grocerylist.persistence;
 import bentolor.grocerylist.model.GroceryLists;
 import bentolor.grocerylist.model.ModelElement;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,12 @@ import java.io.IOException;
  */
 public class ModelSerializer {
 
-    private final ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper;
+
+    public ModelSerializer() {
+        mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+    }
 
     public <T> T deserialize(String jsonText, Class<T> valueClass) {
         try {

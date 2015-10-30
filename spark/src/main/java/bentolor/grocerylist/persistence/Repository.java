@@ -22,15 +22,10 @@ public class Repository {
         this.groceryLists = serializer.deserialize(dataFile);
     }
 
-    public GroceryLists getGroceryLists() {
-        return groceryLists;
+    private void save() {
+        serializer.serialize(dataFile, groceryLists);
     }
 
-    /**
-     * Adds / creates a new {@link bentolor.grocerylist.model.GroceryList}
-     * @param groceryList JSON representation of a grocery list
-     * @return the generated ID.
-     */
     public UUID createList(GroceryList groceryList) {
         UUID newId = UUID.randomUUID();
         groceryList.setId(newId);
@@ -39,24 +34,18 @@ public class Repository {
         return newId;
     }
 
-    /**
-     * Adds / creates a new {@link bentolor.grocerylist.model.GroceryList}
-     * @param body JSON representation of a grocery list
-     * @return the generated ID.
-     */
     public Optional<GroceryList> getList(UUID id) {
          return groceryLists.stream()
                 .filter(entry -> entry != null && id.equals(entry.getId()))
                 .findFirst();
     }
 
-
-    /**
-     * Save the current content of the {@link #groceryLists} to a persistent file.
-     */
-    private void save() {
-        serializer.serialize(dataFile, groceryLists);
+    public GroceryLists getLists() {
+        return groceryLists;
     }
 
-
+    public boolean updateList(UUID uuid, GroceryList updatedList) {
+        groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
+        return groceryLists.contains(updatedList);
+    }
 }
