@@ -1,6 +1,7 @@
 package bentolor.grocerylist;
 
 import bentolor.grocerylist.service.GroceryService;
+import spark.Filter;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -11,6 +12,8 @@ public class GroceryListResource {
 
     public static void main(String[] args) {
         port(8080);
+        staticFileLocation("/gui");
+        //enableCORS("*", "POST,GET,PUT,DELETE", "*");
 
         GroceryService service = new GroceryService();
 
@@ -32,5 +35,18 @@ public class GroceryListResource {
     private interface Processor {
         public Route process(Request req, Response res);
     }
+
+    /** Configure support for Cross-origin Ajax requests in Spark. */
+    private static void enableCORS(final String origin, final String methods, final String headers) {
+        before(new Filter() {
+            @Override
+            public void handle(Request request, Response response) {
+                response.header("Access-Control-Allow-Origin", origin);
+                response.header("Access-Control-Request-Method", methods);
+                response.header("Access-Control-Allow-Headers", headers);
+            }
+        });
+    }
+
 
 }
