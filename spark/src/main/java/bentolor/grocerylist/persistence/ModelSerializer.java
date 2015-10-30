@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.TimeZone;
 
 /**
  * Reads and writes JSON models into/from POJO models.
@@ -21,6 +22,7 @@ public class ModelSerializer {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         mapper = new ObjectMapper();
         mapper.setDateFormat(df);
+        mapper.setTimeZone(TimeZone.getDefault());
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 
