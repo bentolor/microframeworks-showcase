@@ -53,6 +53,6 @@ public class GroceryService {
 
     public Route deleteGroceryList(String id) {
         boolean ok = repository.deleteList(UUID.fromString(id));
-        return ok ? ok("List deleted") : notFound("List not found");
+        return ok ? noContent() : notFound("List not found");
     }
 }

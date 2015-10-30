@@ -27,6 +27,13 @@ final class ResponseCreator {
         };
     }
 
+    static Route noContent() {
+        return (req, res) -> {
+            res.status(204);
+            return "";
+        };
+    }
+
     static Route badRequest(String message) {
         return (req, res) -> {
             res.status(400);
