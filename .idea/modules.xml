@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/microframeworks.iml" filepath="$PROJECT_DIR$/microframeworks.iml" />
       <module fileurl="file://$PROJECT_DIR$/ninja/ninja.iml" filepath="$PROJECT_DIR$/ninja/ninja.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ratpack/ratpack.iml" filepath="$PROJECT_DIR$/ratpack/ratpack.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
     </modules>
   </component>

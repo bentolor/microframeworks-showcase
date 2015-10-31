@@ -3,8 +3,8 @@ Purpose of this project
 This Java/Gradle based repository illustrates a selection of Java-based
 microframeworks. 
  
-It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/) 
-and [Ninja](http://http://www.ninjaframework.org/) and is meant as supplement for my article 
+It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/),
+[Ninja](http://http://www.ninjaframework.org/) and [Ratpack](http://ratpack.io/) is meant as supplement for my article 
 on [heise developer online](http://www.heise.de/developer/).
 
 ![Grocery list overview](doc/overview.png)
@@ -69,4 +69,28 @@ directory to leverage from the example `grocerylists.json`.
      gradle :ninja:shadowJar
      cd ninja
      java -jar build/libs/ninja-1.0-SNAPSHOT-all.jar
+
       
+      
+Ratpack
+=======
+![Ratpack Logo](https://rawgit.com/ratpack/ratpack/v1.1.1/ratpack-manual/src/assets/images/ratpack-logo.png)
+      
+[Ratpack](http://ratpack.io/) 
+
+Starting the demo application
+-----------------------------
+
+### Option #1: Using Gradle
+Run the demo with `gradle :ratpack:run` and access [http://localhost:5050/](http://localhost:5050/).
+
+### Option #2: Using IntelliJ IDEA
+Open the project using IntelliJ IDEA Ultimate and execute the _Ninja: Run Example_ run configuration.
+
+### Option #3: As standalone JAR
+Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ratpack/`
+directory to leverage from the example `grocerylists.json`.
+
+     gradle :ratpack:shadowJar
+     cd ratpack
+     java -jar build/libs/ratpack-1.0-SNAPSHOT-all.jar

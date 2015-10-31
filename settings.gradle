@@ -1,3 +1,4 @@
 rootProject.name = 'microframeworks'
 include ':spark'
 include ':ninja'
+include ':ratpack'
