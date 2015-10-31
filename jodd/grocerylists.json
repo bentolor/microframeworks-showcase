@@ -1,0 +1,39 @@
+[ {
+  "id" : "68798a5c-be46-41b8-985a-1b6f32fefd4c",
+  "shoppingItems" : [ {
+    "quantity" : 5,
+    "unit" : "pcs",
+    "name" : "apples"
+  }, {
+    "quantity" : 2,
+    "unit" : "l",
+    "name" : "soy milk"
+  }, {
+    "quantity" : 500,
+    "unit" : "g",
+    "name" : "vegan cheese"
+  } ],
+  "comment" : "Shopping List for week 32/2015",
+  "date" : "2015-08-08",
+  "settled" : true
+}, {
+  "id" : "5e9d65d7-8377-4013-a73f-7389fdcb8bcd",
+  "shoppingItems" : [ {
+    "quantity" : 1,
+    "unit" : "pcs",
+    "name" : "Canyon mountain bike"
+  }, {
+    "quantity" : 3,
+    "unit" : "pcs",
+    "name" : "socks"
+  } ],
+  "comment" : "Wishlist for christmas",
+  "date" : "2015-12-22",
+  "settled" : false
+}, {
+  "id" : "723a1872-9806-40d6-8540-cedd95209fbd",
+  "shoppingItems" : null,
+  "comment" : "Shopping List for week 33/2015",
+  "date" : "2015-08-15",
+  "settled" : false
+} ]

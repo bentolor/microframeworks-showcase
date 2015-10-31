@@ -4,7 +4,8 @@ This Java/Gradle based repository illustrates a selection of Java-based
 microframeworks. 
  
 It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/),
-[Ninja](http://http://www.ninjaframework.org/) and [Ratpack](http://ratpack.io/) is meant as supplement for my article 
+[Ninja](http://http://www.ninjaframework.org/), [Ratpack](http://ratpack.io/) and [Jodd](http://jodd.org/)
+is meant as supplement for my article 
 on [heise developer online](http://www.heise.de/developer/).
 
 ![Grocery list overview](doc/overview.png)
@@ -50,7 +51,8 @@ Ninja
 =====
 ![Ninja Logo](http://www.ninjaframework.org/ninja_logo.png)
       
-[Ninja](http://http://www.ninjaframework.org/) 
+[Ninja](http://http://www.ninjaframework.org/) is a opinionated, full stack framework including 
+dependency injection, a optimized development mode and support for relational DBs.
 
 Starting the demo application
 -----------------------------
@@ -60,7 +62,7 @@ Run the demo with `gradle :ninja:run` and access [http://localhost:8080/](http:/
 and [http://localhost:8080/hello](http://localhost:8080/hello)
 
 ### Option #2: Using IntelliJ IDEA
-Open the project using IntelliJ IDEA Ultimate and execute the _Ninja: Run Example_ run configuration.
+Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run configuration.
 
 ### Option #3: As standalone JAR
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ninja/`
@@ -76,7 +78,8 @@ Ratpack
 =======
 ![Ratpack Logo](https://rawgit.com/ratpack/ratpack/v1.1.1/ratpack-manual/src/assets/images/ratpack-logo.png)
       
-[Ratpack](http://ratpack.io/) 
+[Ratpack](http://ratpack.io/) is a reactive-oriented, type-safe microframework heavily based on Java 8 lambdas
+and Netty for non-blocking IO.
 
 Starting the demo application
 -----------------------------
@@ -85,7 +88,7 @@ Starting the demo application
 Run the demo with `gradle :ratpack:run` and access [http://localhost:5050/](http://localhost:5050/).
 
 ### Option #2: Using IntelliJ IDEA
-Open the project using IntelliJ IDEA Ultimate and execute the _Ninja: Run Example_ run configuration.
+Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run configuration.
 
 ### Option #3: As standalone JAR
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ratpack/`
@@ -93,4 +96,33 @@ directory to leverage from the example `grocerylists.json`.
 
      gradle :ratpack:shadowJar
      cd ratpack
-     java -jar build/libs/ratpack-1.0-SNAPSHOT-all.jar
+     java -jar build/libs/ratpack-1.0-SNAPSHOT-all.jar      
+
+
+
+Jodd
+=======
+![Jodd Logo](https://rawgit.com/oblac/jodd/master/src/site/resources/images/jodd.png)
+      
+[Jodd](http://jodd.org/) is set of Java micro frameworks, tools and utilities, under 1.5 MB.
+The framework consists of micro components, which can be used more or less independently.
+
+                         
+
+Starting the demo application
+-----------------------------
+
+### Option #1: Using Gradle
+Run the demo with `cd jodd` and `gradle jettyRun` and access [http://http://localhost:8080/jodd/](http://http://localhost:8080/jodd/).
+
+### Option #2: Using IntelliJ IDEA
+This example has no embedded servlet container bundled. To run you need to download a Jetty 8 container
+and use the commericial IntelliJ IDEA Ultimate edition.
+Open the project and configure the _jodd: Run in Jetty_ run configuration. Check for a proper reference to
+a valid Jetty 8 installation under _Application Server_, then run the configuration.
+
+### Option #3: As deployable WAR
+This module does not provide a all-in-one UberJAR. Following how to build a WAR file:
+
+     gradle :jodd:war
+     cp jodd/build/libs/jodd-1.0-SNAPSHOT.war [tomcat]/webapps

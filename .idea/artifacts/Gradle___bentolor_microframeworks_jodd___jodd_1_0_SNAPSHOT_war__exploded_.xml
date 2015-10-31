@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : bentolor.microframeworks:jodd : jodd-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/artifacts/jodd/exploded/jodd-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/jodd" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="jodd/web/Web Gradle : jodd-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jodd" />
+          <element id="dir-copy" path="$PROJECT_DIR$/jodd/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-madvoc:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-core:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-props:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-servlet:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-bean:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-upload:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-petite:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-log:3.6.6" />
+          <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.1" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/artifacts/jodd/exploded/jodd-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

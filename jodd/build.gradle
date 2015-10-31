@@ -1,0 +1,12 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+dependencies {
+
+    compile 'org.jodd:jodd-madvoc:3.6.6',
+            'com.fasterxml.jackson.core:jackson-databind:2.6.1',
+            'javax.servlet:servlet-api:2.5',
+            'org.projectlombok:lombok:1.16.6'
+
+    providedRuntime 'javax.servlet.jsp:jsp-api:2.0'
+}

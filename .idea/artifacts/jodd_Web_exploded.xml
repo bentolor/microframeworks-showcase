@@ -1,0 +1,37 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jodd:Web exploded">
+    <output-path>$PROJECT_DIR$/target/artifacts/jodd_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jodd" />
+          <element id="dir-copy" path="$PROJECT_DIR$/jodd/src/main/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-madvoc:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-core:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-props:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-servlet:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-bean:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-upload:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-petite:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-log:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-joy:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-proxetta:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-jtx:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-lagarto:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-db:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-mail:3.6.6" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-vtor:3.6.6" />
+          <element id="library" level="project" name="Gradle: javax.activation:activation:1.1.1" />
+          <element id="library" level="project" name="Gradle: javax.mail:mail:1.4.5" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.1" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.6" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="jodd/web/Jodd Webapp" />
+    </root>
+  </artifact>
+</component>
