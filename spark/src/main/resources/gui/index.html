@@ -12,8 +12,7 @@
     myApp.config(['NgAdminConfigurationProvider', function (NgAdminConfigurationProvider) {
         var nga = NgAdminConfigurationProvider;
         // create an admin application
-        var admin = nga.application('My Grocery Lists')
-                .baseApiUrl('http://localhost:8080/');
+        var admin = nga.application('My Grocery Lists');
 
         var configureFields = function (view) {
             return view.fields([
