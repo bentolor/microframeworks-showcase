@@ -30,9 +30,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.webjars:bootstrap:3.3.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.webjars:jquery:2.1.3" level="project" />
-    <orderEntry type="library" name="Gradle: com.h2database:h2:1.4.186" level="project" />
     <orderEntry type="library" name="Gradle: org.ninjaframework:ninja-standalone:5.2.1" level="project" />
     <orderEntry type="library" name="Gradle: org.ninjaframework:ninja-servlet:5.2.1" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-server:9.2.10.v20150310" level="project" />

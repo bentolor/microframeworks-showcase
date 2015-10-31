@@ -74,6 +74,7 @@
           <element id="library" level="project" name="Gradle: xml-apis:xml-apis:1.0.b2" />
           <element id="library" level="project" name="Gradle: com.mchange:mchange-commons-java:0.2.3.4" />
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.6" />
         </element>
       </element>
     </root>
