@@ -58,5 +58,9 @@
         nga.configure(admin);
     }]);
 </script>
+<style>
+    #page-wrapper { margin: 0px 0px 0px 150px; }
+    .sidebar { width: 150px; }
+</style>
 </body>
 </html>
