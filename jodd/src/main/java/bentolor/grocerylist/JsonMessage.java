@@ -16,36 +16,14 @@
 package bentolor.grocerylist;
 
 import bentolor.grocerylist.model.ModelElement;
-import jodd.madvoc.meta.RenderWith;
-import lombok.Getter;
 
-@Getter
-@RenderWith(JsonResultRenderer.class)
-public class JsonResult {
+/**
+ * a POJO object for a JSON-rendered message.
+ */
+public class JsonMessage implements ModelElement {
+    String msg;
 
-    private final ModelElement model;
-    private final int status;
-
-    public JsonResult(ModelElement t) {
-        model = t;
-        status = -1;
+    public JsonMessage(String msg) {
+        this.msg = msg;
     }
-
-    public JsonResult(int statusCode, String message) {
-        model = new JsonMessage(message);
-        status = statusCode;
-    }
-
-    public static JsonResult notFound(String message) {
-        return new JsonResult(404, message);
-    }
-
-    public static JsonResult noContent() {
-        return new JsonResult(204, null);
-    }
-
-    public static JsonResult badRequest(String message) {
-        return new JsonResult(400, message);
-    }
-
 }

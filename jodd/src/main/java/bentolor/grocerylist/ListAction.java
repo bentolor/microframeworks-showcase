@@ -35,27 +35,27 @@ public class ListAction {
     }
 
     @Action(value = "/list", method = Action.GET)
-	public JsonData listAllLists() {
+	public JsonResult listAllLists() {
         return GroceryService.get().getAllGroceryLists();
 	}
 
     @Action(value = "/list/${id}", method = Action.GET)
-	public JsonData getList(@In("id") String id) {
+	public JsonResult getList(@In("id") String id) {
         return GroceryService.get().getGroceryList(id);
 	}
 
     @Action(value = "/list/${id}", method = Action.DELETE)
-	public JsonData deleteList(@In("id") String id) {
+	public JsonResult deleteList(@In("id") String id) {
         return GroceryService.get().deleteGroceryList(id);
 	}
 
     @Action(value = "/list/${id}", method = Action.PUT)
-	public JsonData updateList(@In("id") String id) throws IOException {
+	public JsonResult updateList(@In("id") String id) throws IOException {
         return GroceryService.get().updateGroceryList(id, request.getReader());
 	}
 
 	@Action(value = "/list", method = Action.POST)
-	public JsonData createList() throws IOException {
+	public JsonResult createList() throws IOException {
         BufferedReader reader = request.getReader();
         return GroceryService.get().createGroceryList(reader);
 	}

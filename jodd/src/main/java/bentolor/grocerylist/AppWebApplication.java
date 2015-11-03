@@ -31,16 +31,7 @@ public class AppWebApplication extends WebApplication {
 	}
 
 	@Override
-	protected void initWebApplication() {
-		// todo customize madvoc scanning path, e.g.:
-		//ClassFinder.setSystemJars();
-
-		super.initWebApplication();
-	}
-
-	@Override
 	protected void init(MadvocConfig madvocConfig, ServletContext servletContext) {
-
 		// set the root package to be where the index action is
 		madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
 

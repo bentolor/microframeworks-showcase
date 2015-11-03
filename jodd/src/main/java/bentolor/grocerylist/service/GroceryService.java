@@ -15,7 +15,7 @@
  */
 package bentolor.grocerylist.service;
 
-import bentolor.grocerylist.JsonData;
+import bentolor.grocerylist.JsonResult;
 import bentolor.grocerylist.model.GroceryList;
 import bentolor.grocerylist.persistence.ModelSerializer;
 import bentolor.grocerylist.persistence.Repository;
@@ -43,34 +43,34 @@ public class GroceryService {
         return INSTANCE;
     }
 
-    public JsonData createGroceryList(Reader listJson) {
+    public JsonResult createGroceryList(Reader listJson) {
         GroceryList newList = ModelSerializer.get().deserialize(listJson, GroceryList.class);
-        return new JsonData(repository.createList(newList));
+        return new JsonResult(repository.createList(newList));
     }
 
-    public JsonData getGroceryList(String id) {
+    public JsonResult getGroceryList(String id) {
         Optional<GroceryList> match = repository.getList(UUID.fromString(id));
         if (match.isPresent())
-            return new JsonData(match.get());
+            return new JsonResult(match.get());
         else
-            return JsonData.notFound("Could not find a grocery list with id:" + id);
+            return JsonResult.notFound("Could not find a grocery list with id:" + id);
     }
 
-    public JsonData getAllGroceryLists() {
-        return new JsonData(repository.getLists());
+    public JsonResult getAllGroceryLists() {
+        return new JsonResult(repository.getLists());
     }
 
-    public JsonData updateGroceryList(String id, Reader listJson) {
+    public JsonResult updateGroceryList(String id, Reader listJson) {
         if (repository.getList(UUID.fromString(id)).isPresent()) {
             GroceryList updatedList = serializer.deserialize(listJson, GroceryList.class);
             boolean ok = repository.updateList(UUID.fromString(id), updatedList);
-            return ok ? JsonData.noContent() : JsonData.badRequest("Update failed");
+            return ok ? JsonResult.noContent() : JsonResult.badRequest("Update failed");
         } else
-            return JsonData.notFound("Could not find a grocery list with id:" + id);
+            return JsonResult.notFound("Could not find a grocery list with id:" + id);
     }
 
-    public JsonData deleteGroceryList(String id) {
+    public JsonResult deleteGroceryList(String id) {
         boolean ok = repository.deleteList(UUID.fromString(id));
-        return ok ? JsonData.noContent() : JsonData.notFound("List not found");
+        return ok ? JsonResult.noContent() : JsonResult.notFound("List not found");
     }
 }
