@@ -14,11 +14,15 @@ on [heise developer online](http://www.heise.de/developer/).
 
 Prerequisites
 ==============
-- Installed JDK 8+
-- [Gradle 2.8+](http://gradle.org/)
-- [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
+- Installed JDK 8+ with proper set `JAVA_HOME` environment variable
 
-*Recommended:*
+This repository comes with a pre-bundled [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
+`gradlew` or `gradlew.bat` (Windows) which will download the appropriate build dependencies automatically on the first 
+run. 
+
+*Optional (recommended for development):*
+- [Gradle 2.8+](http://gradle.org/) 
+- [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
 - IntelliJ IDEA (Ultimate Edition) 
 
 
@@ -42,7 +46,7 @@ Open the project using IntelliJ IDEA Ultimate and execute the _Spark: Run Exampl
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `spark/`
 directory to leverage from the example `grocerylists.json`.
 
-     gradle :spark:shadowJar
+     gradlew :spark:shadowJar
      cd spark
      java -jar build/libs/spark-1.0-SNAPSHOT-all.jar
       
@@ -68,7 +72,7 @@ Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run co
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ninja/`
 directory to leverage from the example `grocerylists.json`.
 
-     gradle :ninja:shadowJar
+     gradlew :ninja:shadowJar
      cd ninja
      java -jar build/libs/ninja-1.0-SNAPSHOT-all.jar
 
@@ -94,7 +98,7 @@ Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run co
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ratpack/`
 directory to leverage from the example `grocerylists.json`.
 
-     gradle :ratpack:shadowJar
+     gradlew :ratpack:shadowJar
      cd ratpack
      java -jar build/libs/ratpack-1.0-SNAPSHOT-all.jar      
 
@@ -124,5 +128,5 @@ a valid Jetty 8 installation under _Application Server_, then run the configurat
 ### Option #3: As deployable WAR
 This module does not provide a all-in-one UberJAR. Following how to build a WAR file:
 
-     gradle :jodd:war
+     gradlew :jodd:war
      cp jodd/build/libs/jodd-1.0-SNAPSHOT.war [tomcat]/webapps
