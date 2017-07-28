@@ -3,10 +3,10 @@ dependencies {
     apply plugin: 'application'
     mainClassName = "bentolor.grocerylist.GroceryListResource"
 
-    compile        'com.sparkjava:spark-core:2.3',
-                   'com.sparkjava:spark-template-jade:2.3',
+    compile        'com.sparkjava:spark-core:2.6.0',
+                   'com.sparkjava:spark-template-jade:2.5.5',
                    'com.fasterxml.jackson.core:jackson-databind:2.6.1',
-                   'org.projectlombok:lombok:1.16.6'
+                   'org.projectlombok:lombok:1.16.18'
     testCompile    'junit:junit:4.12'
 
 }
