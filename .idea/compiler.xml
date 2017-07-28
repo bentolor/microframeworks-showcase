@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
-    <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
       <entry name="!?*.form" />
@@ -16,9 +14,17 @@
       <entry name="?*.props" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
-        <processorPath useClasspath="true" />
-      </profile>
+      <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jodd_main" target="1.8" />
+      <module name="jodd_test" target="1.8" />
+      <module name="ninja_main" target="1.8" />
+      <module name="ninja_test" target="1.8" />
+      <module name="ratpack_main" target="1.8" />
+      <module name="ratpack_test" target="1.8" />
+      <module name="spark_main" target="1.8" />
+      <module name="spark_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

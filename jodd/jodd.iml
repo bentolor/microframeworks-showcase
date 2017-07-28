@@ -15,48 +15,15 @@
         </sourceRoots>
       </configuration>
     </facet>
-    <facet type="web" name="Web Gradle : jodd-1.0-SNAPSHOT.war">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
-        </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
-      </configuration>
-    </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/build/classes/main" />
-    <output-test url="file://$MODULE_DIR$/build/classes/test" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-madvoc:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-core:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-props:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-servlet:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-bean:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-upload:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-petite:3.6.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-log:3.6.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet.jsp:jsp-api:2.0" level="project" />
-    <orderEntry type="library" name="Gradle: javax.servlet:servlet-api:2.5" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.6" level="project" />
   </component>
 </module>

@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jodd/jodd.iml" filepath="$PROJECT_DIR$/jodd/jodd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jodd/jodd.iml" filepath="$PROJECT_DIR$/jodd/jodd.iml" group="jodd" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jodd/jodd_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jodd/jodd_main.iml" group="jodd" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jodd/jodd_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jodd/jodd_test.iml" group="jodd" />
       <module fileurl="file://$PROJECT_DIR$/microframeworks.iml" filepath="$PROJECT_DIR$/microframeworks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ninja/ninja.iml" filepath="$PROJECT_DIR$/ninja/ninja.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ratpack/ratpack.iml" filepath="$PROJECT_DIR$/ratpack/ratpack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ninja/ninja.iml" filepath="$PROJECT_DIR$/ninja/ninja.iml" group="ninja" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ninja/ninja_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ninja/ninja_main.iml" group="ninja" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ninja/ninja_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ninja/ninja_test.iml" group="ninja" />
+      <module fileurl="file://$PROJECT_DIR$/ratpack/ratpack.iml" filepath="$PROJECT_DIR$/ratpack/ratpack.iml" group="ratpack" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratpack/ratpack_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ratpack/ratpack_main.iml" group="ratpack" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratpack/ratpack_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ratpack/ratpack_test.iml" group="ratpack" />
+      <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" group="spark" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark/spark_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spark/spark_main.iml" group="spark" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark/spark_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spark/spark_test.iml" group="spark" />
     </modules>
   </component>
 </project>
