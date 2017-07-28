@@ -28,7 +28,7 @@ run.
 
 Spark Java
 ==========
-![Spark Logo](http://sparkjava.com/assets/images/logo.svg)
+![Spark Logo](http://sparkjava.com/img/logo.svg)
 
 [Spark](http://sparkjava.com/) is a tiny Sinatra inspired framework for 
 creating web applications in Java 8 with minimal effort
