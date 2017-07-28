@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Small is sexy: Die Hitparade der Microframeworks</title>
+    <meta name="description"
+          content="Microservices machen es deutlich: Der Trend geht zurück zur Spezialisierung und kleinen,
+           überschaubaren Lösungen. Die neue Klasse der Microframeworks setzt dies fort und verspricht neue
+            Eleganz für die Java-Welt. Ein Blick auf die vier Kandidaten Jodd, Spark, Ninja und Ratpack zeigt,
+            ob sie das Versprechen halten.">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/solarized-light.css">
+
+    <!-- Custom, overriding CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<img src="img/eXXcellent%20logo-transparent.png" id="exxcellent-logo"
+     alt="eXXcellent solutions GmbH Logo"
+/>
+
+<div class="reveal">
+    <div class="slides">
+
+        <!--
+          === Title ===============================================================================
+        -->
+
+        <section data-background-color="#fff">
+            <img data-src="img/eXXcellent%20logo-transparent.png"
+                 style="width: 320px; position: absolute; top: 0; left: 0;"
+                 class="plain" alt="eXXcellent solutions GmbH Logo"
+            />
+
+            <!--
+            <div style="text-align: left;">
+                <h1 style="margin: 380px 0 0 0; font-size: 1.9em;" class="emphasize">Russisch unterwegs!</h1>
+                <img data-src="img/kotlin_logos/logo_Kotlin.svg"
+                     style="width: 200px; position: absolute; top: 506px; left: 4px;"
+                     class="plain" alt="Kotlin Logo"
+                />
+                <h3 style="left: 220px; top: 503px;" class="abs">für die moderne</h3>
+                <h3 style="left: 220px; top: 568px;" class="abs">Android-Entwicklung</h3>
+            </div>
+            -->
+            <div style="text-align: right;">
+                <h2 style="margin: 360px 0px 0 0; font-size: 1.7em; text-transform: none">
+                    <span class="emphasize"><i>Small is sexy: </i><br> </span>
+                    Die Hitparade der <br>Microframeworks
+                </h2>
+            </div>
+
+            <div id="version">
+                2017-07-28
+            </div>
+
+            <div class="profile" style="position: absolute; top: 0; left: 900px;">
+                <div class="profile-sidebar">
+                    <div class="profile-userpic">
+                        <img data-src="img/BenjaminSchmid.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            Benjamin Schmid
+                        </div>
+                        <div class="profile-usertitle-job">
+                            Technology Advisor
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <a href="https://twitter.com/bentolor">@bentolor</a>
+                </div>
+            </div>
+
+            <div id="rightsection">
+                <code>?</code> for help
+            </div>
+
+            <div id="licence">
+                <!--suppress HtmlUnknownAttribute -->
+                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
+                      property="dct:title" rel="dct:type">
+                    Moderne Android-Entwicklung mit Kotlin
+                </span>
+                by
+                <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/bentolor"
+                   property="cc:attributionName" rel="cc:attributionURL">
+                    Benjamin Schmid
+                </a>
+                is licensed under a
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    Creative Commons License (BY-NC-SA/4.0)
+                </a>.
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <img alt="Creative Commons Lizenzvertrag"
+                         src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"/>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!--
+          === Motivation ============================================================================
+        -->
+        <section>
+            <section class="">
+                <h3>Weniger ist mehr ... <br>die neue Leichtigkeit!</h3>
+
+                <div class="abs handwriting right fragment"
+                     style="transform: rotate(-2deg); left: 490px; top: 240px; font-size: 130%; line-height: 0.8em">
+                    <strong>Microservices</strong>
+                </div>
+                <div class="abs handwriting right fragment"
+                     style="transform: rotate(+2deg); left: 390px; top: 340px; font-size: 130%;">
+                    <strong>Spring Boot vs. JEE</strong>
+                </div>
+                <div class="abs handwriting right fragment"
+                     style="transform: rotate(0deg); left: 530px; top: 440px; font-size: 130%; line-height: 0.6em">
+                    <strong>Dropwizard</strong>
+                </div>
+                <div class="abs handwriting right fragment"
+                     style="transform: rotate(3deg); left: 530px; top: 490px; font-size: 130%; line-height: 0.6em">
+                    <strong>...</strong>
+                </div>
+            </section>
+
+
+            <section>
+                <h3>Microframeworks in der Javascript-Welt</h3>
+                <iframe src="http://microjs.com/" style="width: 1000px; height: 600px;"></iframe>
+            </section>
+
+            <section>
+                <h2><u>Java Hitparade</u></h2>
+                <div data-markdown class="right container" style="font-size: .8em; margin: 36px 0px 0px 320px">
+                    ## Spark
+
+                    ## Ninja
+
+                    ## Jodd
+
+                    ## Ratpack
+                </div>
+            </section>
+
+            <section>
+                <h2>Das Schlachtfeld</h2>
+
+                <div class="center">
+                    <p data-markdown>
+                        ##### „Einkaufsliste“
+                        - RESTful CRUD Application
+                        - Frontend: `ng-admin`
+                        - Backend: Kandidat
+                    </p>
+                    <div>
+                        <img src="overview.png"/>
+                        <img src="edit.png"/>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+
+        <!--
+          === Spark ============================================================================
+        -->
+        <section>
+
+
+            <section data-background-color="#fff" class="center">
+                <img src="http://sparkjava.com/img/logo.svg" class="plain" width="1000"/>
+            </section>
+
+            <section data-background-color="#fff" class="center">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+
+                    <p>Sinatra-inspiriert</p>
+                    <p class="decent subline x-small">populäres Ruby-Webframework</p>
+
+                    <p>Java 8 & Kotlin (2017)</p>
+                    <p class="decent subline x-small">optimierte Spark-DSL</p>
+
+                    <p>Version</p>
+                    <p class="decent subline x-small">2.6.0 (April 2017)</p>
+                    <p class="decent subline x-small">APL2</p>
+
+                    <p class="x-small"><br>http://sparkjava.com/</p>
+
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 840px; height: 560px; margin-top: 26px">
+                    <iframe style="width: 840px; height: 560px" src="http://sparkjava.com/"></iframe>
+                </div>
+            </section>
+
+            <section>
+                <h2>Quick-Start #1 <code>build.gradle</code></h2>
+
+                <pre><code>
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    mainClassName = "bentolor.sparkjava.HelloWorld"
+
+    compile        'com.sparkjava:spark-core:2.3',
+                   'com.sparkjava:spark-template-mustache:2.3'
+}</code></pre>
+            </section>
+
+
+            <section>
+                <h2>Quick-Start #2 <code>build.gradle</code></h2>
+
+                <pre><code>package bentolor.sparkjava;
+
+import …
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        get("/hello", "text/plain", (req, res) -> "Hello World!");
+
+        get("/hello/:name", "text/plain",
+            (req, res) -> "Hello "+req.params("name")+"!");
+
+        get("/hello2/:name", (rq, rs) -> {
+            Map vals = new HashMap();
+            vals.put("name", rq.params("name"));
+            return new ModelAndView(vals, "/hello.html");
+        }, new MustacheTemplateEngine());
+    }
+
+}</code></pre>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section class="center">
+                <h1>To the battleground</h1>
+            </section>
+
+            <section>
+                <h3>ng-admin (1)</h3>
+                <pre><code style="font-size: .8em;">
+    var myApp = angular.module('myApp', ['ng-admin']);
+    myApp.config(['NgAdminConfigurationProvider',
+                    function (NgAdminConfigurationProvider) {
+
+        var nga = NgAdminConfigurationProvider;
+        var admin = nga.application('My Grocery Lists');
+
+        var configureFields = function (view) {
+            return view.fields([
+                nga.field('id').editable(false),
+                nga.field('comment'),
+                nga.field('settled', 'boolean'),
+                nga.field('date', 'date'),
+                nga.field('shoppingItems', 'embedded_list')
+                    .targetFields([
+                        nga.field('quantity', 'number'),
+                        nga.field('unit', 'choice').choices([
+                            {value: 'pcs', label: 'pieces'},
+                            {value: 'kg', label: 'kilogram'},
+                            {value: 'g', label: 'gram'},
+                            {value: 'l', label: 'litre'}
+                        ]),
+                        nga.field('name', 'string')
+                    ])
+            ]);
+        };
+</code></pre>
+            </section>
+            <section>
+                <h3>ng-admin (2)</h3>
+
+                <pre><code style="font-size: .8em;">
+        // lists entity
+        var list = nga.entity('list');
+
+        list.listView()
+            .fields([
+                nga.field('comment'),
+                nga.field('settled', 'boolean'),
+                nga.field('date', 'date')])
+            .listActions(['show', 'edit', 'delete'])
+            .title("My shopping lists");
+
+        configureFields(list.editionView())
+            .title('Edit "{{ entry.values.comment }}"')
+            .actions(['show', 'list', 'delete']);
+        configureFields(list.showView())
+            .title('View "{{ entry.values.comment }}"');
+        configureFields(list.creationView());
+
+        admin.addEntity(list);
+
+        nga.configure(admin);
+    }]);
+</code></pre>
+            </section>
+
+            <section>
+                 <iframe style="width: 900px; height:640px" src="http://localhost:8080/"></iframe>
+            </section>
+
+        </section>
+
+
+
+        <!--
+            === Ninja ============================================================================
+        -->
+        <section>
+
+            <section data-background-color="#fff" class="center">
+                <img src="http://www.ninjaframework.org/ninja_logo.png" class="plain" width="1100"/>
+            </section>
+
+
+            <section data-background-color="#fff" class="center">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+                    <p class="decent subline x-small">Nicht wirklich <i>Micro</i>… </p>
+
+                    <p>Full-Stack Web</p>
+                    <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, </p>
+
+                    <p>Conventions<br>MVC <br>Stateless!</p>
+                    <!--<p class="decent subline x-small">optimierte Spark-DSL</p>-->
+
+                    <p class="decent x-small">6.0.0 (März 2017)</p>
+                    <p class="decent subline x-small">APL2</p>
+
+                    <p class="x-small"><br>http://www.ninjaframework.org/</p>
+
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 940px; height: 560px; margin-top: 26px">
+                    <iframe style="width: 940px; height: 560px" src="http://www.ninjaframework.org/"></iframe>
+                </div>
+            </section>
+        </section>
+
+
+        <!--
+            === Jodd ============================================================================
+        -->
+        <section>
+
+            <section data-background-color="#fff" class="center">
+                <img src="https://www.javacodegeeks.com/wp-content/uploads/2015/06/jodd.png" class="plain" width="1100"/>
+            </section>
+
+
+            <section data-background-color="#fff" class="center">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+                    <p class="decent subline x-small">(ex-)Floppy-tauglich <i>(1.44MB)</i></p>
+
+                    <p>Baukastensystem</p>
+                    <p class="decent subline x-small">an Mikro-Komponenten:</p>
+
+                    <p  class="x-small">IoC, AOP, Bean-Validation <br>SQL/OR-Mapper, HTML Tools,…</p>
+
+                    <p  class="x-small">Endergebnis: 800kb</p>
+
+                    <p class="decent x-small">3.8.5 (April 2017)</p>
+                    <p class="decent subline x-small">APL2</p>
+
+                    <p class="x-small"><br>http://jodd.org/</p>
+
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px">
+                    <iframe style="width: 940px; height: 560px" src="http://jodd.org/"></iframe>
+                </div>
+            </section>
+
+        </section>
+
+        <!--
+            === Ratpack ============================================================================
+        -->
+        <section>
+
+            <section data-background-color="#fff" class="center">
+                <img src="https://danhyun.github.io/2016-gr8confeu-rapid-ratpack-groovy/images//ratpack-logo.png" class="plain" width="1100"/>
+            </section>
+
+
+            <section data-background-color="#fff" class="center">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+                    <p>Reaktiv &amp; Asynchron</p>
+                    <p class="decent subline x-small">hohe Ähnlichkeit mit Vert.X</p>
+                    <p  class="x-small">Basis: Netty &amp; Promises</p>
+
+                    <p  class="x-small">  Module: Guice, Groovy,<br> Jackson, Spring Boot</p>
+
+                    <p class="decent x-small">1.4.6 (April 2017)</p>
+                    <p class="decent subline x-small">APL2</p>
+
+                    <p class="x-small"><br>https://ratpack.io/</p>
+
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px">
+                    <iframe style="width: 940px; height: 560px" src="https://ratpack.io/"></iframe>
+                </div>
+            </section>
+
+        </section>
+
+        <section data-background="img/mf-article.png" data-background-color="#fff">
+        </section>
+
+        <section>
+            <h2>Weitere Materialien</h2>
+            <ul>
+                <li>Pippo (http://www.pippo.ro/)</li>
+                <li>Javalite (http://javalite.io/)</li>
+                <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/ <br>  microframeworks-showcase/</a></li>
+            </ul>
+
+        </section>
+
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<!-- hide "verbatim" sections if URL contains "terse"-Keyword -->
+<script>
+    if (window.location.search.match(/terse/gi)) {
+        var sections = document.getElementsByTagName('section');
+        for (var i = sections.length - 1; i > -1; --i) {
+            if (sections[i].hasAttribute("data-verbatim")) {
+                sections[i].remove();
+            }
+        }
+    }
+</script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+        progress: true,
+        slideNumber: true,
+        mouseWheel: true,
+        controls: true,
+        fragments: false,
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        maxScale: 10,
+        center: false,
+        parallaxBackgroundImage: 'img/kotlin-island-map-light.png', // 'http://jamescroft.co.uk/wp-content/uploads/2015/01/217-L6YVU1.jpg',
+        parallaxBackgroundSize: '4177px 2118px',
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true}  // Zoom in and out with Alt+click
+        ]
+    });
+</script>
+
+<!-- hack: increase playback speed of background video -->
+<script>
+    Reveal.addEventListener('speedupvideo', function () {
+        document.getElementsByTagName("video")[0].playbackRate = 2.5
+    }, false);
+</script>
+
+
+</body>
+</html>

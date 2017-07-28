@@ -1,0 +1,511 @@
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Montserrat+Alternates);*/
+/*@import url(https://fonts.googleapis.com/css?family=Rajdhani:400,700,600,500,300);*/
+
+
+/* devanagari */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Rajdhani Light'), local('Rajdhani-Light'), url(../lib/font/Rajdhani-Light.woff2) format('woff2');
+    unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Rajdhani Light'), local('Rajdhani-Light'), url(../lib/font/Rajdhani-Light-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rajdhani'), local('Rajdhani-Regular'), url(../lib/font/Rajdhani-Regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Rajdhani Semibold'), local('Rajdhani-Semibold'), url(../lib/font/Rajdhani-Semibold-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Rajdhani Bold'), local('Rajdhani-Bold'), url(../lib/font/Rajdhani-Bold-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* devanagari */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Rajdhani Bold'), local('Rajdhani-Bold'), url(../lib/font/Rajdhani-Bold.woff2) format('woff2');
+    unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+
+/* devanagari */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Rajdhani Semibold'), local('Rajdhani-Semibold'), url(../lib/font/Rajdhani-Semibold.woff2) format('woff2');
+    unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat-Bold'), url(../lib/font/Montserrat-Bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    src: local('MontserratAlternates-Regular'), url(../lib/font/MontserratAlternates-Regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Zeyada';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Zeyada'), url(../lib/font/zeyada.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+
+
+/* Absatzabstand */
+.reveal p {
+    margin: .4em 0 .2em 0;
+}
+.reveal p p {
+    margin: 0;
+}
+
+.reveal .subline {
+    margin: -0.2em 0 .4em 0;
+    line-height: 0.92;
+}
+
+/* Text links*/
+/*.reveal .slides p {
+  text-align: left; }*/
+/* Listen: Größerer linker Einzug. */
+.reveal ol, .reveal dl, .reveal ul {
+    margin: 0 0 0 1.6em;
+}
+
+
+
+/* Decent regular text.*/
+.reveal {
+    color: #333;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 42px;
+}
+
+.reveal .decent {
+    color: #666;
+}
+
+.reveal strong, .reveal h1, .reveal h2 {
+    color: #000;
+    margin: 0 0 .6em 0;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    /*color: #1b91ff;*/
+}
+
+.reveal EM {
+    margin: 0 0 .6em 0;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #1b91ff;
+    font-style: normal;
+}
+
+.reveal .emphasize {
+    color: #1b91ff !important;
+}
+
+
+/* Prägnantere Überschriften-Font. */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5 {
+    font-family: "Montserrat", Impact, sans-serif;
+    line-height: 1em;
+}
+
+.reveal h3,
+.reveal h4 {
+    /*color: #ccc;*/
+}
+
+.reveal h3,
+.reveal h4,
+.reveal h5 {
+    font-family: "Montserrat Alternates", Impact, sans-serif;
+    text-transform: none;
+    font-weight: 700;
+}
+
+.reveal h5, .reveal h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+
+.reveal h5 {
+    font-size: 100%;
+    margin: 1em 0 .3em 0;
+    /*color: #fff;*/
+}
+
+/* h6 = Bridgehead */
+.reveal h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    color: #1b91ff;
+    text-transform: none;
+    text-decoration: underline;
+    margin: 0.4em 0 0 0;
+}
+.reveal h6 + p {
+    margin: 0 0 .2em 0;
+}
+
+/* Aufzählung nicht zentrieren, wenn sie in einem Shrinking Container stecken.*/
+.reveal .container ol, .reveal .container dl, .reveal .container ul {
+    display: table;
+}
+
+.reveal .abs {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#licence {
+    left: 0;
+    position: absolute;
+    top: 700px;
+    z-index: 1;
+    font-size: 0.36em;
+    color: #666;
+    width: 100%;
+    text-align: center;
+}
+
+#licence a {
+    color: #aaf;
+    text-decoration: underline;
+}
+
+#licence img {
+    border: 0;
+    margin: 4px 0 0 0;
+    opacity: 0.4;
+}
+
+#version, #helpfooter, #rightsection {
+    position: absolute;
+    text-align: center;
+    top: 660px;
+    z-index: 1;
+    font-size: .7em;
+    color: #666;
+    width: 100%;
+}
+
+#version {
+    text-align: center;
+}
+
+.reveal .right, #rightsection {
+    text-align: right;
+}
+.reveal .left {
+    text-align: left;
+}
+
+/* --- Layout Hilfen --------------------------------------------------- */
+
+/* Shrinking DIV */
+.reveal DIV.container {
+    display: inline-block;
+}
+
+.reveal .x-large p, .reveal .x-large li, .reveal p.x-large, .reveal  div.x-large, .reveal  span.x-large, .reveal .x-large code {
+    font-size: 168%;
+}
+
+.reveal .large p,.reveal .large li,.reveal .large,.reveal  div.large,.reveal  span.large,.reveal  .large code {
+    font-size: 124%;
+}
+
+.reveal .small li, .reveal div.small,.reveal span.small, .reveal .small code, .reveal .small, .reveal .small li {
+    font-size: 86%;
+}
+
+.reveal .small code {
+    font-size: 72%;
+}
+
+.reveal .x-small p,.reveal  .x-small li,.reveal p.x-small,.reveal span.x-small, .reveal  div.x-small {
+    font-size: 64%;
+}
+
+.reveal .x-small code {
+    font-size: 64%;
+}
+
+.reveal pre.xx-small, .reveal pre.x-small, .reveal pre.small {
+    width: 100%; margin: 0;
+}
+.reveal .xx-small code {
+    font-size: 50%;
+    padding: 10px
+}
+
+
+/* --- Darstellung Tweaks ----------------------------------------------- */
+
+/* Kein max height für Codeblöcke */
+.reveal pre code {
+    max-height: none;
+}
+
+/* Plain Images ohne Buzz */
+.reveal img.plain {
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Hand-written arrows, colorized
+.reveal img.arrow {
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    -webkit-filter: invert(100%) hue-rotate(180deg) saturate(255); filter: invert(100%)  hue-rotate(180deg) saturate(255);
+}*/
+
+
+/* Top & bottom gaps */
+.reveal .tgap {
+    margin-top: .8em;
+}
+
+.reveal .tgapxl {
+    margin-top: 1.6em;
+}
+
+.reveal .lgap {
+    margin-left: .8em;
+}
+
+.reveal .bgap {
+    margin-bottom: .8em
+}
+
+.reveal .glow {
+    text-shadow: 0 0 0.5em #ccc, 0 0 0.5em #ccc;
+    -webkit-filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 1));
+    filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 1));
+}
+
+.reveal .handwriting {
+    font-family: Zeyada, cursive;
+    font-size: 1.4em;
+    line-height: .9em;
+    color: rgba(0, 0, 205, .7);
+}
+
+/* Inline code */
+.reveal code {
+    border-radius: 5px;
+    padding: 0 7px 2px;
+    border: 1px solid rgba(64, 64, 64, .8);
+    background-color: rgba(252, 248, 237, 0.8);
+    font-size: .8em;
+    white-space: nowrap;
+}
+
+.reveal pre code {
+    padding: 20px;
+    background-color: rgba(252, 248, 237, 0.8);
+    border: 1px solid rgba(64, 64, 64, .8);
+    font-size: 1.0em;
+    line-height: 1.2em;
+    white-space: pre-wrap;
+}
+
+/* TOC 2-spaltig*/
+#table-of-contents ol {
+    list-style-position: inside;
+    -moz-column-count: 2;
+    -moz-column-gap: 60px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 60px;
+    column-count: 2;
+    column-gap: 60px;
+}
+
+/* TOC kleiner & dezenter */
+#table-of-contents li {
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: rgb(141, 207, 252);
+}
+
+/* ID cards auf Einstiegsfolie  ------------------------------------------------------ */
+.reveal DIV.profile {
+    /*margin: 60px 30px;*/
+    width: 400px;
+    font-size: .9em;
+    font-weight: 200;
+    float: left;
+}
+
+.profile .profile-sidebar {
+    padding: 10px 0 10px 0;
+    border-top: 2px solid rgba(27, 145, 255, 1);
+    background: rgba(27, 145, 255, .2);
+}
+
+.profile .profile-userpic {
+    padding: 0 10px;
+}
+
+.profile .profile-userpic img {
+    float: left;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile .profile-usertitle {
+    text-align: center;
+    margin-top: .6em;
+    font-weight: 700;
+}
+
+.profile .profile-usertitle-name {
+    font-size: .8em;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.profile .profile-usertitle-job {
+    color: palevioletred;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.profile .profile-content {
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: rgba(63, 63, 63, .2);
+    font-size: 0.8em;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(27, 145, 255, 1);
+}
+
+/* ------------------------------------------------------------*/
+.reveal .twocol {
+    width: 48%;
+    margin: 0 10px;
+    float: left;
+}
+
+.reveal .threecol {
+    width: 30%;
+    margin: 0 10px;
+    float: left;
+}
+
+/* Aufzählung nicht zentrieren im 2col layout.*/
+.reveal .twocol ol, .reveal .twocol dl, .reveal .twocol ul {
+    display: table;
+}
+
+/* Keine Einengung der width*/
+.reveal blockquote {
+    width: 80%;
+    text-align: left;
+}
+
+/* --------------------------------------------------------- */
+/* a specially decent code ref */
+.c-ref {
+    font-weight: lighter !important;
+    font-size: 50% !important;
+    vertical-align: super !important;
+    margin: 0 8px !important;
+    opacity: 0.6 !important;
+}
+
+.c-ref > code {
+    border: 1px solid rgba(255, 255, 255, .6) !important;
+    background: darkblue !important;
+}
+
+A.c-ref > code {
+    color: whitesmoke !important;
+    text-decoration: underline !important;
+}
+
+.jep {
+    font-weight: bold !important;
+    font-size: 45% !important;
+    vertical-align: super !important;
+    margin: 0 8px !important;
+    color: cornsilk !important;
+    border-radius: 5px !important;
+    padding: 0 7px 2px !important;
+    border: 1px solid rgba(255, 255, 255, .6) !important;
+    background: olivedrab !important;
+}
+
+
+/* --------- Code Style tweaks ----------------------------*/
+.reveal PRE .hljs-keyword {
+    font-weight: 700;
+}
+
+
+#exxcellent-logo {
+    position: fixed;
+    display: none;
+    bottom: 5%;
+    left: 3%;
+    z-index: 10;
+    height: 28px;
+    /* prevent logo gradient banding? */
+    -webkit-filter: drop-shadow(0px 0px 1px rgba(255,255,255,.3));
+    opacity: .5;
+}
