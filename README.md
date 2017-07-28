@@ -8,8 +8,8 @@ It implements a functionally identical grocery list application with [Spark](htt
 is meant as supplement for my article 
 on [heise developer online](http://www.heise.de/developer/).
 
-![Grocery list overview](doc/overview.png)
-![Grocery list edit](doc/edit.png)
+![Grocery list overview](docs/overview.png)
+![Grocery list edit](docs/edit.png)
 
 
 Prerequisites
