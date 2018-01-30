@@ -1,12 +1,12 @@
 apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty-1.4.2.plugin'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty-2.0.0.plugin'
 
 dependencies {
 
-    compile 'org.jodd:jodd-madvoc:3.8.5',
-            'com.fasterxml.jackson.core:jackson-databind:2.6.1',
+    compile 'org.jodd:jodd-madvoc:4.1.1',
+            'com.fasterxml.jackson.core:jackson-databind:2.9.4',
             'javax.servlet:servlet-api:2.5',
-            'org.projectlombok:lombok:1.16.18'
+            'org.projectlombok:lombok:1.16.20'
 
     providedRuntime 'javax.servlet.jsp:jsp-api:2.0'
 }

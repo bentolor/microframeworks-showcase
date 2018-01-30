@@ -17,9 +17,7 @@ package bentolor.grocerylist;
 
 import bentolor.grocerylist.service.GroceryService;
 import jodd.madvoc.ScopeType;
-import jodd.madvoc.meta.Action;
-import jodd.madvoc.meta.In;
-import jodd.madvoc.meta.MadvocAction;
+import jodd.madvoc.meta.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
@@ -28,33 +26,33 @@ import java.io.IOException;
 @MadvocAction
 public class ListAction {
 
-    @In(scope = ScopeType.SERVLET)
+    @In @Scope(ScopeType.SERVLET)
     HttpServletRequest request;
 
     public ListAction() {
     }
 
-    @Action(value = "/list", method = Action.GET)
+    @Action("/list") @GET
 	public JsonResult listAllLists() {
         return GroceryService.get().getAllGroceryLists();
 	}
 
-    @Action(value = "/list/${id}", method = Action.GET)
+    @Action("/list/${id}") @GET
 	public JsonResult getList(@In("id") String id) {
         return GroceryService.get().getGroceryList(id);
 	}
 
-    @Action(value = "/list/${id}", method = Action.DELETE)
+    @Action("/list/${id}") @DELETE
 	public JsonResult deleteList(@In("id") String id) {
         return GroceryService.get().deleteGroceryList(id);
 	}
 
-    @Action(value = "/list/${id}", method = Action.PUT)
+    @Action("/list/${id}") @PUT
 	public JsonResult updateList(@In("id") String id) throws IOException {
         return GroceryService.get().updateGroceryList(id, request.getReader());
 	}
 
-	@Action(value = "/list", method = Action.POST)
+	@Action("/list") @POST
 	public JsonResult createList() throws IOException {
         BufferedReader reader = request.getReader();
         return GroceryService.get().createGroceryList(reader);

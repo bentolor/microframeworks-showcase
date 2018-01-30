@@ -21,21 +21,23 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-madvoc:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-madvoc:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.4" level="project" />
     <orderEntry type="library" name="Gradle: javax.servlet:servlet-api:2.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.18" level="project" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-servlet:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-petite:3.8.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-servlet:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-petite:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-json:4.1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet.jsp:jsp-api:2.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-bean:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-props:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-upload:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-core:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-log:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-bean:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-props:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-upload:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-proxetta:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-core:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-log:4.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.4" level="project" />
   </component>
 </module>

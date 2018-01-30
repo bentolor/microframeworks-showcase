@@ -15,26 +15,21 @@
  */
 package bentolor.grocerylist;
 
-import jodd.log.Logger;
 import jodd.log.LoggerFactory;
-import jodd.log.impl.SimpleLoggerFactory;
-import jodd.madvoc.WebApplication;
-import jodd.madvoc.component.MadvocConfig;
+import jodd.log.impl.SimpleLogger;
+import jodd.madvoc.MadvocConfig;
+import jodd.madvoc.WebApp;
 
-import javax.servlet.ServletContext;
+public class AppWebApplication extends WebApp {
 
-public class AppWebApplication extends WebApplication {
+    public AppWebApplication() {
+        super();
+        LoggerFactory.setLoggerProvider(SimpleLogger.PROVIDER);
+    }
 
-	public AppWebApplication() {
-		super();
-		LoggerFactory.setLoggerFactory(new SimpleLoggerFactory(Logger.Level.DEBUG));
-	}
-
-	@Override
-	protected void init(MadvocConfig madvocConfig, ServletContext servletContext) {
-		// set the root package to be where the index action is
-		madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
-
-		super.init(madvocConfig, servletContext);
-	}
+    @Override
+    protected void configureMadvoc(MadvocConfig madvocConfig) {
+        // set the root package to be where the index action is
+        madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
+    }
 }
