@@ -18,8 +18,8 @@
     <orderEntry type="library" name="Gradle: javax.websocket:javax.websocket-api:1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-servlet:3.8.5" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-petite:3.8.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodd:jodd-bean:3.8.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet.jsp:jsp-api:2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodd:jodd-bean:3.8.5" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-props:3.8.5" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-upload:3.8.5" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-core:3.8.5" level="project" />
