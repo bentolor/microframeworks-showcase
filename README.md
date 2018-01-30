@@ -107,7 +107,7 @@ Jodd
 =======
 ![Jodd Logo](https://rawgit.com/oblac/jodd/master/src/site/resources/images/jodd.png)
       
-[Jodd](http://jodd.org/) is set of Java micro frameworks, tools and utilities, under 1.5 MB.
+[Jodd](http://jodd.org/) is set of Java micro frameworks, tools and utilities, under 1.7 MB.
 The framework consists of micro components, which can be used more or less independently.
 
                          
