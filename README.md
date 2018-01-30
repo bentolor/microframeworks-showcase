@@ -5,8 +5,7 @@ microframeworks.
  
 It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/),
 [Ninja](http://http://www.ninjaframework.org/), [Ratpack](http://ratpack.io/) and [Jodd](http://jodd.org/)
-is meant as supplement for my article 
-on [heise developer online](http://www.heise.de/developer/).
+is meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all).
 
 ![Grocery list overview](docs/overview.png)
 ![Grocery list edit](docs/edit.png)
