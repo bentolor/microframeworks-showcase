@@ -21,7 +21,7 @@ This repository comes with a pre-bundled [Gradle Wrapper](https://docs.gradle.or
 run. 
 
 *Optional (recommended for development):*
-- [Gradle 2.8+](http://gradle.org/) 
+- [Gradle 4.5+](http://gradle.org/) 
 - [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
 - IntelliJ IDEA (Ultimate Edition) 
 
