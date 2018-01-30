@@ -17,19 +17,21 @@
           <element id="dir-copy" path="$PROJECT_DIR$/jodd/out/production/resources" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-madvoc:3.8.5" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-madvoc:4.1.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.4" />
           <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
-          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.18" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-servlet:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-petite:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-bean:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-props:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-upload:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-core:3.8.5" />
-          <element id="library" level="project" name="Gradle: org.jodd:jodd-log:3.8.5" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.1" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.20" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-servlet:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-petite:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-json:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-bean:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-props:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-upload:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-proxetta:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-core:4.1.1" />
+          <element id="library" level="project" name="Gradle: org.jodd:jodd-log:4.1.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.4" />
         </element>
       </element>
     </root>
