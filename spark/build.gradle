@@ -8,5 +8,6 @@ dependencies {
                    'com.fasterxml.jackson.core:jackson-databind:2.9.4',
                    'org.projectlombok:lombok:1.16.20'
     testCompile    'junit:junit:4.12'
+    runtime        'org.slf4j:slf4j-simple:1.7.25'
 
 }
