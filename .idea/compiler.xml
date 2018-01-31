@@ -17,6 +17,14 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bentolor.microframeworks.jodd.main" target="1.8" />
+      <module name="bentolor.microframeworks.jodd.test" target="1.8" />
+      <module name="bentolor.microframeworks.ninja.main" target="1.8" />
+      <module name="bentolor.microframeworks.ninja.test" target="1.8" />
+      <module name="bentolor.microframeworks.ratpack.main" target="1.8" />
+      <module name="bentolor.microframeworks.ratpack.test" target="1.8" />
+      <module name="bentolor.microframeworks.spark.main" target="1.8" />
+      <module name="bentolor.microframeworks.spark.test" target="1.8" />
       <module name="jodd_main" target="1.8" />
       <module name="jodd_test" target="1.8" />
       <module name="ninja_main" target="1.8" />

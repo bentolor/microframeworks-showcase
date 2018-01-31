@@ -10,10 +10,10 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/jodd/build/libs/exploded/jodd-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="jodd_main/web/Web Gradle : jodd-1.0-SNAPSHOT.war" />
+      <element id="javaee-facet-resources" facet="jodd/web/Web Gradle : jodd-1.0-SNAPSHOT.war" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="jodd_main" />
+          <element id="module-output" name="jodd" />
           <element id="dir-copy" path="$PROJECT_DIR$/jodd/out/production/resources" />
         </element>
         <element id="directory" name="lib">
