@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":pippo" external.linked.project.path="$MODULE_DIR$/../../../pippo" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="bentolor.microframeworks" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../pippo/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../pippo/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../pippo">
+      <sourceFolder url="file://$MODULE_DIR$/../../../pippo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../pippo/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../pippo/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../pippo/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../pippo/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../pippo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../pippo/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: ro.pippo:pippo-undertow:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: ro.pippo:pippo-controller:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: ro.pippo:pippo-gson:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" name="Gradle: ro.pippo:pippo-core:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.undertow:undertow-servlet:1.4.12.Final" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.3.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="library" name="Gradle: io.undertow:undertow-core:1.4.12.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.servlet:jboss-servlet-api_3.1_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging:3.2.1.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.xnio:xnio-nio:3.3.6.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.jboss.xnio:xnio-api:3.3.6.Final" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-simple:1.7.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-simple:1.7.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+  </component>
+</module>

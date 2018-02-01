@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jodd/jodd.iml" filepath="$PROJECT_DIR$/.idea/modules/jodd/jodd.iml" />
       <module fileurl="file://$PROJECT_DIR$/microframeworks.iml" filepath="$PROJECT_DIR$/microframeworks.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ninja/ninja.iml" filepath="$PROJECT_DIR$/.idea/modules/ninja/ninja.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pippo/pippo.iml" filepath="$PROJECT_DIR$/.idea/modules/pippo/pippo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratpack/ratpack.iml" filepath="$PROJECT_DIR$/.idea/modules/ratpack/ratpack.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark/spark.iml" filepath="$PROJECT_DIR$/.idea/modules/spark/spark.iml" />
     </modules>

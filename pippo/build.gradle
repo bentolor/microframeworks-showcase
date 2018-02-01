@@ -1,0 +1,14 @@
+dependencies {
+
+    apply plugin: 'application'
+    mainClassName = "bentolor.grocerylist.GroceryListResource"
+
+
+    compile 'ro.pippo:pippo-undertow:1.7.0',
+            'ro.pippo:pippo-controller:1.7.0',
+            'ro.pippo:pippo-gson:1.7.0',
+            //'com.fasterxml.jackson.core:jackson-databind:2.9.4',
+            'org.projectlombok:lombok:1.16.20'
+
+    runtime        'org.slf4j:slf4j-simple:1.7.25'
+}
