@@ -16,6 +16,7 @@
 package bentolor.grocerylist;
 
 import bentolor.grocerylist.controller.GroceryListController;
+import bentolor.grocerylist.persistence.Repository;
 import ro.pippo.controller.ControllerApplication;
 import ro.pippo.gson.GsonEngine;
 
@@ -24,9 +25,12 @@ import ro.pippo.gson.GsonEngine;
  */
 public class GroceryListApp extends ControllerApplication {
 
+    private final Repository repository = new Repository();
+
     @Override
     protected void onInit() {
-        addControllers(new GroceryListController());
+        super.onInit();
+        addControllers(new GroceryListController(repository));
         registerContentTypeEngine(GsonEngine.class);
     }
 }

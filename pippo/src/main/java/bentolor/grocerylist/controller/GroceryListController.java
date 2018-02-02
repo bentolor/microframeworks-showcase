@@ -16,22 +16,63 @@
 package bentolor.grocerylist.controller;
 
 import bentolor.grocerylist.model.GroceryList;
-import ro.pippo.controller.Controller;
-import ro.pippo.controller.GET;
-import ro.pippo.controller.Path;
+import bentolor.grocerylist.persistence.Repository;
+import ro.pippo.controller.*;
+import ro.pippo.controller.extractor.Body;
+import ro.pippo.controller.extractor.Param;
 
-import java.util.Date;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
  * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
  */
 @Path("/list")
+@Produces(Produces.JSON)
 public class GroceryListController extends Controller {
 
+    private final Repository repository;
+
+    public GroceryListController(Repository repository) {
+        this.repository = repository;
+    }
+
     @GET
-    public void index() {
-        getResponse().json(new GroceryList(UUID.randomUUID(), new Date(), "Foo", false));
+    public void lists() {
+        getResponse().json(repository.getLists());
+    }
+
+    @POST
+    public void createList(@Body GroceryList newGroceryList) {
+        getResponse().json(repository.createList(newGroceryList));
+    }
+
+    @PUT("/{id: [\\w-]+}")
+    public void updateList(@Param("id") UUID id, @Body GroceryList updatedList) {
+        if (repository.updateList(id, updatedList)) {
+            getResponse().ok();
+        } else {
+            getResponse().notFound();
+        }
+    }
+
+    @GET("/{id: [\\w-]+}")
+    public void getList(@Param("id") UUID id) {
+        Optional<GroceryList> list = repository.getList(id);
+        if (list.isPresent()) {
+            getResponse().json(list.get());
+        } else {
+            getResponse().notFound();
+        }
+    }
+
+    @DELETE("/{id: [\\w-]+}")
+    public void deleteList(@Param("id") UUID id) {
+        if (repository.deleteList(id)) {
+            getResponse().ok();
+        } else {
+            getResponse().notFound();
+        }
     }
 
 }
