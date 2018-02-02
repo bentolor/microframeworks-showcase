@@ -82,12 +82,25 @@ class RepositoryTest {
         emptyRepository.createList(groceryList);
         groceryList.setSettled(true);
         groceryList.setShoppingItems(Arrays.asList(ITEM_SOY_MILK));
-        emptyRepository.updateList(groceryList.getId(), groceryList);
+        assertTrue(emptyRepository.updateList(groceryList.getId(), groceryList));
 
         Optional<GroceryList> updatedList = emptyRepository.getList(groceryList.getId());
         assertTrue(updatedList.isPresent());
         assertEquals(1, updatedList.get().getShoppingItems().size());
         assertEquals("soy milk", updatedList.get().getShoppingItems().get(0).getName());
+    }
+
+    @Test
+    void updateListWithMissingUUID() {
+        emptyRepository.createList(groceryList);
+        UUID uuid = groceryList.getId();
+        groceryList.setSettled(true);
+        groceryList.setId(null);
+        assertTrue(emptyRepository.updateList(uuid, groceryList));
+
+        Optional<GroceryList> updatedList = emptyRepository.getList(uuid);
+        assertTrue(updatedList.isPresent());
+        assertTrue(updatedList.get().isSettled());
     }
 
     @Test

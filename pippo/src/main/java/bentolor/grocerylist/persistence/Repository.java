@@ -64,6 +64,7 @@ public class Repository {
     }
 
     public synchronized boolean updateList(UUID uuid, GroceryList updatedList) {
+        updatedList.setId(uuid);
         groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
         save();
         return groceryLists.contains(updatedList);
