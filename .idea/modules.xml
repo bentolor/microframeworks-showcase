@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javalite/javalite.iml" filepath="$PROJECT_DIR$/.idea/modules/javalite/javalite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jodd/jodd.iml" filepath="$PROJECT_DIR$/.idea/modules/jodd/jodd.iml" />
       <module fileurl="file://$PROJECT_DIR$/microframeworks.iml" filepath="$PROJECT_DIR$/microframeworks.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ninja/ninja.iml" filepath="$PROJECT_DIR$/.idea/modules/ninja/ninja.iml" />

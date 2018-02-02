@@ -1,0 +1,14 @@
+dependencies {
+
+    apply plugin: 'application'
+    mainClassName = "bentolor.grocerylist.GroceryListResource"
+
+
+    compile         'org.javalite:activeweb:1.15',
+                    'org.projectlombok:lombok:1.16.20',
+                    'com.google.code.gson:gson:2.8.2'
+
+    // runtime         'org.slf4j:slf4j-simple:1.7.25'
+
+    testCompile     'org.junit.jupiter:junit-jupiter-api:5.0.3'
+}
