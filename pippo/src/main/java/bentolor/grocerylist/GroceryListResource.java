@@ -16,15 +16,18 @@
 package bentolor.grocerylist;
 
 import ro.pippo.core.Pippo;
+import ro.pippo.core.route.ClasspathResourceHandler;
 
 /**
  * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
  */
-public class GroceryListResource {
+public final class GroceryListResource {
 
     public static void main(String[] args) {
         Pippo pippo = new Pippo(new GroceryListApp());
         pippo.getServer().getSettings().port(8080);
+        pippo.addResourceRoute(new ClasspathResourceHandler("/", "gui"));
+        pippo.GET("/", routeContext -> routeContext.redirect("/index.html"));
         pippo.start();
     }
 }
