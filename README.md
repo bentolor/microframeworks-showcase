@@ -131,3 +131,27 @@ Follow these steps to build a WAR file:
 
 ### Option #4: Using a Jetty ctonainer
 Run the demo with `gradle :jodd:jettyRun` and access [http://localhost:8080/jodd/](http://localhost:8080/jodd/).
+
+
+Pippo
+=====
+````
+ ____  ____  ____  ____  _____
+(  _ \(_  _)(  _ \(  _ \(  _  )
+ ) __/ _)(_  ) __/ ) __/ )(_)( 
+(__)  (____)(__)  (__)  (_____)
+
+````
+      
+[Pippo](http://www.pippo.ro/) is set of Java micro framework in the spirit of Sinatra but also
+offers a Controller-based approach. The core is small (around 140 KB) and can be extended with
+various modules for template engine or embedded web servers. 
+                      
+Starting the demo application
+-----------------------------
+
+### Option #1: Using Gradle
+Run the demo with `gradle :pippo:run` and access [http://localhost:8080/](http://localhost:8080/).
+
+### Option #2: Using IntelliJ IDEA
+Open the project using IntelliJ IDEA and execute the _Pippo: Run Example_ run configuration.
