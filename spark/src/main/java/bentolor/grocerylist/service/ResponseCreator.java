@@ -22,7 +22,8 @@ import spark.Route;
  */
 final class ResponseCreator {
 
-    private ResponseCreator() {}
+    private ResponseCreator() {
+    }
 
     static Route ok(String body) {
         return (req, res) -> {

@@ -21,6 +21,7 @@ import jodd.madvoc.result.Redirect;
 
 /**
  * Madvoc Action to serve the index.html file.
+ *
  * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
  */
 @MadvocAction("/")

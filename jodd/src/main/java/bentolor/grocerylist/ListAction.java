@@ -33,29 +33,29 @@ public class ListAction {
     }
 
     @Action("/list") @GET
-	public JsonResult listAllLists() {
+    public JsonResult listAllLists() {
         return GroceryService.get().getAllGroceryLists();
-	}
+    }
 
     @Action("/list/{id}") @GET
-	public JsonResult getList(@In("id") String id) {
+    public JsonResult getList(@In("id") String id) {
         return GroceryService.get().getGroceryList(id);
-	}
+    }
 
     @Action("/list/{id}") @DELETE
-	public JsonResult deleteList(@In("id") String id) {
+    public JsonResult deleteList(@In("id") String id) {
         return GroceryService.get().deleteGroceryList(id);
-	}
+    }
 
     @Action("/list/{id}") @PUT
-	public JsonResult updateList(@In("id") String id) throws IOException {
+    public JsonResult updateList(@In("id") String id) throws IOException {
         return GroceryService.get().updateGroceryList(id, request.getReader());
-	}
+    }
 
-	@Action("/list") @POST
-	public JsonResult createList() throws IOException {
+    @Action("/list") @POST
+    public JsonResult createList() throws IOException {
         BufferedReader reader = request.getReader();
         return GroceryService.get().createGroceryList(reader);
-	}
+    }
 
 }

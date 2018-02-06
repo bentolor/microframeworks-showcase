@@ -75,7 +75,7 @@ public class ModelSerializerTest {
 
     @Test
     public void testFileReadWriteCycle() throws Exception {
-        File tmpFile = File.createTempFile("ModelSerializerTest",".json");
+        File tmpFile = File.createTempFile("ModelSerializerTest", ".json");
         serializer.serialize(tmpFile, groceryLists);
         GroceryLists deserialized = serializer.deserialize(tmpFile);
         assertEquals(groceryLists, deserialized);

@@ -51,7 +51,7 @@ class ModelSerializer {
     }
 
     GroceryLists deserialize(File sourceFile) {
-        try(Reader fr = new FileReader(sourceFile)) {
+        try (Reader fr = new FileReader(sourceFile)) {
             GroceryLists groceryLists = null;
             if (sourceFile.canRead()) {
                 groceryLists = gson.fromJson(fr, GroceryLists.class);
@@ -63,7 +63,7 @@ class ModelSerializer {
     }
 
     void serialize(File targetFile, GroceryLists groceryLists) {
-        try(Writer fw = new FileWriter(targetFile)) {
+        try (Writer fw = new FileWriter(targetFile)) {
             gson.toJson(groceryLists, fw);
         } catch (IOException e) {
             throw new IllegalArgumentException("Invalid JSON", e);

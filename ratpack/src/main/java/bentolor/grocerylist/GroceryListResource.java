@@ -21,27 +21,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
 
-public class GroceryListResource {
+public final class GroceryListResource {
     public static void main(String... args) throws Exception {
         ObjectMapper objectMapper = ModelSerializer.buildConfiguredObjectMapper();
         GroceryService service = new GroceryService();
         RatpackServer.start(server -> server
-                        .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true))
-                        .registryOf(r -> r.add(objectMapper))
-                        .handlers(chain -> chain
-                                        .prefix("list", nested -> {
-                                            nested.path(ctx -> ctx.byMethod(method -> {
-                                                method.post(() -> service.createGroceryList(ctx));
-                                                method.get(() -> service.getAllGroceryLists(ctx));
-                                            }));
-                                            nested.path(":id", ctx -> ctx.byMethod(method -> {
-                                                method.put(() -> service.createGroceryList(ctx));
-                                                method.get(() -> service.getGroceryList(ctx));
-                                                method.delete(() -> service.deleteGroceryList(ctx));
-                                            }));
-                                        })
-                                        .files(f -> f.indexFiles("index.html"))
-                        )
+                .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true))
+                .registryOf(r -> r.add(objectMapper))
+                .handlers(chain -> chain
+                        .prefix("list", nested -> {
+                            nested.path(ctx -> ctx.byMethod(method -> {
+                                method.post(() -> service.createGroceryList(ctx));
+                                method.get(() -> service.getAllGroceryLists(ctx));
+                            }));
+                            nested.path(":id", ctx -> ctx.byMethod(method -> {
+                                method.put(() -> service.createGroceryList(ctx));
+                                method.get(() -> service.getGroceryList(ctx));
+                                method.delete(() -> service.deleteGroceryList(ctx));
+                            }));
+                        })
+                        .files(f -> f.indexFiles("index.html"))
+                )
         );
     }
 

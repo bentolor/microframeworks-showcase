@@ -54,7 +54,7 @@ public class Repository {
     }
 
     public Optional<GroceryList> getList(UUID id) {
-         return groceryLists.stream()
+        return groceryLists.stream()
                 .filter(entry -> entry != null && id.equals(entry.getId()))
                 .findFirst();
     }
