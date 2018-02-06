@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <title>My Grocery Lists</title>
-    <link rel="stylesheet" href="https://rawgit.com/marmelab/ng-admin/v0.9.1/build/ng-admin.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ng-admin@1.0.12/build/ng-admin.min.css">
 </head>
 <body ng-app="myApp">
-<div ui-view></div>
-<script src="https://rawgit.com/marmelab/ng-admin/v0.9.1/build/ng-admin.min.js"></script>
+<div ui-view="ng-admin"></div>
+<script src="https://cdn.jsdelivr.net/npm/ng-admin@1.0.12/build/ng-admin.min.js"></script>
 <script type="text/javascript">
     var myApp = angular.module('myApp', ['ng-admin']);
     myApp.config(['NgAdminConfigurationProvider', function (NgAdminConfigurationProvider) {

@@ -7,8 +7,8 @@ dependencies {
     apply plugin: 'application'
     mainClassName = 'ninja.standalone.NinjaJetty'
 
-    compile 'org.ninjaframework:ninja-standalone:6.0.0',
-            'org.projectlombok:lombok:1.16.18'
+    compile 'org.ninjaframework:ninja-standalone:6.2.2',
+            'org.projectlombok:lombok:1.16.20'
 
-    testCompile 'org.ninjaframework:ninja-test-utilities:6.0.0'
+    testCompile 'org.ninjaframework:ninja-test-utilities:6.2.2'
 }

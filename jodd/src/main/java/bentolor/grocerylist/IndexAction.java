@@ -15,21 +15,20 @@
  */
 package bentolor.grocerylist;
 
-import jodd.log.LoggerFactory;
-import jodd.log.impl.SimpleLogger;
-import jodd.madvoc.MadvocConfig;
-import jodd.madvoc.WebApp;
+import jodd.madvoc.meta.Action;
+import jodd.madvoc.meta.MadvocAction;
+import jodd.madvoc.result.Redirect;
 
-public class AppWebApplication extends WebApp {
+/**
+ * Madvoc Action to serve the index.html file.
+ * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
+ */
+@MadvocAction("/")
+public class IndexAction {
 
-    public AppWebApplication() {
-        super();
-        LoggerFactory.setLoggerProvider(SimpleLogger.PROVIDER);
+    @Action("/")
+    public Redirect index() {
+        return Redirect.to("/index.html");
     }
 
-    @Override
-    protected void configureMadvoc(MadvocConfig madvocConfig) {
-        // set the root package to be where the index action is
-        madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
-    }
 }

@@ -31,6 +31,9 @@
 # Maven style output path
 target/
 
+# IDEA/Gradle output path
+out/
+
 ### Java template
 *.class
 

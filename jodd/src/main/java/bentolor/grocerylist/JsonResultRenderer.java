@@ -20,13 +20,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jodd.io.StreamUtil;
 import jodd.madvoc.ActionRequest;
-import jodd.madvoc.result.BaseActionResult;
-import jodd.util.MimeTypes;
+import jodd.madvoc.result.ActionResult;
+import jodd.util.net.MimeTypes;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
-public class JsonResultRenderer extends BaseActionResult<JsonResult> {
+public class JsonResultRenderer implements ActionResult<JsonResult> {
         private final ObjectMapper objectMapper
                 = ModelSerializer.buildConfiguredObjectMapper();
 
