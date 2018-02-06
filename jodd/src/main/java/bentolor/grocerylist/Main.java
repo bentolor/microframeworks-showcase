@@ -21,6 +21,9 @@ import io.undertow.server.handlers.resource.ClassPathResourceManager;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
+import jodd.madvoc.MadvocContextListener;
+import jodd.madvoc.MadvocServletFilter;
+import jodd.servlet.RequestContextListener;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.ServletException;
@@ -30,7 +33,7 @@ import javax.servlet.ServletException;
  *
  * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
  */
-public class Main {
+public final class Main {
 
     public static void main(final String[] args) throws ServletException {
         ClassLoader classLoader = AppWebApplication.class.getClassLoader();
@@ -39,11 +42,11 @@ public class Main {
                 .setContextPath("/")
                 .setResourceManager(new ClassPathResourceManager(classLoader, "webapp"))
                 .setDeploymentName("grocerylists-jodd.war")
-                .addListener(Servlets.listener(jodd.madvoc.MadvocContextListener.class))
+                .addListener(Servlets.listener(MadvocContextListener.class))
                 .addServletContextAttribute("madvoc.webapp", "bentolor.grocerylist.AppWebApplication")
                 .addServletContextAttribute("madvoc.params", "/madvoc.properties")
-                .addListener(Servlets.listener(jodd.servlet.RequestContextListener.class))
-                .addFilter(Servlets.filter("madvoc", jodd.madvoc.MadvocServletFilter.class))
+                .addListener(Servlets.listener(RequestContextListener.class))
+                .addFilter(Servlets.filter("madvoc", MadvocServletFilter.class))
                 .addFilterUrlMapping("madvoc", "/*", DispatcherType.REQUEST);
 
         DeploymentManager manager = Servlets.defaultContainer().addDeployment(servletBuilder);

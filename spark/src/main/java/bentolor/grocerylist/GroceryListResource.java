@@ -23,7 +23,7 @@ import spark.Route;
 
 import static spark.Spark.*;
 
-public class GroceryListResource {
+public final class GroceryListResource {
 
     public static void main(String[] args) {
         port(8080);
@@ -48,7 +48,7 @@ public class GroceryListResource {
     }
 
     private interface Processor {
-        public Route process(Request req, Response res);
+        Route process(Request req, Response res);
     }
 
     /** Configure support for Cross-origin Ajax requests in Spark. */

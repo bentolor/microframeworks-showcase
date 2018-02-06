@@ -13,9 +13,8 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package bentolor.grocerylist.service;
+package bentolor.grocerylist;
 
-import bentolor.grocerylist.JsonResult;
 import bentolor.grocerylist.model.GroceryList;
 import bentolor.grocerylist.persistence.ModelSerializer;
 import bentolor.grocerylist.persistence.Repository;

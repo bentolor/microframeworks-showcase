@@ -23,7 +23,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * A minimalistic, file-based persistence repository for {@link bentolor.grocerylist.model.GroceryLists}.
+ * A minimalistic, file-based persistence repository for {@link GroceryLists}.
  */
 public class Repository {
 

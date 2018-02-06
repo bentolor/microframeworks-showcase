@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="showcase-sources" pattern="file:*/&amp;&amp;!file[microframeworks]:docs//*&amp;&amp;!file[microframeworks]:gradle//*&amp;&amp;!file[microframeworks]:.idea//*&amp;&amp;!file:gradlew&amp;&amp;!file:gradlew.bat&amp;&amp;!file:microframeworks.iml" />
+</component>

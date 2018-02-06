@@ -15,7 +15,6 @@
  */
 package bentolor.grocerylist;
 
-import bentolor.grocerylist.service.GroceryService;
 import jodd.madvoc.ScopeType;
 import jodd.madvoc.meta.*;
 

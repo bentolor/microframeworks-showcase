@@ -379,13 +379,6 @@
       <scope name="Tests" level="INFO" enabled="false" />
     </inspection_tool>
     <inspection_tool class="FieldMayBeStatic" enabled="true" level="INFO" enabled_by_default="true" />
-    <inspection_tool class="FieldNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
-      <extension name="ConstantNamingConvention" enabled="true">
-        <option name="m_regex" value="[A-Z][A-Z_\d]*" />
-        <option name="m_minLength" value="4" />
-        <option name="m_maxLength" value="32" />
-      </extension>
-    </inspection_tool>
     <inspection_tool class="File Name" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="FileEqualsUsage" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="FinalMethodInFinalClass" enabled="true" level="INFO" enabled_by_default="true" />
@@ -1133,6 +1126,7 @@
     <inspection_tool class="OctalLiteral" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="OldIssuesGlobalInspectionTool" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="OneButtonGroup" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="OptionalIsPresent" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="OrredNotEqualExpression" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="OverlyComplexArithmeticExpression" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="m_limit" value="6" />

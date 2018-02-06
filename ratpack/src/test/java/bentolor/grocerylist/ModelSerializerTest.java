@@ -37,15 +37,13 @@ public class ModelSerializerTest {
     private GroceryList decemberList;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         Item apples = new Item(3, pcs, "Red apples");
         Item flour = new Item(2, kg, "Flour");
         Item soyMilk = new Item(1, l, "Soy milk");
 
-        soyMilk.getName();
-
-        Date date1 = new Date(1450652400000l);
-        Date date2 = new Date(1513724400000l);
+        Date date1 = new Date(1450652400000L);
+        Date date2 = new Date(1513724400000L);
         UUID uuid1 = UUID.randomUUID();
         UUID uuid2 = UUID.randomUUID();
 
@@ -57,7 +55,7 @@ public class ModelSerializerTest {
     }
 
     @Test
-    public void testReadWriteCycle() throws Exception {
+    public void testReadWriteCycle() {
         String jsonText = serializer.serialize(groceryLists);
         assertNotNull(jsonText);
         GroceryLists deserialized = serializer.deserialize(jsonText, GroceryLists.class);
@@ -66,7 +64,7 @@ public class ModelSerializerTest {
     }
 
     @Test
-    public void testDateReadWrite() throws Exception {
+    public void testDateReadWrite() {
         String jsonText = serializer.serialize(novemberList);
         assertTrue(jsonText.contains("2015-12-21"));
         GroceryList deserialized = serializer.deserialize(jsonText, GroceryList.class);

@@ -51,7 +51,7 @@ public final class HelloWorldService {
         get("/protected", HelloWorldService::unauthorized);
     }
 
-    public static Object unauthorized(Request request, Response response) throws Exception {
+    public static Object unauthorized(Request request, Response response) {
         halt(200, "Go away!");
         return null;
     }
