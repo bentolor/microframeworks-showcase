@@ -117,16 +117,19 @@ Starting the demo application
 -----------------------------
 
 ### Option #1: Using Gradle
-Run the demo with `cd jodd` and `gradle jettyRun` and access [http://http://localhost:8080/jodd/](http://http://localhost:8080/jodd/).
+Run the demo with `gradle :jodd:run` and access [http://localhost:8080/](http://localhost:8080/).
 
 ### Option #2: Using IntelliJ IDEA
-This example has no embedded servlet container bundled. To run you need to download a Jetty 8 container
-and use the commericial IntelliJ IDEA Ultimate edition.
-Open the project and configure the _jodd: Run in Jetty_ run configuration. Check for a proper reference to
-a valid Jetty 8 installation under _Application Server_, then run the configuration.
+Open the project using IntelliJ IDEA and execute the _Jodd: Run Example_ run configuration.
+Jodd by default has no embedded servlet container bundled. The example includes and configures
+a Undertow server as embedded server.
 
 ### Option #3: As deployable WAR
-This module does not provide a all-in-one UberJAR. Following how to build a WAR file:
+This module originally did not provide an all-in-one UberJAR. 
+Follow these steps to build a WAR file:
 
      gradlew :jodd:war
      cp jodd/build/libs/jodd-1.0-SNAPSHOT.war [tomcat]/webapps
+
+### Option #4: Using a Jetty ctonainer
+Run the demo with `gradle :jodd:jettyRun` and access [http://localhost:8080/jodd/](http://localhost:8080/jodd/).

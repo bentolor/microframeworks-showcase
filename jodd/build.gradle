@@ -3,10 +3,11 @@ apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty-2
 
 dependencies {
 
-    compile 'org.jodd:jodd-madvoc:4.1.1',
-            'com.fasterxml.jackson.core:jackson-databind:2.9.4',
-            'javax.servlet:servlet-api:2.5',
-            'org.projectlombok:lombok:1.16.20'
+    apply plugin: 'application'
+    mainClassName = "bentolor.grocerylist.Main"
 
-    providedRuntime 'javax.servlet.jsp:jsp-api:2.0'
+    compile 'org.jodd:jodd-madvoc:4.1.4',
+            'com.fasterxml.jackson.core:jackson-databind:2.9.4',
+            'org.projectlombok:lombok:1.16.20',
+            'io.undertow:undertow-servlet:1.4.22.Final'
 }
