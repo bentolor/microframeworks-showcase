@@ -15,22 +15,31 @@
  */
 package bentolor.grocerylist;
 
-import bentolor.grocerylist.controller.GroceryListController;
-import bentolor.grocerylist.persistence.Repository;
-import ro.pippo.controller.ControllerApplication;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import ro.pippo.gson.GsonEngine;
+
+import java.util.Date;
 
 /**
- * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
+ * Dirty hack to adjust Pippos default configuration for Gson.
+ * UX BROKEN DUE TO https://github.com/decebals/pippo/issues/414
  */
-public class GroceryListApp extends ControllerApplication {
+public class IsoDateGsonEngine extends GsonEngine {
 
-    private final Repository repository = new Repository();
+    private final Gson gson;
+
+    public IsoDateGsonEngine() {
+        gson = new GsonBuilder().registerTypeAdapter(Date.class, new ISO8601DateTypeAdapter()).create();
+    }
 
     @Override
-    protected void onInit() {
-        super.onInit();
-        addControllers(new GroceryListController(repository));
-        // Nasty workaround – see also https://github.com/decebals/pippo/issues/274
-        getContentTypeEngines().setContentTypeEngine(new IsoDateGsonEngine());
+    public String toString(Object object) {
+        return gson.toJson(object);
+    }
+
+    @Override
+    public <T> T fromString(String content, Class<T> classOfT) {
+        return gson.fromJson(content, classOfT);
     }
 }
