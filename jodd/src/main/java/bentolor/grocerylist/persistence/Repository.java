@@ -32,7 +32,11 @@ public class Repository {
     private final ModelSerializer serializer;
 
     public Repository() {
-        this.dataFile = new File("grocerylists.json");
+        this("grocerylists.json");
+    }
+
+    public Repository(String repoFilePath) {
+        this.dataFile = new File(repoFilePath);
         this.serializer = new ModelSerializer();
         this.groceryLists = serializer.deserialize(dataFile);
     }
@@ -41,7 +45,7 @@ public class Repository {
         serializer.serialize(dataFile, groceryLists);
     }
 
-    public GroceryList createList(GroceryList groceryList) {
+    public synchronized GroceryList createList(GroceryList groceryList) {
         UUID newId = UUID.randomUUID();
         groceryList.setId(newId);
         groceryLists.add(groceryList);
@@ -59,13 +63,14 @@ public class Repository {
         return groceryLists;
     }
 
-    public boolean updateList(UUID uuid, GroceryList updatedList) {
+    public synchronized boolean updateList(UUID uuid, GroceryList updatedList) {
+        updatedList.setId(uuid);
         groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
         save();
         return groceryLists.contains(updatedList);
     }
 
-    public boolean deleteList(UUID uuid) {
+    public synchronized boolean deleteList(UUID uuid) {
         boolean success = groceryLists.removeIf(list -> uuid.equals(list.getId()));
         save();
         return success;

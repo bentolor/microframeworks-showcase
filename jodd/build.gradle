@@ -7,7 +7,9 @@ dependencies {
     mainClassName = "bentolor.grocerylist.Main"
 
     compile 'org.jodd:jodd-madvoc:4.1.4',
-            'com.fasterxml.jackson.core:jackson-databind:2.9.4',
+            'com.google.code.gson:gson:2.8.2',
             'org.projectlombok:lombok:1.16.20',
             'io.undertow:undertow-servlet:1.4.22.Final'
+
+    testCompile     'org.junit.jupiter:junit-jupiter-api:5.0.3'
 }

@@ -15,10 +15,8 @@
  */
 package bentolor.grocerylist;
 
-import bentolor.grocerylist.persistence.ModelSerializer;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jodd.io.StreamUtil;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import jodd.madvoc.ActionRequest;
 import jodd.madvoc.result.ActionResult;
 import jodd.util.net.MimeTypes;
@@ -27,31 +25,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
 public class JsonResultRenderer implements ActionResult<JsonResult> {
-        private final ObjectMapper objectMapper
-                = ModelSerializer.buildConfiguredObjectMapper();
 
-        @Override
-        public void render(ActionRequest request, JsonResult jsonResult) throws Exception {
-            HttpServletResponse response = request.getHttpServletResponse();
-            response.setContentType(MimeTypes.MIME_APPLICATION_JSON);
+    private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 
-            if (jsonResult.getStatus() > 0) {
-                response.setStatus(jsonResult.getStatus());
-            }
+    @Override
+    public void render(ActionRequest request, JsonResult jsonResult) throws Exception {
+        HttpServletResponse response = request.getHttpServletResponse();
+        response.setContentType(MimeTypes.MIME_APPLICATION_JSON);
 
-            PrintWriter writer = null;
-            try {
-                writer = response.getWriter();
-                String result;
-                try {
-                    result = objectMapper.writeValueAsString(jsonResult.getModel());
-                } catch (JsonProcessingException e) {
-                    throw new IllegalArgumentException("Invalid JSON to render");
-                }
-                writer.println(result);
-            } finally {
-                StreamUtil.close(writer);
-            }
+        if (jsonResult.getStatus() > 0) {
+            response.setStatus(jsonResult.getStatus());
         }
+
+        try (PrintWriter writer = response.getWriter()) {
+            String result = gson.toJson(jsonResult.getModel());
+            writer.println(result);
+        }
+    }
 
 }

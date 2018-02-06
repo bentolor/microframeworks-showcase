@@ -44,7 +44,7 @@ public class GroceryService {
     }
 
     public JsonResult createGroceryList(Reader listJson) {
-        GroceryList newList = ModelSerializer.get().deserialize(listJson, GroceryList.class);
+        GroceryList newList = serializer.deserialize(listJson, GroceryList.class);
         return new JsonResult(repository.createList(newList));
     }
 
