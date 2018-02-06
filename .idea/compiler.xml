@@ -29,6 +29,8 @@
       <module name="jodd_test" target="1.8" />
       <module name="ninja_main" target="1.8" />
       <module name="ninja_test" target="1.8" />
+      <module name="pippo_main" target="1.8" />
+      <module name="pippo_test" target="1.8" />
       <module name="ratpack_main" target="1.8" />
       <module name="ratpack_test" target="1.8" />
       <module name="spark_main" target="1.8" />
