@@ -11,7 +11,7 @@ is meant as supplement for my [article on heise developer online (german)](https
 ![Grocery list edit](docs/edit.png)
 
 
-Prerequisites
+Prerequisites [![Build Status](https://www.travis-ci.org/bentolor/microframeworks-showcase.svg?branch=master)](https://www.travis-ci.org/bentolor/microframeworks-showcase)
 ==============
 - Installed JDK 8+ with proper set `JAVA_HOME` environment variable
 
@@ -23,7 +23,6 @@ run.
 - [Gradle 2.8+](http://gradle.org/) 
 - [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
 - IntelliJ IDEA (Ultimate Edition) 
-
 
 Spark Java
 ==========
