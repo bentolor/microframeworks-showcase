@@ -1,5 +1,11 @@
 configurations.all {
     it.exclude group: 'commons-logging'
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group.startsWith('org.eclipse.jetty') && details.requested.version == '9.4.3.v20170317') {
+            // Cruel gradle hack to avoid, that Gradle prefers a newer, byte-incompatible version for Jetty
+            details.useVersion '9.3.15.v20161220'
+        }
+    }
 }
 
 dependencies {
