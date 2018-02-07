@@ -19,8 +19,10 @@ import jodd.madvoc.ScopeType;
 import jodd.madvoc.meta.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.StringReader;
+
+import static jodd.madvoc.ScopeType.SERVLET;
 
 @MadvocAction
 public class ListAction {
@@ -47,14 +49,13 @@ public class ListAction {
     }
 
     @Action("/list/{id}") @PUT
-    public JsonResult updateList(@In("id") String id) throws IOException {
-        return GroceryService.get().updateGroceryList(id, request.getReader());
+    public JsonResult updateList(@In("id") String id, @In @Scope(SERVLET) String requestBody) {
+        return GroceryService.get().updateGroceryList(id, new StringReader(requestBody));
     }
 
     @Action("/list") @POST
-    public JsonResult createList() throws IOException {
-        BufferedReader reader = request.getReader();
-        return GroceryService.get().createGroceryList(reader);
+    public JsonResult createList(@In @Scope(SERVLET) String requestBody) throws IOException {
+        return GroceryService.get().createGroceryList(new StringReader(requestBody));
     }
 
 }
