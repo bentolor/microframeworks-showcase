@@ -1,8 +1,23 @@
 language: java
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
+before_install:
+  - sudo add-apt-repository ppa:mmk2410/intellij-idea -y
+  - sudo apt-get update -q
+  - sudo apt-get install intellij-idea-community -y
+  - sudo apt-get install groovy -y
+
+install:
+  - wget https://github.com/bentolor/idea-cli-inspector/archive/master.zip
+  - unzip master.zip
+
+script:
+  - ./idea-cli-inspector-master/ideainspect.groovy -i  /opt/intellij-idea-community
