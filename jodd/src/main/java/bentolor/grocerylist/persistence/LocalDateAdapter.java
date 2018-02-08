@@ -13,34 +13,24 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package model;
+package bentolor.grocerylist.persistence;
 
-import lombok.Data;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 
+import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.time.format.DateTimeFormatter;
 
-/** A shopping list for groceries. */
-@Data
-public class GroceryList implements ModelElement {
+/** Gson Adapter to support {@link LocalDate} objects. */
+class LocalDateAdapter extends TypeAdapter<LocalDate> {
 
-    private UUID id;
-    private List<Item> shoppingItems;
-    private String comment;
-    private LocalDate date;
-    private boolean settled;
-
-    public GroceryList() {
+    @Override public void write(JsonWriter out, LocalDate date) throws IOException {
+        out.value(date.format(DateTimeFormatter.ISO_LOCAL_DATE));
     }
 
-    public GroceryList(UUID id, LocalDate date, String comment, boolean settled, Item... shoppingItems) {
-        this.id = id;
-        this.shoppingItems = Arrays.asList(shoppingItems);
-        this.comment = comment;
-        this.date = date;
-        this.settled = settled;
+    @Override public LocalDate read(JsonReader in) throws IOException {
+        return LocalDate.parse(in.nextString(), DateTimeFormatter.ISO_LOCAL_DATE);
     }
-
 }

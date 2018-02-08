@@ -48,7 +48,7 @@ class RepositoryTest {
         defaultRepository = new Repository();
         emptyRepository = new Repository(File.createTempFile(this.getClass().getName(), "json").getPath());
         Item[] items = {ITEM_APPLES, ITEM_SOY_MILK};
-        groceryList = new GroceryList(null, LocalDate.of(2018, 1, 1), "Shopping spree", false, items);
+        groceryList = new GroceryList(null, LocalDate.of(2018,2,1), "Shopping spree", false, items);
     }
 
     @Test

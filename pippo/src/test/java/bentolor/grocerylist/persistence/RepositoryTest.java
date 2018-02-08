@@ -24,6 +24,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,7 +48,7 @@ class RepositoryTest {
         defaultRepository = new Repository();
         emptyRepository = new Repository(File.createTempFile(this.getClass().getName(), "json").getPath());
         Item[] items = {ITEM_APPLES, ITEM_SOY_MILK};
-        groceryList = new GroceryList(null, new Date(1517575956873L), "Shopping spree", false, items);
+        groceryList = new GroceryList(null, LocalDate.of(2018, 2, 1), "Shopping spree", false, items);
     }
 
     @Test

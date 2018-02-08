@@ -15,11 +15,12 @@
  */
 package bentolor.grocerylist;
 
+import bentolor.grocerylist.persistence.LocalDateAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import ro.pippo.gson.GsonEngine;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Dirty hack to adjust Pippos default configuration for Gson.
@@ -30,7 +31,7 @@ public class IsoDateGsonEngine extends GsonEngine {
     private final Gson gson;
 
     public IsoDateGsonEngine() {
-        gson = new GsonBuilder().registerTypeAdapter(Date.class, new ISO8601DateTypeAdapter()).create();
+        gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
     }
 
     @Override

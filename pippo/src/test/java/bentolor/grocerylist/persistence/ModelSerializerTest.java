@@ -13,21 +13,22 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package bentolor.grocerylist;
+package bentolor.grocerylist.persistence;
 
 import bentolor.grocerylist.model.GroceryList;
 import bentolor.grocerylist.model.GroceryLists;
 import bentolor.grocerylist.model.Item;
-import bentolor.grocerylist.persistence.ModelSerializer;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 import static bentolor.grocerylist.model.Unit.*;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ModelSerializerTest {
 
@@ -36,14 +37,14 @@ public class ModelSerializerTest {
     private GroceryList novemberList;
     private GroceryList decemberList;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         Item apples = new Item(3, pcs, "Red apples");
         Item flour = new Item(2, kg, "Flour");
         Item soyMilk = new Item(1, l, "Soy milk");
 
-        Date date1 = new Date(1450652400000L);
-        Date date2 = new Date(1513724400000L);
+        LocalDate date1 = LocalDate.of(2015, 12, 21);
+        LocalDate date2 = LocalDate.of(2015, 8, 15);
         UUID uuid1 = UUID.randomUUID();
         UUID uuid2 = UUID.randomUUID();
 

@@ -21,6 +21,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
+import java.time.LocalDate;
 
 /**
  * Reads and writes JSON models into/from POJO models.
@@ -34,7 +35,7 @@ class ModelSerializer {
     }
 
     private static Gson buildConfiguredObjectMapper() {
-        return new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+        return new GsonBuilder().setDateFormat("yyyy-MM-dd").registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
     }
 
 

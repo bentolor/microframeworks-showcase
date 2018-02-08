@@ -17,8 +17,8 @@ package bentolor.grocerylist.model;
 
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,13 +29,13 @@ public class GroceryList implements ModelElement {
     private UUID id;
     private List<Item> shoppingItems;
     private String comment;
-    private Date date;
+    private LocalDate date;
     private boolean settled;
 
     public GroceryList() {
     }
 
-    public GroceryList(UUID id, Date date, String comment, boolean settled, Item... shoppingItems) {
+    public GroceryList(UUID id, LocalDate date, String comment, boolean settled, Item... shoppingItems) {
         this.id = id;
         this.shoppingItems = Arrays.asList(shoppingItems);
         this.comment = comment;

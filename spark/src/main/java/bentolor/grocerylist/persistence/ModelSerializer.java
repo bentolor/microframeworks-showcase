@@ -17,60 +17,55 @@ package bentolor.grocerylist.persistence;
 
 import bentolor.grocerylist.model.GroceryLists;
 import bentolor.grocerylist.model.ModelElement;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.TimeZone;
+import java.io.*;
+import java.time.LocalDate;
 
 /**
  * Reads and writes JSON models into/from POJO models.
  */
 public class ModelSerializer {
 
-    private final ObjectMapper mapper;
+    private final Gson gson;
 
     public ModelSerializer() {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        mapper = new ObjectMapper();
-        mapper.setDateFormat(df);
-        mapper.setTimeZone(TimeZone.getDefault());
-        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        gson = buildConfiguredObjectMapper();
     }
 
+    private static Gson buildConfiguredObjectMapper() {
+        return new GsonBuilder().setDateFormat("yyyy-MM-dd").registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
+    }
+
+
     public <T> T deserialize(String jsonText, Class<T> valueClass) {
-        try {
-            return mapper.readValue(jsonText, valueClass);
-        } catch (IOException e) {
-            throw new IllegalArgumentException("Invalid JSON", e);
-        }
+        return gson.fromJson(jsonText, valueClass);
+    }
+
+    public <T> T deserialize(Reader jsonText, Class<T> valueClass) {
+        return gson.fromJson(jsonText, valueClass);
     }
 
     public String serialize(ModelElement modelElement) {
-        try {
-            return mapper.writeValueAsString(modelElement);
+        return gson.toJson(modelElement);
+    }
+
+    GroceryLists deserialize(File sourceFile) {
+        try (Reader fr = new FileReader(sourceFile)) {
+            GroceryLists groceryLists = null;
+            if (sourceFile.canRead()) {
+                groceryLists = gson.fromJson(fr, GroceryLists.class);
+            }
+            return groceryLists != null ? groceryLists : new GroceryLists();
         } catch (IOException e) {
             throw new IllegalArgumentException("Invalid JSON", e);
         }
     }
 
-    public GroceryLists deserialize(File sourceFile) {
-        try {
-            if (sourceFile.canRead())
-                return mapper.readValue(sourceFile, GroceryLists.class);
-            else
-                return new GroceryLists();
-        } catch (IOException e) {
-            throw new IllegalArgumentException("Invalid JSON", e);
-        }
-    }
-
-    public void serialize(File targetFile, GroceryLists groceryLists) {
-        try {
-            mapper.writeValue(targetFile, groceryLists);
+    void serialize(File targetFile, GroceryLists groceryLists) {
+        try (Writer fw = new FileWriter(targetFile)) {
+            gson.toJson(groceryLists, fw);
         } catch (IOException e) {
             throw new IllegalArgumentException("Invalid JSON", e);
         }
