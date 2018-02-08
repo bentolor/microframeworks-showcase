@@ -20,6 +20,7 @@ import bentolor.grocerylist.model.ModelElement;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,6 +44,7 @@ public class ModelSerializer {
         ObjectMapper objectMapper = new ObjectMapper();
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
         objectMapper.registerModule(new Jdk8Module());
+        objectMapper.registerModule(new JavaTimeModule());
         objectMapper.setDateFormat(df);
         objectMapper.setTimeZone(TimeZone.getDefault());
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
