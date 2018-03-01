@@ -1,0 +1,18 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.0.RELEASE'
+}
+
+dependencies {
+    apply plugin: 'application'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    mainClassName = "bentolor.grocerylist.GroceryListApp"
+
+    compile 'org.springframework.boot:spring-boot-starter-webflux:2.0.0.RELEASE',
+            'com.google.code.gson:gson:2.8.2',
+            'org.projectlombok:lombok:1.16.20'
+
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+
+    //runtime 'org.slf4j:slf4j-simple:1.7.25'
+}

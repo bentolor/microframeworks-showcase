@@ -4,8 +4,9 @@ This Java/Gradle based repository illustrates a selection of Java-based
 microframeworks. 
  
 It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/),
-[Ninja](http://http://www.ninjaframework.org/), [Ratpack](http://ratpack.io/) and [Jodd](http://jodd.org/)
-is meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all).
+[Ninja](http://http://www.ninjaframework.org/), [Ratpack](http://ratpack.io/) and [Jodd](http://jodd.org/) and a few others. 
+
+It was originally meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all) but is also the basis for my talk [Schlank in den Service: Der große Java-Microframework-Test!](https://programm.javaland.eu/2018/#/scheduledEvent/549567) on the Javaland conference 2018.
 
 ![Grocery list overview](docs/overview.png)
 ![Grocery list edit](docs/edit.png)
@@ -21,8 +22,8 @@ run.
 
 *Optional (recommended for development):*
 - [Gradle 4.5+](http://gradle.org/) 
-- [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Preferably: IntelliJ IDEA UE)
-- IntelliJ IDEA (Ultimate Edition) 
+- [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Guide: [IDEA](https://projectlombok.org/setup/intellij), [Eclipse](https://projectlombok.org/setup/eclipse), …)
+- IntelliJ IDEA (preferably Ultimate Edition for full Framework support) 
 
 Spark Java
 ==========
@@ -155,3 +156,38 @@ Run the demo with `gradle :pippo:run` and access [http://localhost:8080/](http:/
 
 ### Option #2: Using IntelliJ IDEA
 Open the project using IntelliJ IDEA and execute the _Pippo: Run Example_ run configuration.
+
+### Option #3: As standalone JAR
+Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `pippo/`
+directory to leverage from the example `grocerylists.json`.
+
+     gradlew :pippo:shadowJar
+     cd pippo
+     java -jar build/libs/pippo-1.0-SNAPSHOT-all.jar      
+
+
+
+Spring Boot 2 – Spring 5 – WebFlux
+==================================
+![Spring Logo](https://upload.wikimedia.org/wikipedia/en/2/20/Pivotal_Java_Spring_Logo.png)
+      
+[Spring Boot](https://projects.spring.io/spring-boot/) favors convention over configuration and is designed to get you up and running as quickly as possible. Spring WebFlux is the reactive successor of Spring MVC and a is fully non-blocking, back pressure-supporting web framework.
+
+ 
+                      
+Starting the demo application
+-----------------------------
+
+### Option #1: Using Gradle
+Run the demo with `gradle :spring5:run` and access [http://localhost:8080/](http://localhost:8080/).
+
+### Option #2: Using IntelliJ IDEA
+Open the project using IntelliJ IDEA and execute the _Spring 5: Run Example_ run configuration. Potentially this requires IDEA Ultimate Edition. 
+
+### Option #3: As standalone JAR
+Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `spring5/`
+directory to leverage from the example `grocerylists.json`.
+
+     gradlew :spring5:shadowJar
+     cd spring5
+     java -jar build/libs/spring5-1.0-SNAPSHOT-all.jar      

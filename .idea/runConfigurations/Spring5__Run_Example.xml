@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spring5: Run Example" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="bentolor.grocerylist.GroceryListApp" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/spring5" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="spring5" />
+    <envs />
+    <method />
+  </configuration>
+</component>

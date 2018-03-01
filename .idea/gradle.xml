@@ -7,7 +7,6 @@
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/usr/lib/gradle/default/2.6" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -16,6 +15,7 @@
             <option value="$PROJECT_DIR$/pippo" />
             <option value="$PROJECT_DIR$/ratpack" />
             <option value="$PROJECT_DIR$/spark" />
+            <option value="$PROJECT_DIR$/spring5" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
