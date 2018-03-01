@@ -1,0 +1,59 @@
+= Notizen
+
+== Vergleich
+
+|===
+| Framework | Fat-JAR (MB) | davon eigene Dependencies | Zusammensetzung
+
+| Spark
+| 2,7M
+| Gson (228k), spark-template-jade (3k)
+| Jetty 9, slf4j
+
+| Ratpack
+| 9,5M
+| -
+| Netty, Jackson, Javassist, SnakeYaml, slf4j
+
+| Ninja
+| 25M
+| jackson-jsr310 (45k)
+| Jetty 9, Guice, Guava, Logback, Jackson, Woodstox, commons-code,-configuration,-io,-fileupload, -email, -lang3, joda-time, ehcache, memcached, flyway, freemarker, hibernate, prettytime, slf4j
+
+| Jodd
+| 4,9M
+| Gson (0.2M), Undertow (2.8M)
+| Jodd Bean/Core/JSON/Log/Petite/Props/Proxetta/Servlet/Upload
+
+| Spring 5
+| 16M
+| -
+| Spring Boot, Spring Web/Beans/Core/JCL, WebFlux, Reactor/ReactiveStreams, Hibernate Validator, slf4j, SnakeYaml, Logback, Jackson, Netty
+
+| Pippo
+| 3,9M
+| Undertow (2.8M), pippo-controller
+| slf4j
+
+|===
+
+
+== Performance-Vergleich
+
+
+
+
+== Pippo
+* _sehr_ schlechte API Dokumentation
+* gut: kleinteilige Module
+* Controller-Konzept als Alternative zu Routing Konzept
+* Viele fertige Bridges: JSON-Prozessoren, Servlet Container
+* static sources auf / -> redirect notwendig
+* extensibility mangelhat: bsp. GsonEninge kodiert hat Zeitformat.
+
+
+== Spring 5
+* kein "Microframework" im eigentlichen Sinne
+* kompakter Code ist möglich
+** erfordert aber viel "Magie" und Vorab-Detailwissen
+** Altlasten – z.B. repetitives `consumes` und `produces`

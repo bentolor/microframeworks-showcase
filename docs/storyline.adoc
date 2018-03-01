@@ -1,0 +1,107 @@
+= Vortrags Storyline
+
+== Einführung
+
+=== Introslide
+* moving bg?
+
+=== "Microframeworks"
+* Video jsmicroframeworks-Website. Ein paar Begriffe suchen
+
+=== Meine Definition
+* Artikel-Zitat: "auf eine Lösung zugeschnittene Lösung"
+
+=== "Leichtigkeit"
+* Symbolbild
+** Leichtgewicht im Umfang
+** Leichtigkeit in der Verwendung
+* Java = Fetter Dampfer
+
+=== Contenders
+* Übersichtsfolie Frameworks
+
+=== Disziplinen (?)
+* Performance
+* Bytegröße
+* Codegröße / Easiness
+* Bossability (would my boss say yes) / Riskieness
+
+=== "Einkaufen"
+* Überleitung: Einkaufswagen?
+
+=== Testat: GroceryList
+* Symbolbild Einkaufszettel (über Einkaufswagen?)
+
+=== Anwendung: Video
+* Einkaufslisten bearbeiten/verändern
+
+=== Frontend/Backend/Fat Jar
+
+* Frontend: Exakt das gleiche. Vorschau Code. ng-admin Referenz.
+* Backend: CRUD RESTful
+** GET /list, GET /list/id, PUT, POST, DELETE
+* no DB
+
+=== Microservice-Architektur (?)
+* Docker Container
+* self-Contained Webservice
+* Keine App-Container mehr
+
+
+
+== Spark Java (Logo)
+
+=== Summary (?)
+* Selbstbeschreibung
+
+=== Video: Hello World Screencast
+
+=== Konzepte
+* Sinatra
+* Ausschnitte: Routen-Handling
+
+=== Umfang
+* Was ist drin, was nicht
+
+=== Bewertung Spark Java
+
+
+
+== Ratpack (Logo)
+
+=== Summary (?)
+
+.Symbolbild Asynchron / Reaktiv
+
+* Zustandslos
+* Asynchron/non-Blocking
+* Netty
+* Typisiert
+=== Configuration
+
+
+== Jodd
+
+
+== Spring 5
+
+
+== Sonstige Kandidaten
+
+== Battle / Vergleich
+
+* Bytecode-Größe
+* Code-Eleganz (Wertung)
+* Performance: Durchsatz
+* Performance: Start/Stop-Zyklus: Dauer.
+
+
+== Weiterführendes
+
+* Verweis Demo-Repository (Screenshot)
+
+
+== ---- UNSORTIERTES -----
+
+* Model : Lombok
+

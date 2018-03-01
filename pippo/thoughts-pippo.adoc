@@ -1,0 +1,8 @@
+= Gedanken zu Pippo
+
+* SEHR schlechte API Dokumentation
+* gut: kleinteilige Module
+* Controller-Konzept als Alternative zu Routing Konzept
+* Viele fertige Bridges: JSON-Prozessoren, Servlet Container
+* static sources auf / -> redirect notwendig
+* extensibility mangelhat: bsp. GsonEninge kodiert hat Zeitformat.
