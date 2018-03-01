@@ -35,7 +35,7 @@ public class GroceryListController {
 
     private final ReactiveRepository repository;
 
-    @GetMapping(path = "/lists")
+    @GetMapping(path = "/list")
     Flux<GroceryList> listStream() {
         return repository.getLists();
     }
