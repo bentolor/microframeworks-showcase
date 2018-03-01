@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pippo/pippo.iml" filepath="$PROJECT_DIR$/.idea/modules/pippo/pippo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratpack/ratpack.iml" filepath="$PROJECT_DIR$/.idea/modules/ratpack/ratpack.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark/spark.iml" filepath="$PROJECT_DIR$/.idea/modules/spark/spark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring5/spring5.iml" filepath="$PROJECT_DIR$/.idea/modules/spring5/spring5.iml" />
     </modules>
   </component>
 </project>
