@@ -8,8 +8,7 @@ dependencies {
     apply plugin: 'io.spring.dependency-management'
     mainClassName = "bentolor.grocerylist.GroceryListApp"
 
-    compile 'org.springframework.boot:spring-boot-starter-webflux:2.0.0.RELEASE',
-            'com.google.code.gson:gson:2.8.2'
+    compile 'org.springframework.boot:spring-boot-starter-webflux:2.0.0.RELEASE'
 
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.3'
 
