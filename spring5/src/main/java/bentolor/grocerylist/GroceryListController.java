@@ -30,12 +30,12 @@ import java.util.UUID;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class GroceryListController {
 
     private final ReactiveRepository repository;
 
-    @GetMapping(path = "/lists",
-            produces = { MediaType.APPLICATION_JSON_VALUE })
+    @GetMapping(path = "/lists")
     Flux<GroceryList> listStream() {
         return repository.getLists();
     }
@@ -45,13 +45,13 @@ public class GroceryListController {
         return repository.getList(id);
     }
 
-    @PostMapping("/list")
-    public Mono<UUID> createList(GroceryList newList) {
+    @PostMapping(value = "/list", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<UUID> createList(@RequestBody GroceryList newList) {
         return repository.createList(newList);
     }
 
-    @PutMapping("/list/{id}")
-    public Mono<GroceryList> createList(@PathVariable(value = "id") UUID id, GroceryList updatedList) {
+    @PutMapping(value = "/list/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<GroceryList> updateList(@PathVariable(value = "id") UUID id, @RequestBody GroceryList updatedList) {
         return repository.updateList(id, updatedList);
     }
 

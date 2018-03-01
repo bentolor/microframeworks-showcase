@@ -64,6 +64,7 @@ public class DefaultReactiveRepository implements ReactiveRepository {
     }
 
     public Mono<GroceryList> updateList(UUID uuid, GroceryList updatedList) {
+        updatedList.setId(uuid);
         groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
         save();
         return groceryLists.contains(updatedList) ? Mono.just(updatedList) : Mono.empty();
