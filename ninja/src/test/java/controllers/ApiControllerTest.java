@@ -24,16 +24,15 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
-public class ApiControllerDocTesterTest extends NinjaDocTester {
+public class ApiControllerTest extends NinjaDocTester {
 
-    String URL_INDEX = "/hello";
+    String URL_INDEX = "/list";
 
     @Test
     public void testGetIndex() {
         Response response = makeRequest(Request.GET().url(testServerUrl().path(URL_INDEX)));
 
-        assertThat(response.payload, containsString("Hello World!"));
-        assertThat(response.payload, containsString("BAM!"));
+        assertThat(response.payload, containsString("5e9d65d7-8377-4013-a73f-7389fdcb8bcd"));
     }
 
 }

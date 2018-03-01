@@ -22,6 +22,7 @@ import model.GroceryList;
 import model.GroceryLists;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -36,10 +37,10 @@ public class Repository {
     private final File dataFile;
 
     @Inject
-    public Repository(@Named("datastore") File dataFile, ModelSerializer serializer) {
-        this.dataFile = dataFile;
+    public Repository(@Named("datastore") File dataFile, ModelSerializer serializer) throws IOException {
+        this.dataFile = dataFile != null ? dataFile : File.createTempFile(this.getClass().getName(), ".json");
         this.serializer = serializer;
-        this.groceryLists = serializer.deserialize(dataFile);
+        this.groceryLists = dataFile != null ? serializer.deserialize(dataFile) : new GroceryLists();
     }
 
     private void save() {
@@ -65,6 +66,7 @@ public class Repository {
     }
 
     public boolean updateList(UUID uuid, GroceryList updatedList) {
+        updatedList.setId(uuid);
         groceryLists.replaceAll(list -> uuid.equals(list.getId()) ? updatedList : list);
         save();
         return groceryLists.contains(updatedList);

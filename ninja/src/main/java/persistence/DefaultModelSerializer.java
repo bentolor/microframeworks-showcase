@@ -17,6 +17,7 @@ package persistence;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
@@ -35,13 +36,14 @@ import java.util.TimeZone;
 public class DefaultModelSerializer implements ModelSerializer {
 
     @Inject
-    private ObjectMapper mapper;
+    ObjectMapper mapper;
     @Inject
     @Named("json-dateformat")
-    private DateFormat df;
+    DateFormat df;
 
     @Start(order = 90)
     public void configureObjectMapper() {
+        mapper.registerModule(new JavaTimeModule());
         mapper.setDateFormat(df);
         mapper.setTimeZone(TimeZone.getDefault());
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
