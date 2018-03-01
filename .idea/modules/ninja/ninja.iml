@@ -16,8 +16,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.ninjaframework:ninja-standalone:6.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: org.ninjaframework:ninja-servlet:6.2.2" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:javax-websocket-server-impl:9.3.15.v20161220" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-server:9.3.15.v20161220" level="project" />

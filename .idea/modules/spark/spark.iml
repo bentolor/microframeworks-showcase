@@ -18,7 +18,7 @@
     <orderEntry type="library" name="Gradle: com.sparkjava:spark-template-jade:2.7.1" level="project" />
     <orderEntry type="library" name="Gradle: com.sparkjava:spark-core:2.7.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-webapp:9.4.6.v20170531" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-server:9.4.6.v20170531" level="project" />

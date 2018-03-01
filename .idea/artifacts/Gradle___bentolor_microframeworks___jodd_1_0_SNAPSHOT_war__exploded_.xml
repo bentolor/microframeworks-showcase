@@ -19,7 +19,6 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Gradle: org.jodd:jodd-madvoc:4.1.4" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
-          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.20" />
           <element id="library" level="project" name="Gradle: io.undertow:undertow-servlet:1.4.22.Final" />
           <element id="library" level="project" name="Gradle: org.jodd:jodd-servlet:4.1.4" />
           <element id="library" level="project" name="Gradle: org.jodd:jodd-petite:4.1.4" />

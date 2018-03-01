@@ -6,8 +6,7 @@ dependencies {
 
     compile         'ro.pippo:pippo-undertow:1.7.0',
                     'ro.pippo:pippo-controller:1.7.0',
-                    'ro.pippo:pippo-gson:1.7.0',
-                    'org.projectlombok:lombok:1.16.20'
+                    'ro.pippo:pippo-gson:1.7.0'
 
     runtime         'org.slf4j:slf4j-simple:1.7.25'
 

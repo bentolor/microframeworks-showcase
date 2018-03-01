@@ -33,8 +33,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-madvoc:4.1.4" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: io.undertow:undertow-servlet:1.4.22.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.websocket:javax.websocket-api:1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jodd:jodd-servlet:4.1.4" level="project" />

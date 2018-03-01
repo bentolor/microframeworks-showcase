@@ -12,12 +12,16 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../ratpack/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/build/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/build/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/build/resources" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/build/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/../../../ratpack/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: io.ratpack:ratpack-core:1.5.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: io.ratpack:ratpack-exec:1.5.1" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-codec-http:4.1.17.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-handler:4.1.17.Final" level="project" />

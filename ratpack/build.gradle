@@ -4,11 +4,8 @@ plugins {
 
 dependencies {
     apply plugin: 'io.ratpack.ratpack-java'     // This implicitly declares dependencies
-    apply plugin: 'idea'
 
     mainClassName = 'bentolor.grocerylist.GroceryListResource'
-
-    compile 'org.projectlombok:lombok:1.16.20'
 
     runtime 'org.slf4j:slf4j-simple:1.7.25'
 

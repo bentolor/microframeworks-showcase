@@ -22,7 +22,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-webflux:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-reactor-netty:2.0.0.RELEASE" level="project" />
@@ -71,9 +71,11 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-buffer:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-common:4.1.22.Final" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-simple:1.7.25" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.junit.platform:junit-platform-commons:1.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apiguardian:apiguardian-api:1.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-simple:1.7.25" level="project" />
   </component>
 </module>

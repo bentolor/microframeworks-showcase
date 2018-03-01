@@ -18,7 +18,7 @@
     <orderEntry type="library" name="Gradle: ro.pippo:pippo-undertow:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: ro.pippo:pippo-controller:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: ro.pippo:pippo-gson:1.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
     <orderEntry type="library" name="Gradle: ro.pippo:pippo-core:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: io.undertow:undertow-servlet:1.4.12.Final" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.3.1" level="project" />
