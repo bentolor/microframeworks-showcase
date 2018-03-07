@@ -4,10 +4,95 @@
 
 `logo-*`:: Trademark owner
 
+`igor-ovsyannykov-520422-unsplash.jpg`:: Unsplash
 
+`note-pad-1425759.png`:: freeimages.xom
 
 == Unsplash License
 
+|===
 All photos published on Unsplash can be used for free. You can use them for commercial and noncommercial purposes. You do not need to ask permission from or provide credit to the photographer or Unsplash, although it is appreciated when possible.
 
 More precisely, Unsplash grants you an irrevocable, nonexclusive copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
+|===
+
+== Freeimages License
+
+|===
+CONTENT LICENSE AGREEMENT
+LAST UPDATED: July 2015
+
+    What is this?
+
+    This is a license agreement between you and FreeImages.com that explains how you can use photos, illustrations and vectors that you license from FreeImages.com. By downloading content from FreeImages.com, you accept the terms of this agreement.
+    How can I use licensed content? You may use content:
+        in digital format on websites, blog posts, social media, advertisements, film and television productions, web and mobile applications
+        in printed materials such as magazines, newspapers, books, brochures, flyers, product packaging
+        for decorative use in your home, office or any public place
+        or personal use
+
+    The rights granted to you by FreeImages.com are:
+        Perpetual, meaning there is no expiration or end date on your rights to use the content.
+        Non-exclusive, meaning that you do not have exclusive rights to use the content. FreeImages.com can license the same content to other customers.
+        Unlimited, meaning you can use the content in an unlimited number of projects and in any media.
+
+    For purposes of this agreement, “use” means to copy, reproduce, modify, edit, synchronize, perform, display, broadcast, publish, or otherwise make use of.
+
+    Please make sure you read the Restricted Uses section below for exceptions.
+
+    If you need broader rights then are granted in this license agreement, please check out the premium content and licensing options available from iStock by Getty Images.
+
+    Restricted Uses.
+
+        No Unlawful Use. You may not use content in a pornographic, defamatory or other unlawful manner.
+
+        No Standalone File Use. You may not use content in any way that allows others to download, extract, or redistribute content as a standalone file (meaning just the content file itself, separate from the project or end use).
+
+        No Use in Trademark or Logo. You may not use content as part of a trademark, design mark, tradename, business name, service mark, or logo.
+
+        Sensitive Use Disclaimer Required. If you use content that features models or property in connection with a subject that would be unflattering or unduly controversial to a reasonable person (for example, sexually transmitted diseases), you must indicate: (1) that the content is being used for illustrative purposes only, and (2) any person depicted in the content is a model. For example, you could say: “Stock photo.  Posed by model.”  No disclaimer is required for “editorial use only” content that is used in an editorial manner.
+
+        No Products for Resale. You may not use content in connection with any goods or services intended for resale or distribution where the primary value lies in the content itself including, without limitation, cards, stationery items, paper products, calendars, apparel items, posters (printed on paper, canvas, or any other media), CDs, DVDs, mobile applications or other items for resale, license or other distribution for profit.  This includes “on demand” products (meaning products in which content is selected by a third party for customization on such product on a made-to-order basis), including, without limitation, postcards, mugs, t-shirts, posters and other items (this includes the sale of products through custom designed websites, as well as sites such as zazzle.com and cafepress.com)
+
+        No Electronic Templates. You may not use content in electronic or digital templates intended for resale or other distribution (for example, website templates, business card templates, electronic greeting card templates, brochure design templates).
+
+        No False Representation of Authorship. You may not falsely represent that you are the original creator of a work that is made up largely of licensed content. For instance, you cannot create a painting or deviation/manipulation based on licensed content and claim that you are the author.
+    Intellectual property rights.
+
+        Who owns the content? All of the licensed content is owned by either FreeImages.com or the artists who supply the content. All rights not expressly granted in this agreement are reserved by FreeImages.com and the content suppliers.
+        Attribution.
+
+            Do I need to include a photo credit? You do not need to include a photo credit for commercial use, but if you are using content for editorial purposes, you must include the following credit adjacent to the content or in audio/visual production credits: “FreeImages.com/Artist’s Member Name.”
+
+            Do I need to include an audio and/or video credit? Yes, if technically feasible, you must include the following credit in audio or audio/visual productions: “FreeImages.com/Artist’s Member Name.”
+
+    Termination/Cancellation/Withdrawal.
+
+        Termination. a.This agreement is effective until it is terminated by either party. You can terminate this agreement by ceasing use of the content and deleting or destroying any copies. FreeImages.com may terminate this agreement at any time if you fail to comply with any of the terms, in which case you must immediately: cease using the content; delete or destroy any copies; and, if requested, confirm to FreeImages.com in writing that you have complied with these requirements.
+
+            Social Media Termination. If you use the content on a social media platform or other third party website and the platform or website uses (or announces that it plans to use) the content for its own purpose or in a way that is contrary to this agreement, this agreement shall immediately terminate.
+
+        Content Withdrawal. FreeImages.com may discontinue licensing any item of content at any time in its sole discretion. Upon notice from FreeImages.com, or upon your knowledge, that any content may be subject to a claim of infringement of a third party’s right for which FreeImages.com may be liable, FreeImages.com may require you to immediately, and at your own expense: cease using the content, delete or destroy any copies; and ensure that your clients, distributors and/or employer do likewise.
+
+    No Representations.
+
+    The content is provided “as is” without representation, warranty or condition of any kind, either express or implied, including, but not limited to, implied representations, warranties or conditions of merchantability, or fitness for a particular purpose. You understand that FreeImages.com has not made any representation or warranty that your use of the content will not infringe or violate the trademark rights of any third party. FreeImages.com does not grant any right or make any warranty with regard to the use of names, people, trademarks, trade dress, logos, registered, unregistered or copyrighted audio, designs, works of art or architecture depicted or contained in the content. It is your sole responsibility to make sure that you have all the necessary rights, consents and licenses for the use of the content.
+
+    Indemnification/Limitation of Liability.
+
+        Indemnification of FreeImages.com by you. You agree to defend, indemnify and hold harmless FreeImages.com and its parent, subsidiaries, affiliates, and content suppliers, and each of their respective officers, directors and employees from all damages, liabilities and expenses (including reasonable outside legal fees) arising out of or in connection with any breach or alleged breach by you (or anyone acting on your behalf) of any of the terms of this agreement.
+
+        Limitation of Liability. FREEIMAGES.COM WILL NOT BE LIABLE TO YOU OR ANY OTHER PERSON OR ENTITY FOR ANY PUNITIVE, SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR OTHER SIMILAR DAMAGES, COSTS OR LOSSES ARISING OUT OF THIS AGREEMENT, EVEN IF FREEIMAGES.COM HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, COSTS OR LOSSES. SOME JURISDICTIONS DO NOT PERMIT THE EXCLUSION OR LIMITATION OF IMPLIED WARRANTIES OR LIABILITY.
+
+    General Provisions.
+
+        Assignment. This agreement is personal to you and is not assignable by you without FreeImages.com’s prior written consent. FreeImages.com may assign this agreement, without notice or consent, to any corporate affiliate or to any successor in interest, provided that such entity agrees to be bound by these terms.
+
+        Governing Law/Arbitration. This agreement will be governed by the laws of the State of New York, U.S.A., without reference to its laws relating to conflicts of law. Any disputes arising from or related to this agreement shall be finally settled by binding, confidential arbitration by a single arbitrator selected using the rules and procedures for arbitrator selection under the Commercial Rules of the American Arbitration Association ("AAA") or of the International Centre for Dispute Resolution ("ICDR") in effect on the date of the commencement of arbitration (the applicable rules to be at your discretion) to be held in one of the following jurisdictions (whichever is closest to you): Seattle, Washington; New York, New York; Los Angeles, California; London, England; Paris, France; Frankfurt, Germany; Tokyo, Japan; or Singapore. The arbitration proceedings shall be conducted in English and all documentation shall be presented and filed in English. The decision of the arbitrator shall be final and binding on the parties, and judgment may be entered on the arbitration award and enforced by any court of competent jurisdiction. The United Nations Convention on Contracts for the International Sale of Goods does not govern this agreement. FreeImages.com shall also have the right to commence and prosecute any legal or equitable action or proceeding before any court of competent jurisdiction to obtain injunctive or other relief against you in the event that, in the opinion of FreeImages.com, such action is necessary or desirable. The parties agree that, notwithstanding any otherwise applicable statute(s) of limitation, any arbitration proceeding shall be commenced within two years of the acts, events or occurrences giving rise to the claim.
+
+        Entire Agreement. No terms of conditions of this agreement may be added or deleted unless made in writing and accepted in writing by both parties, or issued electronically by FreeImages.com and accepted in writing by you. In the event of any inconsistency between the terms of this agreement and the terms contained on any purchase order sent by you, the terms of this agreement will apply.
+
+        Notice. All notices required to be sent to FreeImages.com under this agreement should be sent via email to legalnotice@freeimages.com. All notices to you will be sent via email to the email set out in your account.
+
+        Licensing Entity. The licensing entity under this agreement shall be Getty Images International.
+|===
