@@ -1,5 +1,5 @@
 <!doctype html>
-<!--suppress RequiredAttributes -->
+<!--suppress RequiredAttributes, HtmlFormInputWithoutLabel, CssUnusedSymbol -->
 <html>
 <head>
     <meta charset="utf-8">
@@ -57,22 +57,11 @@
 
         <section data-background-color="#fff">
             <a href="https://www.exxcellent.de" style="width: 320px; position: absolute; top: 0; left: 0;">
-                <img data-src="img/exxcellent-logo-transparent.png"
-                     class="plain" alt="eXXcellent solutions GmbH Logo"
+                <img data-src="img/logo-exxcellent-transparent.png"
+                     class="plain" alt="eXXcellent solutions GmbH"
                 />
             </a>
 
-            <!--
-            <div style="text-align: left;">
-                <h1 style="margin: 380px 0 0 0; font-size: 1.9em;" class="emphasize">Russisch unterwegs!</h1>
-                <img data-src="img/kotlin_logos/logo_Kotlin.svg"
-                     style="width: 200px; position: absolute; top: 506px; left: 4px;"
-                     class="plain" alt="Kotlin Logo"
-                />
-                <h3 style="left: 220px; top: 503px;" class="abs">für die moderne</h3>
-                <h3 style="left: 220px; top: 568px;" class="abs">Android-Entwicklung</h3>
-            </div>
-            -->
             <div style="text-align: right;">
                 <h2 style="margin: 360px 0px 0 0; font-size: 1.7em; text-transform: none;">
                     <span class="emphasize"><i>Schlank in den Service: </i><br> </span>
@@ -126,8 +115,24 @@
                     <img alt="Creative Commons Lizenzvertrag"
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"/>
                 </a>
-
             </div>
+
+
+            <!--  @formatter:off -->
+            <aside class="notes" data-markdown>
+                * Freue mich heute hier zu sein und das stilvolle Ambiente genießen zu dürfen!
+                * Java Plattform: Beeindruckende Plattform; wahnsinnig viele, attraktive & leistungsfähige
+                Tools, Frameworks & freie Lösungen
+                * Lange Historie führt teils auch zu vielen Verwachsungen, Bloat, Schwerfälligkeiten
+                    * Kennt z.B. jemand die [FizzBuzz Enterprise Edition](http://www.fizzbuzz.enterprises/)?
+                    * _ made by serious businessmen for serious business_
+                    * %3==0: Fizz, %5=0: Buzz in 89 Java Klassen und 3,8kLOC
+                * Trend weg vom Monolithen zu kleineren, besser managebaren Einheiten
+                * Setzt natürlich eine gewisse Leichtigkeit voraus.
+                * Gelingt das auch unter Java?
+                * Das wollen wir herausfinden und in dieser Session ein paar Inspirationen sammeln
+            </aside>
+            <!--  @formatter:on -->
         </section>
 
 
@@ -135,44 +140,130 @@
           === Motivation ============================================================================
         -->
         <section>
-            <section class="">
-                <h3>Weniger ist mehr ... <br>die neue Leichtigkeit!</h3>
+            <section data-background-video="img/microjs-site-demo.mp4"
+                     data-background-video-loop="true"
+                     data-background-size="contain"
+                     data-background-color="#111414">
+                <div style="position: absolute; right: 0; top: 700px; width: 100%;
+                            text-align: right; padding: 6px 32px;
+                            background-color: rgba(225,20,206,0.4);">
+                    http://microjs.com/
+                </div>
+                <!--<iframe src="http://microjs.com/" style="width: 1000px; height: 600px;"></iframe>-->
 
-                <div class="abs handwriting right fragment"
-                     style="transform: rotate(-2deg); left: 490px; top: 240px; font-size: 130%; line-height: 0.8em;">
-                    <strong>Microservices</strong>
-                </div>
-                <div class="abs handwriting right fragment"
-                     style="transform: rotate(+2deg); left: 390px; top: 340px; font-size: 130%;">
-                    <strong>Spring Boot vs. JEE</strong>
-                </div>
-                <div class="abs handwriting right fragment"
-                     style="transform: rotate(0deg); left: 530px; top: 440px; font-size: 130%; line-height: 0.6em;">
-                    <strong>Dropwizard</strong>
-                </div>
-                <div class="abs handwriting right fragment"
-                     style="transform: rotate(3deg); left: 530px; top: 490px; font-size: 130%; line-height: 0.6em;">
-                    <strong>...</strong>
-                </div>
-            </section>
-
-
-            <section>
-                <h3>Microframeworks in der Javascript-Welt</h3>
-                <iframe src="http://microjs.com/" style="width: 1000px; height: 600px;"></iframe>
+                <aside class="notes" data-markdown>
+                    * Ursprünglich aus der Javascript-Welt
+                    * _Weniger ist mehr!_
+                </aside>
             </section>
 
             <section>
-                <h2><u>Java Hitparade</u></h2>
-                <div data-markdown class="right container" style="font-size: .8em; margin: 36px 0px 0px 320px;">
-                    ## Spark
-
-                    ## Ninja
-
-                    ## Jodd
-
-                    ## Ratpack
+                <img src="img/ben-avatar.png" alt="Ben's Avatar" class="plain"
+                     style="position: absolute; left: 180px; top: 410px; transform: scale(6);">
+                <div style="position: absolute; left: 320px; top: 155px">
+                    <div class="bubble">
+                        <h4>Microframeworks</h4>
+                        <i>„Elegante, flexible auf <b>ein Thema</b> fokussierte Rahmenwerke
+                            für eine Problemstellung (in der Regel Webanwendungen) mit dem Ziel
+                            einer <b>schlankere Source- und/oder Bytecode</b>-Linie“</i>
+                    </div>
                 </div>
+                <style>
+                    DIV.bubble {
+                        position: relative;
+                        width: 800px;
+                        height: 300px;
+                        padding: 32px;
+                        background: #CEE8F7;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        border-radius: 10px;
+                        border: #e114ce solid 6px;
+                    }
+
+                    DIV.bubble:after {
+                        content: '';
+                        position: absolute;
+                        border-style: solid;
+                        border-width: 30px 90px 30px 0;
+                        border-color: transparent #CEE8F7;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        left: -89px;
+                        top: 271px;
+                    }
+
+                    DIV.bubble:before {
+                        content: '';
+                        position: absolute;
+                        border-style: solid;
+                        border-width: 35px 95px 35px 0;
+                        border-color: transparent #e114ce;
+                        display: block;
+                        width: 0;
+                        z-index: 0;
+                        left: -101px;
+                        top: 266px;
+                    }
+                </style>
+            </section>
+
+            <section class="center">
+                <style>
+                    .logogrid {
+                        display: grid;
+                        grid-gap: 64px;
+                        grid-template-columns: auto auto auto;
+                    }
+
+                    .logogrid DIV {
+                        height: 200px;
+                        display: inline;
+                    }
+                </style>
+                <h2><u>Die Kandidaten</u></h2>
+                <div class="logogrid" style="margin-top: 90px">
+                    <div><img src="img/logo-jodd.png" alt="Jodd" class="plain"></div>
+                    <div><img src="img/logo-ninja.png" alt="Ninja" class="plain"></div>
+                    <div><img src="img/logo-ratpack.png" alt="Ratpack" class="plain"
+                              style="margin-top: -12px;"></div>
+                    <div><img src="img/logo-spark.svg" alt="Spark Java" class="plain"
+                              style="transform: scale(1.7); margin-top: -21px;"></div>
+                    <div><img src="img/logo-spring.png" alt="Spring 5" class="plain"></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Microservice Architektur</h2>
+                <img src="img/microservices-architektur.png"
+                     alt="Overview Microservice Architektur"
+                     class="plain">
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    * In einer Microservice-Architektur wird eine komplexe Anwendungslogik aus
+                    voneinander unabhängigen, wiederverwendbaren Prozessen zusammengesetzt
+                    * Die einzelnen Dienste sind dabei weitestgehend voneinander entkoppelt und klein
+                    * In einer voll-ausgebauten Microservice Architektur sind teils auch
+                    elementare Dienste wie Peristenz separate Services
+                    * Ziel ist es dabei natürlich, am Ende möglichst einfache und leichte Module zu haben
+                    die für sich einzeln gut gut steuerbar und betreibbar sind.
+                    * *Geringe Komplexität und Gewicht sind essentielle Kernqualitäten*.
+                </aside>
+                <!--  @formatter:on -->
+
+            </section>
+
+            <section data-markdown="">
+                <textarea data-template>
+                ## Disziplinen (?)
+                * Performance
+                * Bytegröße
+                * Codegröße / Easiness
+                * Bossability (would my boss say yes) / Riskieness
+                * single JAR
+                </textarea>
             </section>
 
             <section>
@@ -342,11 +433,10 @@ public class HelloWorld {
             </section>
 
             <section>
-                 <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
+                <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
             </section>
 
         </section>
-
 
 
         <!--
@@ -403,9 +493,9 @@ public class HelloWorld {
                     <p>Baukastensystem</p>
                     <p class="decent subline x-small">an Mikro-Komponenten:</p>
 
-                    <p  class="x-small">IoC, AOP, Bean-Validation <br>SQL/OR-Mapper, HTML Tools,…</p>
+                    <p class="x-small">IoC, AOP, Bean-Validation <br>SQL/OR-Mapper, HTML Tools,…</p>
 
-                    <p  class="x-small">Endergebnis: 800kb</p>
+                    <p class="x-small">Endergebnis: 800kb</p>
 
                     <p class="decent x-small">3.8.5 (April 2017)</p>
                     <p class="decent subline x-small">APL2</p>
@@ -437,9 +527,9 @@ public class HelloWorld {
                     <h2 class="large">Datenblatt</h2>
                     <p>Reaktiv &amp; Asynchron</p>
                     <p class="decent subline x-small">hohe Ähnlichkeit mit Vert.X</p>
-                    <p  class="x-small">Basis: Netty &amp; Promises</p>
+                    <p class="x-small">Basis: Netty &amp; Promises</p>
 
-                    <p  class="x-small">  Module: Guice, Groovy,<br> Jackson, Spring Boot</p>
+                    <p class="x-small"> Module: Guice, Groovy,<br> Jackson, Spring Boot</p>
 
                     <p class="decent x-small">1.4.6 (April 2017)</p>
                     <p class="decent subline x-small">APL2</p>
@@ -459,12 +549,12 @@ public class HelloWorld {
         </section>
 
         <section>
-            <h2>Weitere Materialien  QR-CODES?</h2>
+            <h2>Weitere Materialien QR-CODES?</h2>
             <ul>
                 <li>Pippo (http://www.pippo.ro/)</li>
                 <li>Javalite (http://javalite.io/)</li>
                 <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/
-                    <br>  microframeworks-showcase/</a></li>
+                    <br> microframeworks-showcase/</a></li>
             </ul>
 
         </section>
@@ -513,19 +603,21 @@ public class HelloWorld {
             {src: 'plugin/notes/notes.js', async: true},
             {
                 src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                // noinspection JSUnresolvedVariable
-                hljs.initHighlightingOnLoad();
-            }
+                    // noinspection JSUnresolvedVariable
+                    hljs.initHighlightingOnLoad();
+                }
             },
             {src: 'plugin/zoom-js/zoom.js', async: true}  // Zoom in and out with Alt+click
         ]
     });
 </script>
 
-<!-- hack: increase playback speed of background video -->
 <script>
-    Reveal.addEventListener('speedupvideo', function () {
-        document.getElementsByTagName("video")[0].playbackRate = 2.5
+    <!-- Hack to increase video playbackRate -->
+    Reveal.addEventListener('ready', function () {
+        document.querySelectorAll("video").forEach(function (v) {
+            v.playbackRate = 1.25;
+        });
     }, false);
 </script>
 
