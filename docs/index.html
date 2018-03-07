@@ -1,15 +1,29 @@
 <!doctype html>
+<!--suppress RequiredAttributes -->
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Small is sexy: Die Hitparade der Microframeworks</title>
+    <title>Schlank in den Service: Der große Java-Microframework-Test!</title>
     <meta name="description"
-          content="Microservices machen es deutlich: Der Trend geht zurück zur Spezialisierung und kleinen,
-           überschaubaren Lösungen. Die neue Klasse der Microframeworks setzt dies fort und verspricht neue
-            Eleganz für die Java-Welt. Ein Blick auf die vier Kandidaten Jodd, Spark, Ninja und Ratpack zeigt,
-            ob sie das Versprechen halten.">
+          content="Jedes Frühlings-Deployment ist er wieder da: der Bytecode-Winterspeck.
+          Und alle Jahre wieder sagen wir ihm den Kampf an, denn der Trend geht zu schlanken
+          und spezialisierten Lösungen: Sei es als Microservice oder Stand-alone-Anwendung.
+          Schließlich naht der Produktivgang, und wer will schon beim Deployment eine schlechte Figur machen?
+
+          Das große Fasten macht inzwischen auch vor Java nicht halt. Microframeworks üben sich im
+          stringenten Verzicht, und das nicht nur für die schlanke Linie: Ihre Idee ist es, elegante,
+          flexible auf ein Thema fokussierte Rahmenwerke für eine Problemstellung, in der Regel
+          Webanwendungen, anzubieten. Aber welche Diät ist die richtige? Wie können wir nicht nur
+          erfolgreich, sondern auch mit Freude und vor allem gesund abnehmen?
+
+          Wir erklären anhand einer Beispielanwendung im REST-Architekturmuster überflüssigen Pfunden
+          den Krieg und testen fünf ausgewählte JVM Schlankheitsexperten im Vergleich: Zu den
+          Kandidaten gehören das elegante an Sinatra angelehnte Spark Java, der modulare Multifunktions-
+          Baukasten Jodd, Ninja als integrierten Softwarestack, das reaktive Ratpack sowie als Referenz
+          den Platzhirsch Spring Boot. Wir schauen auf Stärken und Schwächen und vergleichen am Codebeispiel,
+          wie gut sie ihrem Anspruch an eine schlankere Source- oder Bytecode-Linie gerecht werden können.">
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css">
@@ -42,10 +56,11 @@
         -->
 
         <section data-background-color="#fff">
-            <img data-src="img/eXXcellent%20logo-transparent.png"
-                 style="width: 320px; position: absolute; top: 0; left: 0;"
-                 class="plain" alt="eXXcellent solutions GmbH Logo"
-            />
+            <a href="https://www.exxcellent.de" style="width: 320px; position: absolute; top: 0; left: 0;">
+                <img data-src="img/exxcellent-logo-transparent.png"
+                     class="plain" alt="eXXcellent solutions GmbH Logo"
+                />
+            </a>
 
             <!--
             <div style="text-align: left;">
@@ -59,20 +74,20 @@
             </div>
             -->
             <div style="text-align: right;">
-                <h2 style="margin: 360px 0px 0 0; font-size: 1.7em; text-transform: none">
-                    <span class="emphasize"><i>Small is sexy: </i><br> </span>
-                    Die Hitparade der <br>Microframeworks
+                <h2 style="margin: 360px 0px 0 0; font-size: 1.7em; text-transform: none;">
+                    <span class="emphasize"><i>Schlank in den Service: </i><br> </span>
+                    Der große Java-<br>Microframework-Test!
                 </h2>
             </div>
 
             <div id="version">
-                2017-07-28
+                2018-03-13
             </div>
 
             <div class="profile" style="position: absolute; top: 0; left: 900px;">
                 <div class="profile-sidebar">
                     <div class="profile-userpic">
-                        <img data-src="img/BenjaminSchmid.jpg" class="img-responsive" alt="">
+                        <img data-src="img/ben-portrait.jpg" class="img-responsive" alt="">
                     </div>
                     <div class="profile-usertitle">
                         <div class="profile-usertitle-name">
@@ -88,15 +103,15 @@
                 </div>
             </div>
 
-            <div id="rightsection">
+            <!--<div id="rightsection">
                 <code>?</code> for help
-            </div>
+            </div>-->
 
             <div id="licence">
                 <!--suppress HtmlUnknownAttribute -->
                 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
                       property="dct:title" rel="dct:type">
-                    Moderne Android-Entwicklung mit Kotlin
+                    Schlank in den Service: Der große Java-Microframework-Test!
                 </span>
                 by
                 <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/bentolor"
@@ -124,7 +139,7 @@
                 <h3>Weniger ist mehr ... <br>die neue Leichtigkeit!</h3>
 
                 <div class="abs handwriting right fragment"
-                     style="transform: rotate(-2deg); left: 490px; top: 240px; font-size: 130%; line-height: 0.8em">
+                     style="transform: rotate(-2deg); left: 490px; top: 240px; font-size: 130%; line-height: 0.8em;">
                     <strong>Microservices</strong>
                 </div>
                 <div class="abs handwriting right fragment"
@@ -132,11 +147,11 @@
                     <strong>Spring Boot vs. JEE</strong>
                 </div>
                 <div class="abs handwriting right fragment"
-                     style="transform: rotate(0deg); left: 530px; top: 440px; font-size: 130%; line-height: 0.6em">
+                     style="transform: rotate(0deg); left: 530px; top: 440px; font-size: 130%; line-height: 0.6em;">
                     <strong>Dropwizard</strong>
                 </div>
                 <div class="abs handwriting right fragment"
-                     style="transform: rotate(3deg); left: 530px; top: 490px; font-size: 130%; line-height: 0.6em">
+                     style="transform: rotate(3deg); left: 530px; top: 490px; font-size: 130%; line-height: 0.6em;">
                     <strong>...</strong>
                 </div>
             </section>
@@ -149,7 +164,7 @@
 
             <section>
                 <h2><u>Java Hitparade</u></h2>
-                <div data-markdown class="right container" style="font-size: .8em; margin: 36px 0px 0px 320px">
+                <div data-markdown class="right container" style="font-size: .8em; margin: 36px 0px 0px 320px;">
                     ## Spark
 
                     ## Ninja
@@ -208,8 +223,8 @@
 
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 840px; height: 560px; margin-top: 26px">
-                    <iframe style="width: 840px; height: 560px" src="http://sparkjava.com/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 840px; height: 560px; margin-top: 26px;">
+                    <iframe style="width: 840px; height: 560px;" src="http://sparkjava.com/"></iframe>
                 </div>
             </section>
 
@@ -327,7 +342,7 @@ public class HelloWorld {
             </section>
 
             <section>
-                 <iframe style="width: 900px; height:640px" src="http://localhost:8080/"></iframe>
+                 <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
             </section>
 
         </section>
@@ -362,8 +377,8 @@ public class HelloWorld {
 
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 940px; height: 560px; margin-top: 26px">
-                    <iframe style="width: 940px; height: 560px" src="http://www.ninjaframework.org/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 940px; height: 560px; margin-top: 26px;">
+                    <iframe style="width: 940px; height: 560px;" src="http://www.ninjaframework.org/"></iframe>
                 </div>
             </section>
         </section>
@@ -375,7 +390,8 @@ public class HelloWorld {
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img src="https://www.javacodegeeks.com/wp-content/uploads/2015/06/jodd.png" class="plain" width="1100"/>
+                <img src="https://www.javacodegeeks.com/wp-content/uploads/2015/06/jodd.png"
+                     class="plain" width="1100"/>
             </section>
 
 
@@ -398,8 +414,8 @@ public class HelloWorld {
 
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px">
-                    <iframe style="width: 940px; height: 560px" src="http://jodd.org/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px;">
+                    <iframe style="width: 940px; height: 560px;" src="http://jodd.org/"></iframe>
                 </div>
             </section>
 
@@ -411,7 +427,8 @@ public class HelloWorld {
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img src="https://danhyun.github.io/2016-gr8confeu-rapid-ratpack-groovy/images//ratpack-logo.png" class="plain" width="1100"/>
+                <img src="https://danhyun.github.io/2016-gr8confeu-rapid-ratpack-groovy/images//ratpack-logo.png"
+                     class="plain" width="1100"/>
             </section>
 
 
@@ -431,8 +448,8 @@ public class HelloWorld {
 
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px">
-                    <iframe style="width: 940px; height: 560px" src="https://ratpack.io/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px;">
+                    <iframe style="width: 940px; height: 560px;" src="https://ratpack.io/"></iframe>
                 </div>
             </section>
 
@@ -442,11 +459,12 @@ public class HelloWorld {
         </section>
 
         <section>
-            <h2>Weitere Materialien</h2>
+            <h2>Weitere Materialien  QR-CODES?</h2>
             <ul>
                 <li>Pippo (http://www.pippo.ro/)</li>
                 <li>Javalite (http://javalite.io/)</li>
-                <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/ <br>  microframeworks-showcase/</a></li>
+                <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/
+                    <br>  microframeworks-showcase/</a></li>
             </ul>
 
         </section>
@@ -477,14 +495,15 @@ public class HelloWorld {
         progress: true,
         slideNumber: true,
         mouseWheel: true,
-        controls: true,
+        controls: false,
         fragments: false,
         width: 1280,
         height: 720,
         margin: 0.1,
         maxScale: 10,
         center: false,
-        parallaxBackgroundImage: 'img/kotlin-island-map-light.png', // 'http://jamescroft.co.uk/wp-content/uploads/2015/01/217-L6YVU1.jpg',
+        parallaxBackgroundImage: 'img/kotlin-island-map-light.png',
+        // 'http://jamescroft.co.uk/wp-content/uploads/2015/01/217-L6YVU1.jpg',
         parallaxBackgroundSize: '4177px 2118px',
 
         // More info https://github.com/hakimel/reveal.js#dependencies
@@ -494,6 +513,7 @@ public class HelloWorld {
             {src: 'plugin/notes/notes.js', async: true},
             {
                 src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                // noinspection JSUnresolvedVariable
                 hljs.initHighlightingOnLoad();
             }
             },
