@@ -10,6 +10,7 @@
 
 === Meine Definition
 * Artikel-Zitat: "auf eine Lösung zugeschnittene Lösung"
+* kräftige BG, Zitateblase, Mangatar
 
 === "Leichtigkeit"
 * Symbolbild
@@ -17,7 +18,7 @@
 ** Leichtigkeit in der Verwendung
 * Java = Fetter Dampfer
 
-=== Contenders
+=== Contenders / Hitparade
 * Übersichtsfolie Frameworks
 
 === Disziplinen (?)
@@ -25,27 +26,20 @@
 * Bytegröße
 * Codegröße / Easiness
 * Bossability (would my boss say yes) / Riskieness
+* single JAR
+
+=== Microservice-Architektur
+* Handgezeichnete Skizze mit Standard Architektur
+* Docker Container
+* self-Contained Webservice
+* Keine App-Container mehr
 
 === "Einkaufen"
 * Überleitung: Einkaufswagen?
 
-=== Testat: GroceryList
+.TESTFELD: GroceryList
 * Symbolbild Einkaufszettel (über Einkaufswagen?)
 
-=== Anwendung: Video
-* Einkaufslisten bearbeiten/verändern
-
-=== Frontend/Backend/Fat Jar
-
-* Frontend: Exakt das gleiche. Vorschau Code. ng-admin Referenz.
-* Backend: CRUD RESTful
-** GET /list, GET /list/id, PUT, POST, DELETE
-* no DB
-
-=== Microservice-Architektur (?)
-* Docker Container
-* self-Contained Webservice
-* Keine App-Container mehr
 
 
 
@@ -60,10 +54,19 @@
 * Sinatra
 * Ausschnitte: Routen-Handling
 
-=== Umfang
-* Was ist drin, was nicht
+=== TESTFELD: In Detail Frontend/Backend/Fat Jar
 
-=== Bewertung Spark Java
+> Was benötigen wir davon für unseren Testcase?
+
+* Backend: CRUD RESTful
+** GET /list, GET /list/id, PUT, POST, DELETE
+* no DB
+
+=== FACTSHEET
+* Was ist drin, was nicht
+* Bewertung Spark Java
+* Performance?
+
 
 
 
@@ -77,18 +80,67 @@
 * Asynchron/non-Blocking
 * Netty
 * Typisiert
-=== Configuration
+
+=== Konzepte
+
+> Was zeichnet Ratpack aus?
+
+* Configuration
+
+=== TESTFELD: Prägnanz: Model
+
+* Option 1: Lombok
+* Option 2: Kotlin (Data Classes)
+
+=== FACTSHEET
+* Was ist drin, was nicht
+* Bewertung
+* Performance?
+
+
 
 
 == Jodd
 
+=== Summary
+
+=== Konzepte
+
+=== TESTFELD: Frontend
+* Frontend: Darstellung Realisierung. ng-admin Referenz.
+
+=== TESTFELD: Anwendung: Video
+* Einkaufslisten bearbeiten/verändern
+* ggf. erst später und oben nur teasern!
+
+=== FACTSHEET
+* Was ist drin, was nicht
+* Bewertung
+* Performance?
+
+
+
+== Ninja
+=== Summary
+=== Konzepte
+=== FACTSHEET
+
+
+
 
 == Spring 5
+=== Summary
+=== Konzepte
+=== FACTSHEET
+* Was ist drin, was nicht
+* Bewertung
+* Performance?
+
 
 
 == Sonstige Kandidaten
 
-== Battle / Vergleich
+== Summary: Battle / Vergleich
 
 * Bytecode-Größe
 * Code-Eleganz (Wertung)
@@ -99,9 +151,11 @@
 == Weiterführendes
 
 * Verweis Demo-Repository (Screenshot)
+* Kotlin-Talk
+*
 
 
 == ---- UNSORTIERTES -----
 
-* Model : Lombok
+
 
