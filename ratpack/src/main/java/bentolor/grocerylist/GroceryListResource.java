@@ -26,7 +26,7 @@ public final class GroceryListResource {
         ObjectMapper objectMapper = ModelSerializer.buildConfiguredObjectMapper();
         GroceryService service = new GroceryService();
         RatpackServer.start(server -> server
-                .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true))
+                .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true).port(8080))
                 .registryOf(r -> r.add(objectMapper))
                 .handlers(chain -> chain
                         .prefix("list", nested -> {

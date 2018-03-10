@@ -88,7 +88,7 @@ Starting the demo application
 -----------------------------
 
 ### Option #1: Using Gradle
-Run the demo with `gradle :ratpack:run` and access [http://localhost:5050/](http://localhost:5050/).
+Run the demo with `gradle :ratpack:run` and access [http://localhost:8080/](http://localhost:8080/).
 
 ### Option #2: Using IntelliJ IDEA
 Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run configuration.
