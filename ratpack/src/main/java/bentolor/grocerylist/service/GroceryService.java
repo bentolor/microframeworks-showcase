@@ -66,7 +66,6 @@ public class GroceryService {
                 Response res = ctx.getResponse();
                 if (ok) res.status(204).send();
                 else res.status(400).send("Update failed");
-                ctx.render(json(repository.createList(updatedList)));
             });
 
         } else

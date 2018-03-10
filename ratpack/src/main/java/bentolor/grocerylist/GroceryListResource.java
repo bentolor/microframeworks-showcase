@@ -35,7 +35,7 @@ public final class GroceryListResource {
                                 method.get(() -> service.getAllGroceryLists(ctx));
                             }));
                             nested.path(":id", ctx -> ctx.byMethod(method -> {
-                                method.put(() -> service.createGroceryList(ctx));
+                                method.put(() -> service.updateGroceryList(ctx));
                                 method.get(() -> service.getGroceryList(ctx));
                                 method.delete(() -> service.deleteGroceryList(ctx));
                             }));
