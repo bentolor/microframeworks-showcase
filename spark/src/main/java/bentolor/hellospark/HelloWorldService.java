@@ -45,8 +45,10 @@ public final class HelloWorldService {
             Map<String, String> values = new HashMap<>();
             String name = req.queryParams("name");
             values.put("name", name != null ? name : "Anon");
-            return new ModelAndView(values, "greet");
-        }, new JadeTemplateEngine());
+            return new JadeTemplateEngine().render(
+                    new ModelAndView(values, "greet")
+            );
+        });
 
         get("/protected", HelloWorldService::unauthorized);
     }
