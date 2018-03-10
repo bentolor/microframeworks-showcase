@@ -48,7 +48,7 @@ class RepositoryTest {
         defaultRepository = new Repository();
         emptyRepository = new Repository(File.createTempFile(this.getClass().getName(), "json").getPath());
         Item[] items = {ITEM_APPLES, ITEM_SOY_MILK};
-        groceryList = new GroceryList(null, LocalDate.of(2018, 1, 1), "Shopping spree", false, items);
+        groceryList = new GroceryList(null, LocalDate.of(2018,2,1), "Shopping spree", false, items);
     }
 
     @Test
@@ -56,7 +56,7 @@ class RepositoryTest {
         assertTrue(defaultRepository.getList(UUID_1).isPresent());
         assertTrue(defaultRepository.getList(UUID_2).isPresent());
         assertTrue(defaultRepository.getList(UUID_3).isPresent());
-        assertEquals(2, defaultRepository.getList(UUID_2).get().getShoppingItems().size());
+        assertEquals(2, defaultRepository.getList(UUID_2).get().getShoppingItems().length);
     }
 
     @Test
@@ -82,13 +82,13 @@ class RepositoryTest {
     void updateList() {
         emptyRepository.createList(groceryList);
         groceryList.setSettled(true);
-        groceryList.setShoppingItems(Arrays.asList(ITEM_SOY_MILK));
+        groceryList.setShoppingItems(new Item[] { ITEM_SOY_MILK });
         assertTrue(emptyRepository.updateList(groceryList.getId(), groceryList));
 
         Optional<GroceryList> updatedList = emptyRepository.getList(groceryList.getId());
         assertTrue(updatedList.isPresent());
-        assertEquals(1, updatedList.get().getShoppingItems().size());
-        assertEquals("soy milk", updatedList.get().getShoppingItems().get(0).getName());
+        assertEquals(1, updatedList.get().getShoppingItems().length);
+        assertEquals("soy milk", updatedList.get().getShoppingItems()[0].getName());
     }
 
     @Test

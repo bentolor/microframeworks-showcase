@@ -48,8 +48,9 @@ public class ModelSerializerTest {
         UUID uuid1 = UUID.randomUUID();
         UUID uuid2 = UUID.randomUUID();
 
-        novemberList = new GroceryList(uuid1, date1, "My November shopping list", true, apples, flour, soyMilk);
-        decemberList = new GroceryList(uuid2, date2, "December shopping List", false);
+        novemberList = new GroceryList(uuid1, date1, "My November shopping list", true,
+                new Item[] { apples, flour, soyMilk });
+        decemberList = new GroceryList(uuid2, date2, "December shopping List", false, null);
 
         groceryLists = new GroceryLists(novemberList, decemberList);
         serializer = new ModelSerializer();
