@@ -270,8 +270,8 @@
     font-size: 72%;
 }
 
-.reveal .x-small p,.reveal  .x-small li,.reveal p.x-small,.reveal span.x-small, .reveal  div.x-small {
-    font-size: 64%;
+.reveal .x-small p,.reveal  .x-small li, .reveal .x-small {
+    font-size: 64% !important;
 }
 
 .reveal .x-small code {
@@ -281,6 +281,10 @@
 .reveal pre.xx-small, .reveal pre.x-small, .reveal pre.small {
     width: 100%; margin: 0;
 }
+.reveal .xx-small {
+    font-size: 50% !important;
+}
+
 .reveal .xx-small code {
     font-size: 50%;
     padding: 10px

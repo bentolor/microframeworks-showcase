@@ -158,6 +158,37 @@
             </section>
 
             <section>
+                <h2>Microservice Architektur</h2>
+                <img src="img/microservices-architektur.png"
+                     alt="Overview Microservice Architektur"
+                     class="plain">
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown>
+                    * In einer Microservice-Architektur wird eine komplexe Anwendungslogik aus
+                    voneinander unabhängigen, wiederverwendbaren Prozessen zusammengesetzt
+                    * Die einzelnen Dienste sind dabei weitestgehend voneinander entkoppelt und klein
+                    * In einer voll-ausgebauten Microservice Architektur sind teils auch
+                    elementare Dienste wie Peristenz separate Services
+                    * Ziel ist es dabei natürlich, am Ende möglichst einfache und leichte Module zu haben
+                    die für sich einzeln gut gut steuerbar und betreibbar sind.
+                    * *Geringe Komplexität und Gewicht sind essentielle Kernqualitäten*.
+                </aside>
+                <!--  @formatter:on -->
+
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Keys for Microservices
+
+                    1. Komplexität
+                    2. Gewicht / Leichtigkeit
+                    3.  in kürzest möglicher Zeit produktionsreife Java-Anwendungen
+                </textarea>
+            </section>
+
+            <section>
                 <img src="img/ben-avatar.png" alt="Ben's Avatar" class="plain"
                      style="position: absolute; left: 180px; top: 410px; transform: scale(6);">
                 <div style="position: absolute; left: 320px; top: 155px">
@@ -234,35 +265,86 @@
                 </div>
             </section>
 
-            <section>
-                <h2>Microservice Architektur</h2>
-                <img src="img/microservices-architektur.png"
-                     alt="Overview Microservice Architektur"
-                     class="plain">
-
-                <!--  @formatter:off -->
-                <aside class="notes" data-markdown="">
-                    * In einer Microservice-Architektur wird eine komplexe Anwendungslogik aus
-                    voneinander unabhängigen, wiederverwendbaren Prozessen zusammengesetzt
-                    * Die einzelnen Dienste sind dabei weitestgehend voneinander entkoppelt und klein
-                    * In einer voll-ausgebauten Microservice Architektur sind teils auch
-                    elementare Dienste wie Peristenz separate Services
-                    * Ziel ist es dabei natürlich, am Ende möglichst einfache und leichte Module zu haben
-                    die für sich einzeln gut gut steuerbar und betreibbar sind.
-                    * *Geringe Komplexität und Gewicht sind essentielle Kernqualitäten*.
-                </aside>
-                <!--  @formatter:on -->
-
-            </section>
-
             <section data-background-image="img/igor-ovsyannykov-520422-unsplash.jpg">
                 <img src="img/note-pad-1425759.png" alt="Einkaufsliste" class="plain abs fragment"
                      style="left: 210px; top: 400px; transform: scale(16) rotate(-3deg);">
 
                 <!--  @formatter:off -->
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * Als Vergleichsgrundlage dient uns eine kleine Anwendung zur Verwaltung von
                     Einkaufslisten
+                </aside>
+                <!--  @formatter:on -->
+
+            </section>
+        </section>
+
+
+
+        <!--
+          === Spark ==================================================================================
+        -->
+        <section>
+            <section data-background-color="#fff" class="center">
+                <img src="http://sparkjava.com/img/logo.svg" class="plain tgap" width="600"/>
+                <h3 class="tgap" ><em><i>Eleganter Zündfunken</i></em> </h3>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    Unser erster Kandidate ist Spark Java – nicht mit Apache Spark zu verwechseln!
+                </aside>
+                <!--  @formatter:on -->
+            </section>
+
+            <section data-background-color="#fff" class="center">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+
+                    <p class=""><i>Sinatra-inspiriert<br>
+                        Minimaler Boilerplate<br>
+                        Ausdrucksstärke<br>
+                        Standalone (Jetty 9)</i></p>
+                    <!--<p class="decent subline x-small">populäres Ruby-Webframework</p>-->
+
+                    <p>Java 8 & Kotlin</p>
+                    <p class="decent subline x-small">zusätzliche Spark-DSL unter Kotlin</p>
+
+                    <p class="decent x-small tgapxl">
+                        2.7.1 (Nov. 2017), APL2<br>
+                        <a href="http://sparkjava.com">http://sparkjava.com/</a>
+                    </p>
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 820px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 810px; height: 560px; overflow-x: hidden;"-->
+                            <!--src="http://sparkjava.com/"></iframe>-->
+                    <iframe style="width: 810px; height: 560px; overflow-x: hidden;"
+                            src="img/website-sparkjava.png"></iframe>
+                </div>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown>
+                    * spirituellen Wurzeln im Ruby-Framework Sinatra
+                    * Unter Kotlin ergänzende DSL (Geschmackssache)
+                </aside>
+                <!--  @formatter:on -->
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Showcase Architektur
+
+                    * Bild: Hervorgehoben CRUD Services
+                    * REST Operationen
+                </textarea>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    Unsere Beispiel-Applikation stellt eine klassische Singe-Page Applikation mit RESTful
+                    Backend da. Wir benötigen also ein Backend, dass HTTP-Aufrufe auf entsprechende CRUD-
+                    Controllerlogik mapped.
+
+                    Schauen wir uns mal an, wie das mit Spark gelingt.
                 </aside>
                 <!--  @formatter:on -->
 
@@ -270,73 +352,19 @@
 
             <section data-markdown="">
                 <textarea data-template>
-                ## Disziplinen (?)
-                * Performance
-                * Bytegröße
-                * Codegröße / Easiness
-                * Bossability (would my boss say yes) / Riskieness
-                * single JAR
+                    ## Video
+
+                    * build.gradle schreiben
+                    * Helloworld schreiben
+                    * Starten
+                    * Terminal: /hello und /greet/Guests in Curl
                 </textarea>
-            </section>
-
-            <section>
-                <h2>Das Schlachtfeld</h2>
-
-                <div class="center">
-                    <p data-markdown>
-                        ##### „Einkaufsliste“
-                        - RESTful CRUD Application
-                        - Frontend: `ng-admin`
-                        - Backend: Kandidat
-                    </p>
-                    <div>
-                        <img src="overview.png"/>
-                        <img src="edit.png"/>
-                    </div>
-
-                </div>
-            </section>
-        </section>
-
-
-        <!--
-          === Spark ============================================================================
-        -->
-        <section>
-
-
-            <section data-background-color="#fff" class="center">
-                <img src="http://sparkjava.com/img/logo.svg" class="plain" width="1000"/>
-            </section>
-
-            <section data-background-color="#fff" class="center">
-                <div class="right">
-                    <h2 class="large">Datenblatt</h2>
-
-                    <p>Sinatra-inspiriert</p>
-                    <p class="decent subline x-small">populäres Ruby-Webframework</p>
-
-                    <p>Java 8 & Kotlin (2017)</p>
-                    <p class="decent subline x-small">optimierte Spark-DSL</p>
-
-                    <p>Version</p>
-                    <p class="decent subline x-small">2.6.0 (April 2017)</p>
-                    <p class="decent subline x-small">APL2</p>
-
-                    <p class="x-small"><br>http://sparkjava.com/</p>
-
-                </div>
-
-                <div class="abs" style="position: absolute; z-index: 1; width: 840px; height: 560px; margin-top: 26px;">
-                    <iframe style="width: 840px; height: 560px;" src="http://sparkjava.com/"></iframe>
-                </div>
             </section>
 
             <section>
                 <h2>Quick-Start #1 <code>build.gradle</code></h2>
 
-                <pre><code>
-apply plugin: 'java'
+                <pre><code>apply plugin: 'java'
 apply plugin: 'application'
 
 repositories {
@@ -344,112 +372,103 @@ repositories {
 }
 
 dependencies {
-    mainClassName = "bentolor.sparkjava.HelloWorld"
-
-    compile        'com.sparkjava:spark-core:2.3',
-                   'com.sparkjava:spark-template-mustache:2.3'
+    mainClassName = 'bentolor.sparkjava.HelloWorld'
+    compile         'com.sparkjava:spark-core:2.3'
 }</code></pre>
             </section>
 
 
             <section>
-                <h2>Quick-Start #2 <code>build.gradle</code></h2>
+                <h3>Quick-Start #2 <code>build.gradle</code></h3>
 
-                <pre><code>package bentolor.sparkjava;
+                <pre><code class="java">package bentolor.sparkjava;
 
-import …
+import static spark.Spark.*;
 
 public class HelloWorld {
 
     public static void main(String[] args) {
         get("/hello", "text/plain", (req, res) -> "Hello World!");
 
-        get("/hello/:name", "text/plain",
+        get("/greet/:name", "text/plain",
             (req, res) -> "Hello "+req.params("name")+"!");
-
-        get("/hello2/:name", (rq, rs) -> {
-            Map vals = new HashMap();
-            vals.put("name", rq.params("name"));
-            return new ModelAndView(vals, "/hello.html");
-        }, new MustacheTemplateEngine());
     }
 
 }</code></pre>
             </section>
 
+            <section data-markdown>
+                <textarea data-template>
+                    ## Kern-Konzepte
+
+                    * Zentrale Strukturierung: Routen
+                    * Deklarativ / DSL  `methode(pfad, type, callback)`
+                    * zusätzlich: Filter & Transformer; optionaler Template Engine Support, mehr nicht!
+                    * Minimalistisch
+                </textarea>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Templating
+
+                    ```java
+                    get("/greet/:name", "text/html", (req, res) -> {
+                        String name = req.params("name");
+
+                        Map&lt;String, String&gt; values = new HashMap&lt;&gt;();
+                        values.put("name", name != null ? name : "Anon");
+                        return new JadeTemplateEngine().render(
+                            new ModelAndView(values, "greet")
+                        );
+                    });
+                    ```
+
+                    ##### Jade4j Template
+                    ```
+                    doctype html
+                    html
+                        body
+                            h1 Welcome to my Microservice
+                            p Dear #{name}, welcome to my web-based Microservicer endpoint
+                    ```
+
+                    Template Engines: Velocity, Freemarker, Mustache, Handlebars, Jade, Thymeleaf und 5 weitere Exoten
+                </textarea>
+            </section>
+
+
+            <section data-markdown class="small">
+                <textarea data-template>
+                    | Feld                  | Wert |
+                    | ---:                  | ---  |
+                    | Personality           | Sinatra-inspiriert. Zentrale Strukturierung: Routen. Dazu: Filter & Transformer; optionaler Template Engine Support, mehr nicht! |
+                    | Overall Grade         | A- |
+                    | Code Fun              | [....X.] |
+                    | Minimalism/Fullstack  | [.....X] |
+                    | Bytecode Size         | Requests/s, Bundles |
+                    | Comment
+                    * Sehr schnell erste Ergebnisse
+                    * Elegant & Minimalistisch
+                    * Bedeutet aber auch: sinnvolle Zergliederung, Fehlerbehandlung, effiziente Antwortseiten-Generierung
+                      liegen in der Hand des Entwicklers
+                </textarea>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown>
+                    * Wie Sinatra: Routen das zentrale Strukturierungsmittel der DSL
+                    * Via Routen werden HTTP-Anfragen auf Callbacks umgeleitet.
+                        * Diese verarbeiten und beantworten die Requests
+                    * Ansonsten nur noch Filter, Transformer: Fertig! --> Elegant & Minimalistisch
+                    * sinnvolle Zergliederung der Logik, Fehlerbehandlung oder die Art um die Antwortseiten
+                      zu erzeugen, überlässt Spark vollständig dem Entwickler (optionale Templating Engines)
+                </aside>
+                <!--  @formatter:on -->
+
+            </section>
+
         </section>
 
-        <section>
-
-            <section class="center">
-                <h1>To the battleground</h1>
-            </section>
-
-            <section>
-                <h3>ng-admin (1)</h3>
-                <pre><code style="font-size: .8em;">
-    var myApp = angular.module('myApp', ['ng-admin']);
-    myApp.config(['NgAdminConfigurationProvider',
-                    function (NgAdminConfigurationProvider) {
-
-        var nga = NgAdminConfigurationProvider;
-        var admin = nga.application('My Grocery Lists');
-
-        var configureFields = function (view) {
-            return view.fields([
-                nga.field('id').editable(false),
-                nga.field('comment'),
-                nga.field('settled', 'boolean'),
-                nga.field('date', 'date'),
-                nga.field('shoppingItems', 'embedded_list')
-                    .targetFields([
-                        nga.field('quantity', 'number'),
-                        nga.field('unit', 'choice').choices([
-                            {value: 'pcs', label: 'pieces'},
-                            {value: 'kg', label: 'kilogram'},
-                            {value: 'g', label: 'gram'},
-                            {value: 'l', label: 'litre'}
-                        ]),
-                        nga.field('name', 'string')
-                    ])
-            ]);
-        };
-</code></pre>
-            </section>
-            <section>
-                <h3>ng-admin (2)</h3>
-
-                <pre><code style="font-size: .8em;">
-        // lists entity
-        var list = nga.entity('list');
-
-        list.listView()
-            .fields([
-                nga.field('comment'),
-                nga.field('settled', 'boolean'),
-                nga.field('date', 'date')])
-            .listActions(['show', 'edit', 'delete'])
-            .title("My shopping lists");
-
-        configureFields(list.editionView())
-            .title('Edit "{{ entry.values.comment }}"')
-            .actions(['show', 'list', 'delete']);
-        configureFields(list.showView())
-            .title('View "{{ entry.values.comment }}"');
-        configureFields(list.creationView());
-
-        admin.addEntity(list);
-
-        nga.configure(admin);
-    }]);
-</code></pre>
-            </section>
-
-            <section>
-                <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
-            </section>
-
-        </section>
 
 
         <!--
@@ -458,32 +477,225 @@ public class HelloWorld {
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img src="http://www.ninjaframework.org/ninja_logo.png" class="plain" width="1100"/>
+                <img class="tgap plain" src="http://www.ninjaframework.org/ninja_logo.png" width="800"/>
+                <h3 class="tgap"><em><i>Spion mit Konventionen</i></em> </h3>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
+                    Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
+                    sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.</aside>
+                <!--  @formatter:on -->
             </section>
 
 
             <section data-background-color="#fff" class="center">
                 <div class="right">
                     <h2 class="large">Datenblatt</h2>
-                    <p class="decent subline x-small">Nicht wirklich <i>Micro</i>… </p>
+                    <p class="subline tgap"><i>CoC<br>
+                        MVC<br>
+                        Stateless<br></i></p>
 
-                    <p>Full-Stack Web</p>
-                    <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, </p>
 
-                    <p>Conventions<br>MVC <br>Stateless!</p>
-                    <!--<p class="decent subline x-small">optimierte Spark-DSL</p>-->
+                    <p>Full-Stack</p>
+                    <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, …</p>
+                    <p class="subline decent x-small">Daher nicht wirklich „Micro“</p>
 
-                    <p class="decent x-small">6.0.0 (März 2017)</p>
-                    <p class="decent subline x-small">APL2</p>
-
-                    <p class="x-small"><br>http://www.ninjaframework.org/</p>
-
+                    <p class="decent x-small tgapxl">6.2.2 (Jan. 2018), APL2<br>
+                        <a href="http://www.ninjaframework.org/">http://www.ninjaframework.org/</a>
+                    </p>
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 940px; height: 560px; margin-top: 26px;">
-                    <iframe style="width: 940px; height: 560px;" src="http://www.ninjaframework.org/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 900px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 940px; height: 560px;" src="http://www.ninjaframework.org/"></iframe>-->
+                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
+                        <img class="plain" src="img/website-ninja.png"
+                             style="max-width: 100%; max-height: inherit;"
+                             alt="Website screenshot">
+                    </div>
                 </div>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown>
+                    Für fast alle Schichten vom Frontend bis hin zur Datenbank bringt Ninja
+                    bereits eine integrierte Auswahl an Lösungen mit.
+
+                    Mit Jackson für JSON, Hibernate für O/R-Mapping & Validierung,
+                    Guice zur CDI und weitere Tools wie Flyway, Ehcache und Joda Time.
+                    Kein reinrassiges Microframework.
+                </aside>
+                <!--  @formatter:on -->
             </section>
+            
+            <section class="small left">
+                <!--  @formatter:off -->
+                <h2>Convention-over-Configuration (CoC)</h2>
+                <div data-markdown class="twocol">
+                    ##### Fixe Paket/Ordnerstruktur & MVC Pattern
+                    * *Models:* Im Paket `model`
+                    * *Routendefinitionen:*  In Klasse `conf.Routes`
+                    * *Controller:* Im Paket `controller`
+                    * *Views (MVC):* Freemarker-Template `views/CONTROLLER/METHOD.ftl.html`
+
+
+                    ##### Konfiguration
+                    * *Applikation:* `conf/application.conf`
+                    * *Guice:*  `conf/Module.java`
+                    * *I18N:* `conf/messages_XX.properties`
+                </div>
+                <!--  @formatter:on -->
+                <!--  @formatter:off -->
+                <div data-markdown class="twocol">
+                    ##### Binding
+                    * *Dependencies:*  Guice CDI.
+                    * *Input Parsing:* via `Content-Type`
+                    * *Bean Validation:* Automatisch bei passenden Controller-Methodensignaturen
+
+                    ##### Persistenz
+                    * *ORM:*  JPA und Guice Persist
+                    * *Change Management:* mittels Flyway
+                    * *I18N:* `conf/messages_XX.properties`
+                </div>
+                <!--  @formatter:on -->
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    Convention over Configuration (CoC) und MVC haben in Ninja einen hohen Stellenwert.
+                    Das beginnt mit sehr konkreten Erwartungshaltungen in welchen Klassen und Paketen
+                    die Anwendungslogik zu finden ist.
+
+                    * Routen stets in der Klasse `conf.Routes`, Controller im `controllers`-Paket
+                    und View als Freemarker-Template in `views/CONTROLLER/METHOD.ftl.html`.
+                    * Persistenz CDI, I18N, Bean Validation und Serialisierung/Deserialisierung
+                    sind ebenfalls eng über Konventionen in den Stack eingebaut
+                </aside>
+                <!--  @formatter:on -->
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ### Ninja – Routen
+                    ```java
+                    package conf;
+
+                    public class Routes implements ApplicationRoutes {
+
+                      public void init(Router router) {
+                          router.POST().route("/list")
+                            .with(GroceryListController::createGroceryList);
+
+                          router.GET().route("/list/{id}")
+                            .with(GroceryListController::getGroceryList);
+
+                          …
+                      }
+                    }
+                    ```
+                </textarea>
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    * Fixes Paket `conf`
+                    * Controllermethode mit Java 8 Method references
+                </aside>
+                <!--  @formatter:on -->
+            </section>
+
+            <section>
+                <!--  @formatter:off -->
+                <div data-markdown style="width: 980px;">
+                    ### Ninja – Controller
+                    ```java
+                    package controllers;
+
+                    @Singleton
+                    public class GroceryListController {
+                      @Inject private Repository repository;
+
+                      public Result index() {
+                        return html();
+                      }
+
+                      public Result createGroceryList(GroceryList newList) {
+                        return ok().render(repository.createList(newList));
+                      }
+
+                      public Result getGroceryList(@PathParam("id") String id) {
+                        Optional&lt;GroceryList&gt; match = repository.getList(id);
+                        return match.isPresent()
+                            ? json().render(match.get());
+                            : notFound().render(new Message(id + " not found"));
+                      }
+                      …
+                    ```
+                </div>
+                <!--  @formatter:on -->
+                <div class="abs emphasize" style="top: 100px; left: 910px; width: 35%;">
+                    <p style="text-align: left; line-height: .92em; font-size: 72%">
+                        <span class="fragment">&leftarrow; Immer: <code>controllers</code><br></span>
+                        <br>
+                        <br>
+                        <br>
+                        <span class="fragment">&leftarrow; Guice Dependency Injection<br></span>
+                        <br/>
+                        <span class="fragment">&leftarrow; Immer: <code>Result</code> <br></span>
+                        <span class="fragment">
+                            &leftarrow; <code class="xx-small">/GroceryListController/index.ftl.html</code>
+                        </span><br>
+                        <br>
+                        <br>
+                        <span class="fragment">&leftarrow; Request Body<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; geparsed via <code>Content-Type</code><br></span>
+                        <br>
+                        <!--<span class="fragment">&leftarrow; Data classes--> <br></span>
+                        <span class="fragment">&leftarrow; URL Parameter<br></span>
+                    </p>
+                </div>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    * Controller müssen `Result` Objekte zurückgeben
+                    * Injection
+                </aside>
+                <!--  @formatter:on -->
+            </section>
+
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Kern-Konzepte
+
+                    * Client-Side Sessions (!)
+                    * Stateless &  Share nothing! Dadurch gut skalierbar
+                    * Web/RESTful friendly
+                    * Setzt auf mature Standard-Technologien:  Servlets, Guice, JPA, Flyway migrations
+                    * Volle Entwicklungsumgebung: Hotereload, Selenium Tess, CI Support
+                    * Frontend: Freemarker (HTML) / Jackson (XML, Jason)
+                </textarea>
+            </section>
+
+
+            <section data-markdown class="small">
+                <textarea data-template>
+                    | Feld                  | Wert |
+                    | ---:                  | ---  |
+                    | Personality           | Full Stack, Play!-inspired, Stateless, Share-Nothing |
+                    | Overall Grade         |  |
+                    | Code Fun              | [......] |
+                    | Minimalism/Fullstack  | [......] |
+                    | Bytecode Size         | Requests/s, Bundles |
+                    | Comment
+                    * Commercial Support verfügbar
+                    * Eher Nische
+                </textarea>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+                <!--  @formatter:on -->
+
+            </section>
+
+
         </section>
 
 
@@ -561,6 +773,37 @@ public class HelloWorld {
         <section data-background="img/mf-article.png" data-background-color="#fff">
         </section>
 
+
+        <section data-markdown="">
+                <textarea data-template>
+                ## Disziplinen (?)
+                * Performance
+                * Bytegröße
+                * Codegröße / Easiness
+                * Bossability (would my boss say yes) / Riskieness
+                * single JAR
+                </textarea>
+        </section>
+
+        <section>
+            <h2>Das Schlachtfeld</h2>
+
+            <div class="center">
+                <p data-markdown>
+                    ##### „Einkaufsliste“
+                    - RESTful CRUD Application
+                    - Frontend: `ng-admin`
+                    - Backend: Kandidat
+                </p>
+                <div>
+                    <img src="overview.png"/>
+                    <img src="edit.png"/>
+                </div>
+
+            </div>
+        </section>
+
+
         <section>
             <h2>Weitere Materialien QR-CODES?</h2>
             <ul>
@@ -572,6 +815,79 @@ public class HelloWorld {
 
         </section>
 
+
+
+        <section>
+
+            <section class="center">
+                <h1>To the battleground</h1>
+            </section>
+
+            <section>
+                <h3>ng-admin (1)</h3>
+                <pre><code style="font-size: .8em;">
+    var myApp = angular.module('myApp', ['ng-admin']);
+    myApp.config(['NgAdminConfigurationProvider',
+                    function (NgAdminConfigurationProvider) {
+
+        var nga = NgAdminConfigurationProvider;
+        var admin = nga.application('My Grocery Lists');
+
+        var configureFields = function (view) {
+            return view.fields([
+                nga.field('id').editable(false),
+                nga.field('comment'),
+                nga.field('settled', 'boolean'),
+                nga.field('date', 'date'),
+                nga.field('shoppingItems', 'embedded_list')
+                    .targetFields([
+                        nga.field('quantity', 'number'),
+                        nga.field('unit', 'choice').choices([
+                            {value: 'pcs', label: 'pieces'},
+                            {value: 'kg', label: 'kilogram'},
+                            {value: 'g', label: 'gram'},
+                            {value: 'l', label: 'litre'}
+                        ]),
+                        nga.field('name', 'string')
+                    ])
+            ]);
+        };
+</code></pre>
+            </section>
+            <section>
+                <h3>ng-admin (2)</h3>
+
+                <pre><code style="font-size: .8em;">
+        // lists entity
+        var list = nga.entity('list');
+
+        list.listView()
+            .fields([
+                nga.field('comment'),
+                nga.field('settled', 'boolean'),
+                nga.field('date', 'date')])
+            .listActions(['show', 'edit', 'delete'])
+            .title("My shopping lists");
+
+        configureFields(list.editionView())
+            .title('Edit "{{ entry.values.comment }}"')
+            .actions(['show', 'list', 'delete']);
+        configureFields(list.showView())
+            .title('View "{{ entry.values.comment }}"');
+        configureFields(list.creationView());
+
+        admin.addEntity(list);
+
+        nga.configure(admin);
+    }]);
+</code></pre>
+            </section>
+
+            <section>
+                <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
+            </section>
+
+        </section>
 
     </div>
 </div>
@@ -599,13 +915,13 @@ public class HelloWorld {
         slideNumber: true,
         mouseWheel: true,
         controls: false,
-        fragments: true,
+        fragments: false,
         width: 1280,
         height: 720,
         margin: 0.1,
         maxScale: 10,
         center: false,
-        parallaxBackgroundImage: 'https://images.unsplash.com/photo-1502990313206-7f37a9514bea?ixlib=rb-0.3.5&s=7dc56ac17a7fcd2c302b41c181a5ae88',
+        // parallaxBackgroundImage: 'https://images.unsplash.com/photo-1502990313206-7f37a9514bea',
         // 'http://jamescroft.co.uk/wp-content/uploads/2015/01/217-L6YVU1.jpg',
         parallaxBackgroundSize: '4177px 2118px',
 
@@ -629,7 +945,7 @@ public class HelloWorld {
     <!-- Hack to increase video playbackRate -->
     Reveal.addEventListener('ready', function () {
         document.querySelectorAll("video").forEach(function (v) {
-            v.playbackRate = 1.25;
+            v.playbackRate = 1.0;
         });
     }, false);
 </script>

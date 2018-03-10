@@ -8,37 +8,43 @@
 === "Microframeworks"
 * Video jsmicroframeworks-Website. Ein paar Begriffe suchen
 
-=== Meine Definition
-* Artikel-Zitat: "auf eine Lösung zugeschnittene Lösung"
-* kräftige BG, Zitateblase, Mangatar
-
-=== "Leichtigkeit"
-* Symbolbild
-** Leichtgewicht im Umfang
-** Leichtigkeit in der Verwendung
-* Java = Fetter Dampfer
-
-=== Contenders / Hitparade
-* Übersichtsfolie Frameworks
-
-=== Disziplinen (?)
-* Performance
-* Bytegröße
-* Codegröße / Easiness
-* Bossability (would my boss say yes) / Riskieness
-* single JAR
-
 === Microservice-Architektur
 * Handgezeichnete Skizze mit Standard Architektur
 * Docker Container
 * self-Contained Webservice
 * Keine App-Container mehr
 
-=== "Einkaufen"
+== Ego:
+* Komplexität & Größe zählt!
+
+=== Meine Definition
+* Artikel-Zitat: "auf eine Lösung zugeschnittene Lösung"
+* kräftige BG, Zitateblase, Mangatar
+
+//=== "Leichtigkeit"
+//* Symbolbild
+//** Leichtgewicht im Umfang
+//** Leichtigkeit in der Verwendung
+//* Java = Fetter Dampfer
+
+=== Contenders / Hitparade
+* Übersichtsfolie Frameworks
+
+=== Das Testfeld: "Einkaufen"
 * Überleitung: Einkaufswagen?
 
 .TESTFELD: GroceryList
 * Symbolbild Einkaufszettel (über Einkaufswagen?)
+
+=== Bewertungsmuster
+Leeres Assessment-Blatt als Vorschau.
+
+* Performance
+* Bytegröße
+* Codegröße / Easiness
+* Bossability (would my boss say yes) / Riskieness
+* single JAR
+
 
 
 
@@ -54,19 +60,25 @@
 * Sinatra
 * Ausschnitte: Routen-Handling
 
+===
+
+=== TESTFELD: Überblicksbild
+* Handgezeichnete Overall-Diagramm
+* dann, CRUD-Services Hervorgehoben
+
+
 === TESTFELD: In Detail Frontend/Backend/Fat Jar
+Overlay: Tabelle HTTP Operationen
 
-> Was benötigen wir davon für unseren Testcase?
-
-* Backend: CRUD RESTful
+// > Was benötigen wir davon für unseren Testcase?
 ** GET /list, GET /list/id, PUT, POST, DELETE
-* no DB
 
+
+
+== Ninja (Logo)
+=== Summary
+=== Konzepte
 === FACTSHEET
-* Was ist drin, was nicht
-* Bewertung Spark Java
-* Performance?
-
 
 
 
@@ -76,7 +88,7 @@
 
 .Symbolbild Asynchron / Reaktiv
 
-* Zustandslos
+* ????Zustandslos????
 * Asynchron/non-Blocking
 * Netty
 * Typisiert
@@ -120,11 +132,6 @@
 
 
 
-== Ninja
-=== Summary
-=== Konzepte
-=== FACTSHEET
-
 
 
 
@@ -139,6 +146,10 @@
 
 
 == Sonstige Kandidaten
+|===
+| Kandidat | Zusammenfassung
+|===
+
 
 == Summary: Battle / Vergleich
 
