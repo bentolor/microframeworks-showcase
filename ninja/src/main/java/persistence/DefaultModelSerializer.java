@@ -22,6 +22,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 import model.GroceryLists;
+import model.ModelElement;
 import ninja.lifecycle.Start;
 
 import java.io.File;
@@ -71,4 +72,19 @@ public class DefaultModelSerializer implements ModelSerializer {
     }
 
 
+    public <T extends ModelElement> T deserialize(String jsonText, Class<T> targetClass) {
+        try {
+            return mapper.readValue(jsonText, targetClass);
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Invalid JSON", e);
+        }
+    }
+
+    public String serialize(ModelElement model) {
+        try {
+            return mapper.writeValueAsString(model);
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Invalid JSON", e);
+        }
+    }
 }

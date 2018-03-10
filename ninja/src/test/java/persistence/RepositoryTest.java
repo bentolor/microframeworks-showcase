@@ -63,7 +63,7 @@ public class RepositoryTest {
         assertTrue("#1", defaultRepository.getList(UUID_1).isPresent());
         assertTrue("#2", defaultRepository.getList(UUID_2).isPresent());
         assertTrue("#3", defaultRepository.getList(UUID_3).isPresent());
-        assertEquals(2, defaultRepository.getList(UUID_2).get().getShoppingItems().size());
+        assertEquals(2, defaultRepository.getList(UUID_2).get().getShoppingItems().length);
     }
 
     @Test
@@ -89,13 +89,13 @@ public class RepositoryTest {
     public void updateList() {
         emptyRepository.createList(groceryList);
         groceryList.setSettled(true);
-        groceryList.setShoppingItems(Arrays.asList(ITEM_SOY_MILK));
+        groceryList.setShoppingItems(new Item[] { ITEM_SOY_MILK });
         assertTrue(emptyRepository.updateList(groceryList.getId(), groceryList));
 
         Optional<GroceryList> updatedList = emptyRepository.getList(groceryList.getId());
         assertTrue(updatedList.isPresent());
-        assertEquals(1, updatedList.get().getShoppingItems().size());
-        assertEquals("soy milk", updatedList.get().getShoppingItems().get(0).getName());
+        assertEquals(1, updatedList.get().getShoppingItems().length);
+        assertEquals("soy milk", updatedList.get().getShoppingItems()[0].getName());
     }
 
     @Test

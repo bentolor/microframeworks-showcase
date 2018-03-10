@@ -15,32 +15,22 @@
  */
 package model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
 import java.util.UUID;
 
 /** A shopping list for groceries. */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GroceryList implements ModelElement {
 
     private UUID id;
-    private List<Item> shoppingItems;
-    private String comment;
     private LocalDate date;
+    private String comment;
     private boolean settled;
-
-    public GroceryList() {
-    }
-
-    public GroceryList(UUID id, LocalDate date, String comment, boolean settled, Item... shoppingItems) {
-        this.id = id;
-        this.shoppingItems = Arrays.asList(shoppingItems);
-        this.comment = comment;
-        this.date = date;
-        this.settled = settled;
-    }
-
+    private Item[] shoppingItems;
 }
