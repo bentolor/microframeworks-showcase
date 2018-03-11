@@ -3,37 +3,43 @@
 == Vergleich
 
 |===
-| Framework | Fat-JAR (MB) | davon eigene Dependencies | Zusammensetzung
+| Framework | Fat-JAR (MB) | davon eigene Dependencies | Zusammensetzung | Requests/s
 
 | Spark
 | 2,7M
 | Gson (228k), spark-template-jade (3k)
 | Jetty 9, slf4j
+| 4,9k/s, 81ms +/- 39ms
 
 | Ratpack
 | 9,5M
 | -
 | Netty, Jackson, Javassist, SnakeYaml, slf4j
+| 4,5k/s, 87ms +/- 31ms
 
 | Ninja
 | 25M
 | jackson-jsr310 (45k)
 | Jetty 9, Guice, Guava, Logback, Jackson, Woodstox, commons-code,-configuration,-io,-fileupload, -email, -lang3, joda-time, ehcache, memcached, flyway, freemarker, hibernate, prettytime, slf4j
+| 4,8k/s, 82ms +/- 127ms
 
 | Jodd
 | 4,9M
 | Gson (0.2M), Undertow (2.8M)
 | Jodd Bean/Core/JSON/Log/Petite/Props/Proxetta/Servlet/Upload
+| 4,9k/s, 81ms +/- 44.5ms
 
 | Spring 5
 | 16M
 | -
 | Spring Boot, Spring Web/Beans/Core/JCL, WebFlux, Reactor/ReactiveStreams, Hibernate Validator, slf4j, SnakeYaml, Logback, Jackson, Netty
+| 4,1k/s, 98ms +/- 149ms
 
 | Pippo
 | 3,9M
 | Undertow (2.8M), pippo-controller
 | slf4j
+| 4,9k/s, 81ms +/- 33ms
 
 |===
 
