@@ -871,9 +871,29 @@ public class HelloWorld {
                 </aside>
             </section>
 
-            <section>
-                <p>Video: Scrollen über index.html, danach Wechsel in die Applikation.
-                    Klicken und Bearbeiten der Anwendung.</p>
+            <section data-background-video="img/screencast-ng-admin-ui.webm"
+                     data-background-size="contain"
+                     data-background-color="#433">
+                <div style="position: absolute; left:-10%;
+                            top: 700px; width: 116%; z-index: 10;
+                            border-top: 2px solid #111;
+                            padding: 6px 32px;
+                            background-color: rgba(33,33,33,0.7);"
+                    class="fade-in">
+                    GUI in <b>64 Zeilen</b> mit <i>ng-admin</i> :
+                    <a href="https://github.com/marmelab/ng-admin"
+                        style="color: #ccf; text-decoration: underline;">
+                        https://github.com/marmelab/ng-admin
+                    </a>
+                </div>
+
+                <aside class="notes" data-markdown>
+                    * Dazu ist nur 1 HTML Seite erforderlich: `index.html`
+                    * Darin binden wir ng-admin ein und konfigurieren und
+                    Details des Erscheinungsbilds für die Views
+                    * Mit einem funktionsfähigen Backend können wir damit
+                    vollständige Datenverwaltung machen.
+                </aside>
             </section>
 
             <!--
