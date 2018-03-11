@@ -259,6 +259,14 @@
                 </div>
             </section>
 
+        </section>
+
+
+
+        <!--
+          === Demo App: Architektur ==================================================================
+        -->
+        <section>
             <section data-background-image="img/igor-ovsyannykov-520422-unsplash.jpg">
                 <img src="img/note-pad-1425759.png" alt="Einkaufsliste" class="plain abs fragment"
                      style="left: 210px; top: 400px; transform: scale(16) rotate(-3deg);">
@@ -270,6 +278,27 @@
                 </aside>
                 <!--  @formatter:on -->
 
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Showcase Architektur
+
+                    * Bild: Hervorgehoben CRUD Services
+                    * REST Operationen
+
+                    Eventuell als Overlay: Konstruktionspapier & über Einkaufswagen
+                </textarea>
+
+                <!--  @formatter:off -->
+                <aside class="notes" data-markdown="">
+                    Unsere Beispiel-Applikation stellt eine klassische Singe-Page Applikation mit RESTful
+                    Backend da. Wir benötigen also ein Backend, dass HTTP-Aufrufe auf entsprechende CRUD-
+                    Controllerlogik mapped.
+
+                    Schauen wir uns mal an, wie das mit unserme ersten Kandidaten gelingt.
+                </aside>
+                <!--  @formatter:on -->
             </section>
         </section>
 
@@ -319,26 +348,6 @@
                 <aside class="notes" data-markdown>
                     * spirituellen Wurzeln im Ruby-Framework Sinatra
                     * Unter Kotlin ergänzende DSL (Geschmackssache)
-                </aside>
-                <!--  @formatter:on -->
-            </section>
-
-
-            <section data-markdown>
-                <textarea data-template>
-                    ## Showcase Architektur
-
-                    * Bild: Hervorgehoben CRUD Services
-                    * REST Operationen
-                </textarea>
-
-                <!--  @formatter:off -->
-                <aside class="notes" data-markdown="">
-                    Unsere Beispiel-Applikation stellt eine klassische Singe-Page Applikation mit RESTful
-                    Backend da. Wir benötigen also ein Backend, dass HTTP-Aufrufe auf entsprechende CRUD-
-                    Controllerlogik mapped.
-
-                    Schauen wir uns mal an, wie das mit unserme ersten Kandidaten gelingt.
                 </aside>
                 <!--  @formatter:on -->
             </section>
@@ -463,62 +472,10 @@ public class HelloWorld {
 
         </section>
 
-
         <!--
-            === Ninja ============================================================================
+          === Demo App: Model     =============================================================
         -->
         <section>
-
-            <section data-background-color="#fff" class="center">
-                <!--suppress CheckImageSize -->
-                <img class="tgap plain" src="img/logo-ninja.png" width="818"/>
-                <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
-
-                <aside class="notes" data-markdown="">
-                    Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
-                    Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
-                    sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.
-                </aside>
-            </section>
-
-
-            <section data-background-color="#fff">
-                <div class="right">
-                    <h2 class="large">Datenblatt</h2>
-                    <p class="subline tgap"><i>CoC<br>
-                        MVC<br>
-                        Stateless<br></i></p>
-
-
-                    <p>Full-Stack</p>
-                    <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, …</p>
-                    <p class="subline decent x-small">Daher nicht wirklich „Micro“</p>
-
-                    <p class="decent x-small tgapxl">6.2.2 (Jan. 2018), APL2<br>
-                        <a href="http://www.ninjaframework.org/">http://www.ninjaframework.org/</a>
-                    </p>
-                </div>
-
-                <div class="abs" style="position: absolute; z-index: 1; width: 900px; height: 560px; margin-top: 26px;">
-                    <!--<iframe style="width: 940px; height: 560px;" src="http://www.ninjaframework.org/"></iframe>-->
-                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
-                        <img class="plain" src="img/website-ninja.png"
-                             style="max-width: 100%; max-height: inherit;"
-                             alt="Website screenshot">
-                    </div>
-                </div>
-
-                <aside class="notes" data-markdown>
-                    Für fast alle Schichten vom Frontend bis hin zur Datenbank bringt Ninja
-                    bereits eine integrierte Auswahl an Lösungen mit.
-
-                    Mit Jackson für JSON, Hibernate für O/R-Mapping & Validierung,
-                    Guice zur CDI und weitere Tools wie Flyway, Ehcache und Joda Time.
-                    Kein reinrassiges Microframework.
-                </aside>
-            </section>
-
-
             <section data-markdown>
                 <textarea data-template>
                     ## Showcase Architektur
@@ -576,6 +533,75 @@ public class HelloWorld {
                     * xxx
                 </aside>
             </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Showcase Architektur
+                    * Bild: Hervorgehoben: Persistenz
+                </textarea>
+
+                <aside class="notes" data-markdown="">
+                    Die Persitenz machen wir einfach durch Serialisierung/Deserialisierung
+                    des Models als JSON File.
+                </aside>
+            </section>
+
+        </section>
+
+        <!--
+            === Ninja ============================================================================
+        -->
+        <section>
+
+            <section data-background-color="#fff" class="center">
+                <!--suppress CheckImageSize -->
+                <img class="tgap plain" src="img/logo-ninja.png" width="818"/>
+                <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
+
+                <aside class="notes" data-markdown="">
+                    Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
+                    Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
+                    sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.
+                </aside>
+            </section>
+
+
+            <section data-background-color="#fff">
+                <div class="right">
+                    <h2 class="large">Datenblatt</h2>
+                    <p class="subline tgap"><i>CoC<br>
+                        MVC<br>
+                        Stateless<br></i></p>
+
+
+                    <p>Full-Stack</p>
+                    <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, …</p>
+                    <p class="subline decent x-small">Daher nicht wirklich „Micro“</p>
+
+                    <p class="decent x-small tgapxl">6.2.2 (Jan. 2018), APL2<br>
+                        <a href="http://www.ninjaframework.org/">http://www.ninjaframework.org/</a>
+                    </p>
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 900px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 940px; height: 560px;" src="http://www.ninjaframework.org/"></iframe>-->
+                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
+                        <img class="plain" src="img/website-ninja.png"
+                             style="max-width: 100%; max-height: inherit;"
+                             alt="Website screenshot">
+                    </div>
+                </div>
+
+                <aside class="notes" data-markdown>
+                    Für fast alle Schichten vom Frontend bis hin zur Datenbank bringt Ninja
+                    bereits eine integrierte Auswahl an Lösungen mit.
+
+                    Mit Jackson für JSON, Hibernate für O/R-Mapping & Validierung,
+                    Guice zur CDI und weitere Tools wie Flyway, Ehcache und Joda Time.
+                    Kein reinrassiges Microframework.
+                </aside>
+            </section>
+
 
 
             <section class="small left">
@@ -753,6 +779,87 @@ public class HelloWorld {
 
 
         <!--
+          === Demo App: UI ===========================================================================
+        -->
+        <section>
+            <section data-markdown="">
+                <textarea data-template>
+                    ## Architektur: UI - Teil
+                </textarea>
+            </section>
+
+            <section>
+                <p>Video: Scrollen über index.html, danach Wechsel in die Applikation.
+                    Klicken und Bearbeiten der Anwendung.</p>
+            </section>
+
+            <!--
+            <section>
+                <h3>ng-admin (1)</h3>
+                <pre><code style="font-size: .8em;">
+var myApp = angular.module('myApp', ['ng-admin']);
+myApp.config(['NgAdminConfigurationProvider',
+                function (NgAdminConfigurationProvider) {
+
+    var nga = NgAdminConfigurationProvider;
+    var admin = nga.application('My Grocery Lists');
+
+    var configureFields = function (view) {
+        return view.fields([
+            nga.field('id').editable(false),
+            nga.field('comment'),
+            nga.field('settled', 'boolean'),
+            nga.field('date', 'date'),
+            nga.field('shoppingItems', 'embedded_list')
+                .targetFields([
+                    nga.field('quantity', 'number'),
+                    nga.field('unit', 'choice').choices([
+                        {value: 'pcs', label: 'pieces'},
+                        {value: 'kg', label: 'kilogram'},
+                        {value: 'g', label: 'gram'},
+                        {value: 'l', label: 'litre'}
+                    ]),
+                    nga.field('name', 'string')
+                ])
+        ]);
+    };
+</code></pre>
+            </section>
+            <section>
+                <h3>ng-admin (2)</h3>
+
+                <pre><code style="font-size: .8em;">
+    // lists entity
+    var list = nga.entity('list');
+
+    list.listView()
+        .fields([
+            nga.field('comment'),
+            nga.field('settled', 'boolean'),
+            nga.field('date', 'date')])
+        .listActions(['show', 'edit', 'delete'])
+        .title("My shopping lists");
+
+    configureFields(list.editionView())
+        .title('Edit "{{ entry.values.comment }}"')
+        .actions(['show', 'list', 'delete']);
+    configureFields(list.showView())
+        .title('View "{{ entry.values.comment }}"');
+    configureFields(list.creationView());
+
+    admin.addEntity(list);
+
+    nga.configure(admin);
+}]);
+</code></pre>
+            </section>
+            -->
+        </section>
+
+
+
+
+        <!--
             === Jodd ============================================================================
         -->
         <section>
@@ -846,16 +953,6 @@ public class HelloWorld {
                 </aside>
             </section>
 
-            <section data-markdown="">
-                <textarea data-template>
-                    ## Architektur: UI - Teil
-                </textarea>
-            </section>
-
-            <section>
-                <p>Video: Scrollen über index.html, danach Wechsel in die Applikation.
-                    Klicken und Bearbeiten der Anwendung.</p>
-            </section>
 
             <section data-markdown class="">
                 <textarea data-template>
@@ -1201,12 +1298,12 @@ public class HelloWorld {
 
         </section>
 
+
+
         <!--
-            === Outro   ============================================================================
+          === Demo App: Benchmarking =================================================================
         -->
         <section>
-
-
             <section data-markdown>
                 <textarea data-template>
                     ### Benchmark Crunchdown (Bytecode)
@@ -1223,6 +1320,12 @@ public class HelloWorld {
                 </textarea>
             </section>
 
+        </section>
+
+        <!--
+            === Outro   ============================================================================
+        -->
+        <section>
 
             <section data-markdown class="small">
                 <textarea data-template>
@@ -1236,24 +1339,6 @@ public class HelloWorld {
                 </textarea>
             </section>
 
-
-            <section>
-                <h2>Das Schlachtfeld</h2>
-
-                <div class="center">
-                    <p data-markdown>
-                        ##### „Einkaufsliste“
-                        - RESTful CRUD Application
-                        - Frontend: `ng-admin`
-                        - Backend: Kandidat
-                    </p>
-                    <div>
-                        <img src="overview.png"/>
-                        <img src="edit.png"/>
-                    </div>
-
-                </div>
-            </section>
 
             <section data-markdown>
                 <textarea data-template>
@@ -1281,66 +1366,6 @@ public class HelloWorld {
 
                 * Kotlin & Kolin-Vortrag
                 * Project Lombok
-            </section>
-
-            <section>
-                <h3>ng-admin (1)</h3>
-                <pre><code style="font-size: .8em;">
-var myApp = angular.module('myApp', ['ng-admin']);
-myApp.config(['NgAdminConfigurationProvider',
-                function (NgAdminConfigurationProvider) {
-
-    var nga = NgAdminConfigurationProvider;
-    var admin = nga.application('My Grocery Lists');
-
-    var configureFields = function (view) {
-        return view.fields([
-            nga.field('id').editable(false),
-            nga.field('comment'),
-            nga.field('settled', 'boolean'),
-            nga.field('date', 'date'),
-            nga.field('shoppingItems', 'embedded_list')
-                .targetFields([
-                    nga.field('quantity', 'number'),
-                    nga.field('unit', 'choice').choices([
-                        {value: 'pcs', label: 'pieces'},
-                        {value: 'kg', label: 'kilogram'},
-                        {value: 'g', label: 'gram'},
-                        {value: 'l', label: 'litre'}
-                    ]),
-                    nga.field('name', 'string')
-                ])
-        ]);
-    };
-</code></pre>
-            </section>
-            <section>
-                <h3>ng-admin (2)</h3>
-
-                <pre><code style="font-size: .8em;">
-    // lists entity
-    var list = nga.entity('list');
-
-    list.listView()
-        .fields([
-            nga.field('comment'),
-            nga.field('settled', 'boolean'),
-            nga.field('date', 'date')])
-        .listActions(['show', 'edit', 'delete'])
-        .title("My shopping lists");
-
-    configureFields(list.editionView())
-        .title('Edit "{{ entry.values.comment }}"')
-        .actions(['show', 'list', 'delete']);
-    configureFields(list.showView())
-        .title('View "{{ entry.values.comment }}"');
-    configureFields(list.creationView());
-
-    admin.addEntity(list);
-
-    nga.configure(admin);
-}]);
-</code></pre>
             </section>
 
         </section>
