@@ -3,8 +3,8 @@ Purpose of this project
 This Java/Gradle based repository illustrates a selection of Java-based
 microframeworks. 
  
-It implements a functionally identical grocery list application with [Spark](http://sparkjava.com/),
-[Ninja](http://http://www.ninjaframework.org/), [Ratpack](http://ratpack.io/) and [Jodd](http://jodd.org/) and a few others. 
+It implements a functionally identical grocery list application with [Spark](http://sparkjava.com),
+[Ninja](https://www.ninjaframework.org), [Ratpack](https://ratpack.io), [Jodd](https://jodd.org), [Pippo](http://www.pippo.ro), [JavaLite](http://javalite.io), and a few others. 
 
 It was originally meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all) but is also the basis for my talk [Schlank in den Service: Der große Java-Microframework-Test!](https://programm.javaland.eu/2018/#/scheduledEvent/549567) on the Javaland conference 2018.
 
@@ -21,8 +21,8 @@ This repository comes with a pre-bundled [Gradle Wrapper](https://docs.gradle.or
 run. 
 
 *Optional (recommended for development):*
-- [Gradle 4.5+](http://gradle.org/) 
-- [Lombok](http://projectlombok.org/) Plugin for your IDE of choice (Guide: [IDEA](https://projectlombok.org/setup/intellij), [Eclipse](https://projectlombok.org/setup/eclipse), …)
+- [Gradle 4.5+](https://gradle.org) 
+- [Lombok](https://projectlombok.org) Plugin for your IDE of choice (Guide: [IDEA](https://projectlombok.org/setup/intellij), [Eclipse](https://projectlombok.org/setup/eclipse), …)
 - IntelliJ IDEA (preferably Ultimate Edition for full Framework support) 
 
 Spark Java
@@ -81,7 +81,7 @@ Ratpack
 =======
 ![Ratpack Logo](https://rawgit.com/ratpack/ratpack/v1.1.1/ratpack-manual/src/assets/images/ratpack-logo.png)
       
-[Ratpack](http://ratpack.io/) is a reactive-oriented, type-safe microframework heavily based on Java 8 lambdas
+[Ratpack](https://ratpack.io) is a reactive-oriented, type-safe microframework heavily based on Java 8 lambdas
 and Netty for non-blocking IO.
 
 Starting the demo application
@@ -107,7 +107,7 @@ Jodd
 =======
 ![Jodd Logo](https://rawgit.com/oblac/jodd/master/src/site/resources/images/jodd.png)
       
-[Jodd](http://jodd.org/) is set of Java micro frameworks, tools and utilities, under 1.7 MB.
+[Jodd](https://jodd.org) is set of Java micro frameworks, tools and utilities, under 1.7 MB.
 The framework consists of micro components, which can be used more or less independently.
 
                          
@@ -144,7 +144,7 @@ Pippo
 
 ````
       
-[Pippo](http://www.pippo.ro/) is set of Java micro framework in the spirit of Sinatra but also
+[Pippo](http://www.pippo.ro) is set of Java micro framework in the spirit of Sinatra but also
 offers a Controller-based approach. The core is small (around 140 KB) and can be extended with
 various modules for template engine or embedded web servers. 
                       
