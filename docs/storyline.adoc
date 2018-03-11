@@ -77,39 +77,12 @@ Overlay: Tabelle HTTP Operationen
 
 == Ninja (Logo)
 === Summary
-=== Konzepte
-=== FACTSHEET
-
-
-
-== Ratpack (Logo)
-
-=== Summary (?)
-
-.Symbolbild Asynchron / Reaktiv
-
-* ????Zustandslos????
-* Asynchron/non-Blocking
-* Netty
-* Typisiert
-
-=== Konzepte
-
-> Was zeichnet Ratpack aus?
-
-* Configuration
-
 === TESTFELD: Prägnanz: Model
-
 * Option 1: Lombok
 * Option 2: Kotlin (Data Classes)
 
+=== Konzepte
 === FACTSHEET
-* Was ist drin, was nicht
-* Bewertung
-* Performance?
-
-
 
 
 == Jodd
@@ -131,6 +104,31 @@ Overlay: Tabelle HTTP Operationen
 * Performance?
 
 
+
+
+== Ratpack (Logo)
+
+=== Summary (?)
+
+.Symbolbild Asynchron / Reaktiv
+
+* ????Zustandslos????
+* Asynchron/non-Blocking
+* Netty
+* Typisiert
+
+=== Konzepte
+
+> Was zeichnet Ratpack aus?
+
+* Configuration
+
+
+
+=== FACTSHEET
+* Was ist drin, was nicht
+* Bewertung
+* Performance?
 
 
 

@@ -158,10 +158,14 @@
             </section>
 
             <section>
-                <h2>Microservice Architektur</h2>
+                <h3>Microservice Architektur</h3>
                 <img src="img/microservices-architektur.png"
                      alt="Overview Microservice Architektur"
+                     style="max-width: 84%;"
                      class="plain">
+                <p class="fragment">
+                    <span class="decent">Entscheidend:</span> Geringe Komplexität, Größe & Aufwand
+                </p>
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
@@ -178,22 +182,12 @@
 
             </section>
 
-            <section data-markdown>
-                <textarea data-template>
-                    ## Keys for Microservices
-
-                    1. Komplexität
-                    2. Gewicht / Leichtigkeit
-                    3.  in kürzest möglicher Zeit produktionsreife Java-Anwendungen
-                </textarea>
-            </section>
-
             <section>
                 <img src="img/ben-avatar.png" alt="Ben's Avatar" class="plain"
                      style="position: absolute; left: 180px; top: 410px; transform: scale(6);">
                 <div style="position: absolute; left: 320px; top: 155px">
                     <div class="bubble">
-                        <h4>Microframeworks</h4>
+                        <h4>Java Microframeworks:</h4>
                         <i>„Elegante, flexible auf <b>ein Thema</b> fokussierte Rahmenwerke
                             für eine Problemstellung (in der Regel Webanwendungen) mit dem Ziel
                             einer <b>schlankere Source- und/oder Bytecode</b>-Linie“</i>
@@ -254,7 +248,7 @@
                     }
                 </style>
                 <h2><u>Die Kandidaten</u></h2>
-                <div class="logogrid" style="margin-top: 90px">
+                <div class="logogrid" style="margin-top: 90px;">
                     <div><img src="img/logo-jodd.png" alt="Jodd" class="plain"></div>
                     <div><img src="img/logo-ninja.png" alt="Ninja" class="plain"></div>
                     <div><img src="img/logo-ratpack.png" alt="Ratpack" class="plain"
@@ -280,14 +274,13 @@
         </section>
 
 
-
         <!--
           === Spark ==================================================================================
         -->
         <section>
             <section data-background-color="#fff" class="center">
-                <img src="http://sparkjava.com/img/logo.svg" class="plain tgap" width="600"/>
-                <h3 class="tgap" ><em><i>Eleganter Zündfunken</i></em> </h3>
+                <img src="img/logo-spark.svg" class="plain tgap" width="600"/>
+                <h3 class="tgap"><em><i>Eleganter Zündfunken</i></em></h3>
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown="">
@@ -296,7 +289,7 @@
                 <!--  @formatter:on -->
             </section>
 
-            <section data-background-color="#fff" class="center">
+            <section data-background-color="#fff">
                 <div class="right">
                     <h2 class="large">Datenblatt</h2>
 
@@ -317,7 +310,7 @@
 
                 <div class="abs" style="position: absolute; z-index: 1; width: 820px; height: 560px; margin-top: 26px;">
                     <!--<iframe style="width: 810px; height: 560px; overflow-x: hidden;"-->
-                            <!--src="http://sparkjava.com/"></iframe>-->
+                    <!--src="http://sparkjava.com/"></iframe>-->
                     <iframe style="width: 810px; height: 560px; overflow-x: hidden;"
                             src="img/website-sparkjava.png"></iframe>
                 </div>
@@ -329,6 +322,7 @@
                 </aside>
                 <!--  @formatter:on -->
             </section>
+
 
             <section data-markdown>
                 <textarea data-template>
@@ -347,8 +341,8 @@
                     Schauen wir uns mal an, wie das mit Spark gelingt.
                 </aside>
                 <!--  @formatter:on -->
-
             </section>
+
 
             <section data-markdown="">
                 <textarea data-template>
@@ -442,16 +436,16 @@ public class HelloWorld {
                 <textarea data-template>
                     | Feld                  | Wert |
                     | ---:                  | ---  |
-                    | Personality           | Sinatra-inspiriert. Zentrale Strukturierung: Routen. Dazu: Filter & Transformer; optionaler Template Engine Support, mehr nicht! |
+                    | Personality           | Elegant, Minimalistisch, Sinatra-inspiriert. Zentrale Strukturierung: Routen. Deklaratives Muster. Dazu: Filter, Transformer, optionale Template Engines – That's it! |
                     | Overall Grade         | A- |
                     | Code Fun              | [....X.] |
-                    | Minimalism/Fullstack  | [.....X] |
+                    | Minimalism/Fullstack  | [X.....] |
                     | Bytecode Size         | Requests/s, Bundles |
                     | Comment
-                    * Sehr schnell erste Ergebnisse
-                    * Elegant & Minimalistisch
-                    * Bedeutet aber auch: sinnvolle Zergliederung, Fehlerbehandlung, effiziente Antwortseiten-Generierung
+                    * Sehr schnell erste Ergebnisse. Macht Spaß in der Verwendung!
+                    * Minimalismus bedeutet aber auch: sinnvolle Zergliederung, Fehlerbehandlung, effiziente Antwortseiten-Generierung
                       liegen in der Hand des Entwicklers
+                    * Dokumentation könnte umfassender & gründlicher sein. Code aber gut verständlich & debugbar.
                 </textarea>
 
                 <!--  @formatter:off -->
@@ -470,26 +464,25 @@ public class HelloWorld {
         </section>
 
 
-
         <!--
             === Ninja ============================================================================
         -->
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img class="tgap plain" src="http://www.ninjaframework.org/ninja_logo.png" width="800"/>
-                <h3 class="tgap"><em><i>Spion mit Konventionen</i></em> </h3>
+                <!--suppress CheckImageSize -->
+                <img class="tgap plain" src="img/logo-ninja.png" width="818"/>
+                <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
 
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown="">
                     Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
                     Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
-                    sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.</aside>
-                <!--  @formatter:on -->
+                    sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.
+                </aside>
             </section>
 
 
-            <section data-background-color="#fff" class="center">
+            <section data-background-color="#fff">
                 <div class="right">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>CoC<br>
@@ -515,7 +508,6 @@ public class HelloWorld {
                     </div>
                 </div>
 
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
                     Für fast alle Schichten vom Frontend bis hin zur Datenbank bringt Ninja
                     bereits eine integrierte Auswahl an Lösungen mit.
@@ -524,9 +516,68 @@ public class HelloWorld {
                     Guice zur CDI und weitere Tools wie Flyway, Ehcache und Joda Time.
                     Kein reinrassiges Microframework.
                 </aside>
-                <!--  @formatter:on -->
             </section>
-            
+
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Showcase Architektur
+                    * Bild: Hervorgehoben: Model
+                </textarea>
+
+                <aside class="notes" data-markdown="">
+                    Zurück zu unserer Beispiel Anwendung: Nachdem wir die Routen haben, geht es an das Model.
+                    Wie können wir hier Prägnanz erreichen? Dazu greifen wir zu Lombok.
+                </aside>
+            </section>
+
+
+            <section class="container">
+                <!--
+                    ```groovy
+                    plugins {
+                        id 'io.franzbecker.gradle-lombok' version '1.11'
+                    }
+
+                    lombok {
+                        sha256 = "" // skip verifyLombok
+                    }
+                    ```
+                -->
+                <!--  @formatter:off -->
+                <div data-markdown style="width: 68%; margin: 0 auto;">
+                    ### Model: POJOs mit Lombok
+
+                    ```java
+                    /** A shopping list for groceries. */
+                    @Data
+                    @NoArgsConstructor
+                    @AllArgsConstructor
+                    public class GroceryList implements ModelElement {
+
+                        private UUID id;
+                        private LocalDate date;
+                        private String comment;
+                        private boolean settled;
+                        private Item[] shoppingItems;
+                    }
+                    ```
+                </div>
+                <div data-markdown class="fragment">
+                    #### ... oder mit Kotlin
+                    ```kotlin
+                    data class GroceryList(val id: UUID, var date: LocalDate, var comment: String?,
+                                    var isSettled: Boolean, var shoppingItems: List&lt;Item&gt;)
+                    ```
+                </div>
+                <!--  @formatter:on -->
+
+                <aside class="notes" data-markdown="">
+                    * xxx
+                </aside>
+            </section>
+
+
             <section class="small left">
                 <!--  @formatter:off -->
                 <h2>Convention-over-Configuration (CoC)</h2>
@@ -557,7 +608,6 @@ public class HelloWorld {
                     * *I18N:* `conf/messages_XX.properties`
                 </div>
                 <!--  @formatter:on -->
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown="">
                     Convention over Configuration (CoC) und MVC haben in Ninja einen hohen Stellenwert.
                     Das beginnt mit sehr konkreten Erwartungshaltungen in welchen Klassen und Paketen
@@ -568,7 +618,6 @@ public class HelloWorld {
                     * Persistenz CDI, I18N, Bean Validation und Serialisierung/Deserialisierung
                     sind ebenfalls eng über Konventionen in den Stack eingebaut
                 </aside>
-                <!--  @formatter:on -->
             </section>
 
             <section data-markdown>
@@ -591,12 +640,10 @@ public class HelloWorld {
                     }
                     ```
                 </textarea>
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown="">
                     * Fixes Paket `conf`
                     * Controllermethode mit Java 8 Method references
                 </aside>
-                <!--  @formatter:on -->
             </section>
 
             <section>
@@ -629,7 +676,7 @@ public class HelloWorld {
                 </div>
                 <!--  @formatter:on -->
                 <div class="abs emphasize" style="top: 100px; left: 910px; width: 35%;">
-                    <p style="text-align: left; line-height: .92em; font-size: 72%">
+                    <p style="text-align: left; line-height: .92em; font-size: 72%;">
                         <span class="fragment">&leftarrow; Immer: <code>controllers</code><br></span>
                         <br>
                         <br>
@@ -645,17 +692,15 @@ public class HelloWorld {
                         <span class="fragment">&leftarrow; Request Body<br>
                             &nbsp;&nbsp;&nbsp;&nbsp; geparsed via <code>Content-Type</code><br></span>
                         <br>
-                        <!--<span class="fragment">&leftarrow; Data classes--> <br></span>
+                        <br>
                         <span class="fragment">&leftarrow; URL Parameter<br></span>
                     </p>
                 </div>
 
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown="">
                     * Controller müssen `Result` Objekte zurückgeben
                     * Injection
                 </aside>
-                <!--  @formatter:on -->
             </section>
 
 
@@ -670,6 +715,16 @@ public class HelloWorld {
                     * Volle Entwicklungsumgebung: Hotereload, Selenium Tess, CI Support
                     * Frontend: Freemarker (HTML) / Jackson (XML, Jason)
                 </textarea>
+
+                <aside class="notes" data-markdown="">
+                    Ninja ist serverseitige Zustandslos! D.h. keine Mittel für Server-seitige Session.
+                    Stattdessen alle Zustandsinformationen als Cookie (auch verschlüsselt) auf dem Client.
+
+                    Nachteil: Session kann nur sehr kleine Datenmengen speichern.
+
+                    Vorteil: Ninja-Applikationen inhärent horizontal skalierbar. Einfach weitere Server
+                    hinter dem Loadbalancer aufstellen genügt!
+                </aside>
             </section>
 
 
@@ -677,24 +732,22 @@ public class HelloWorld {
                 <textarea data-template>
                     | Feld                  | Wert |
                     | ---:                  | ---  |
-                    | Personality           | Full Stack, Play!-inspired, Stateless, Share-Nothing |
-                    | Overall Grade         |  |
-                    | Code Fun              | [......] |
-                    | Minimalism/Fullstack  | [......] |
+                    | Personality           | Full Stack, Umfassende Konventionen, MVC, Play!-inspired. Client-side Sessions, daher einfache Skalierbarkeit |
+                    | Overall Grade         | B- |
+                    | Code Fun              | [...x..] |
+                    | Minimalism/Fullstack  | [.....x] |
                     | Bytecode Size         | Requests/s, Bundles |
                     | Comment
-                    * Commercial Support verfügbar
-                    * Eher Nische
+                    * Sehr umfassend. Kombiniert viele etablierte Frameworks.
+                    * Architektur sehr stark vorgegeben. Wenig Flexibilität / Modularität
+                    * Umgehen von Detailproblemen durch monolithischen Ansatz teils schwer
+                    * Von Verbreitung eher Nische gegenüber Dropwizard/Spring Boot/Play!
                 </textarea>
 
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
-                    *
+                    * xxx
                 </aside>
-                <!--  @formatter:on -->
-
             </section>
-
 
         </section>
 
@@ -705,36 +758,160 @@ public class HelloWorld {
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img src="https://www.javacodegeeks.com/wp-content/uploads/2015/06/jodd.png"
-                     class="plain" width="1100"/>
+                <img src="img/logo-jodd.png" class="plain tgap" width="1016"/>
+                <h3 class="tgap"><em><i>Floppytaugliches Baukastensystem</i></em></h3>
+
+                <aside class="notes" data-markdown="">
+                    * xxx
+                </aside>
             </section>
 
 
-            <section data-background-color="#fff" class="center">
-                <div class="right">
+            <section data-background-color="#fff">
+                <div class="right" style="width: 30%; float: right">
                     <h2 class="large">Datenblatt</h2>
-                    <p class="decent subline x-small">(ex-)Floppy-tauglich <i>(1.44MB)</i></p>
+                    <p class="subline tgap"><i>Komplettes<br>Baukastensystem</i></p>
+                    <p class="subline x-small"><span class="decent">an Mikro-Frameworks & Tools (!)</span></p>
+                    <p class="small">
+                        IoC, AOP,<br>
+                        Bean-Validation,<br>
+                        SQL/OR-Mapper,<br>
+                        HTML Parser, …</p>
 
-                    <p>Baukastensystem</p>
-                    <p class="decent subline x-small">an Mikro-Komponenten:</p>
+                    <p class="x-small">Einzeln einbindbar<br>Alles zusammen: 1,7MB</p>
 
-                    <p class="x-small">IoC, AOP, Bean-Validation <br>SQL/OR-Mapper, HTML Tools,…</p>
-
-                    <p class="x-small">Endergebnis: 800kb</p>
-
-                    <p class="decent x-small">3.8.5 (April 2017)</p>
-                    <p class="decent subline x-small">APL2</p>
-
-                    <p class="x-small"><br>http://jodd.org/</p>
-
+                    <p class="decent x-small tgapxl">
+                        4.2.0 (März 2018), APL2<br>
+                        <a href="http://sparkjava.com">https://jodd.org/</a>
+                    </p>
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px;">
-                    <iframe style="width: 940px; height: 560px;" src="http://jodd.org/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 800px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 940px; height: 560px;" src="http://jodd.org/"></iframe>-->
+                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
+                        <img class="plain" src="img/website-jodd.png"
+                             style="max-width: 100%; max-height: inherit;"
+                             alt="Website screenshot">
+                    </div>
                 </div>
+
+                <aside class="notes" data-markdown="">
+                    Jodd legt viel Wert auf seine schlanke Linie und hat bis vor kurzem komplett
+                    sogar noch in das 1,44MB Korsett früherer 3,5" Disketten gepasst.
+
+                    Dabei handelt es sich bei Jodd gar nicht um ein einzelnes Framework,
+                    sondern eher um eine ganze Sammlung verschiedener Micro-Komponenten.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Jodd Komponenten (Auszug)</h3>
+                <p class="subline">
+                    <br><img src="img/jodd-components.png" alt="Jodd components" class="plain">
+                    <br>Und noch einiges mehr in nur 1,7MB!
+                    <br><span class="decent subline">(Validierung, HTTP, Utils, CSS, …)</span>
+                </p>
+
+                <aside class="notes" data-markdown="">
+                    IoC-Container Petite, die AOP-Engine Proxetta, der SQL-basierte O/R-Mapper
+                    DbOom, VTor für Bean-Validierungen und weitere Helferlein wie z.B. zur HTML-Verarbeitung.
+                </aside>
+            </section>
+
+
+            <section data-markdown class="">
+                <textarea data-template>
+                    ### Jodd – Madvoc: Controller
+
+                    ```java
+                    @MadvocAction
+                    public class ListAction {
+
+                        @In @Scope(ScopeType.SERVLET)
+                        HttpServletRequest request;
+
+                        @RestAction("/list/{id}") @GET
+                        public GroceryList getList(@In("id") String id) {
+                            return GroceryService.get().getGroceryList(id);
+                        }
+                        …
+                    }
+                    ```
+                    * Injection von Parametern und Servlet-Werten via `jodd-petite` IoC
+                    * Automatische Konvertierung/Serialisierung via `jodd-json`
+                    * `Action` optional – dann URL-Pfade via Konventionen
+                </textarea>
+                <aside class="notes" data-markdown>
+                    * xxx
+                </aside>
+            </section>
+
+            <section data-markdown="">
+                <textarea data-template>
+                    ## Architektur: UI - Teil
+                </textarea>
+            </section>
+
+            <section>
+                <p>Video: Scrollen über index.html, danach Wechsel in die Applikation.
+                    Klicken und Bearbeiten der Anwendung.</p>
+            </section>
+
+            <section data-markdown class="">
+                <textarea data-template>
+                    ### Jodd – Limitationen in der Praxis
+
+                    *Problem:* JSON Serialisierung/Deserialisierung weitestgehend fix.<br>
+                    Format unserer `LocalDate` Instanzen nicht passend.
+
+                    *Workaround:* (De-)Serialisierung selbst in die Hand nehmen:
+
+                    ```java
+                    @Action("/list") @POST
+                    public MyJsonResult createList(@In @Scope(SERVLET) String jsonString)  {
+                        return GroceryService.get().createGroceryList(jsonString));
+                    }
+                    ```
+                    ```java
+                    @RenderWith(MyJsonResultRenderer.class)
+                    public class JsonResult {
+                        private final Object model;
+                        private final int status;
+                        …
+                    ```
+                </textarea>
+                <aside class="notes" data-markdown>
+                    Als Workaround haben wir eine Wrapper-Klasse `JsonResult` geschaffen,
+                    die über eine Annotation Madvoc anweist, nicht nach einer passenden
+                    JSP-Seite zu suchen, sondern den Rückgabewert über unsere Implementierung
+                    des `JsonResultRenderer` zu erzeugen.
+                </aside>
+            </section>
+
+
+            <section data-markdown class="small">
+                <textarea data-template>
+                    | Feld                  | Wert |
+                    | ---:                  | ---  |
+                    | Personality           | Extrem Leichtgewichtig, Modularität & KISS. Trotz 1,7MB weit mehr als nur Web-Framework. Geringe Verbreitung. |
+                    | Overall Grade         | A+ |
+                    | Code Fun              | [....x.] |
+                    | Minimalism/Fullstack  | [.x....] |
+                    | Bytecode Size         | Requests/s, Bundles |
+                    | Comment
+                    * Große Breite & bei geringer Größe & Einfachheit. Microframework at it's best!
+                    * Engagierter Maintainer – aktuell aber in der Sinnkrise
+                    * Breaking changes.
+                    * In komplexeren Fällen ggf. Rückgriff auf umfassendere Lösungen notwendig
+                </textarea>
+
+                <aside class="notes" data-markdown>
+                    * xxx
+                </aside>
             </section>
 
         </section>
+
 
         <!--
             === Ratpack ============================================================================
@@ -742,149 +919,396 @@ public class HelloWorld {
         <section>
 
             <section data-background-color="#fff" class="center">
-                <img src="https://danhyun.github.io/2016-gr8confeu-rapid-ratpack-groovy/images//ratpack-logo.png"
-                     class="plain" width="1100"/>
+                <img class="tgap plain" src="img/logo-ratpack.png" width="818"/>
+                <h3 class="tgap"><em><i>Reaktiver Entertainer</i></em></h3>
+
+                <aside class="notes" data-markdown="">
+                    Der vorletzte Vertreter in unserer Riege gehört zu den
+                    Anhänger der Reaktiven Programmierung und hat damit
+                    konzeptionelle Gemeinsamkeiten z.B. mit Vert.X.
+                </aside>
             </section>
 
+
+            <section data-background-color="#fff">
+                <div class="right" style="float: right; width: 28%;">
+                    <h2 class="large">Datenblatt</h2>
+                    <p>Reaktiv, Asynchron<br>
+                        Event-basiert,<br>
+                        stark typisiert</p>
+                    <p class="decent subline x-small">hohe Ähnlichkeit mit Vert.X</p>
+                    <p class="x-small tgap"><i>Basis:</i><br> Java 8, Netty &amp; Promises</p>
+                    <p class="x-small tgap"><i>Zahlreiche Module:</i><br>
+                        Guice, Groovy, Jackson, Redis, Hystrix, Templating
+                    </p>
+
+                    <p class="decent x-small tgapxl">
+                        1.5.3 (März 2018), APL2<br>
+                        <a href="https://ratpack.io/">https://ratpack.io/</a>
+                    </p>
+                </div>
+
+                <div class="abs" style="position: absolute; z-index: 1; width: 800px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 940px; height: 560px;" src="https://ratpack.io/"></iframe>-->
+                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
+                        <img class="plain" src="img/website-ratpack.png"
+                             style="max-width: 100%; max-height: inherit;"
+                             alt="Website screenshot">
+                    </div>
+                </div>
+
+                <aside class="notes" data-markdown="">
+                    Hohe Skalierbarkeit und vereinfachte Entwicklung der Event-basierenden
+                    Programmierung asynchroner Anwendungen gehören zu den primären Design-Zielen
+                    von Ratpack.
+
+                    Dazu will Ratpack ganz im Sinne eines Microframework weder eine
+                    komplette Full-Stack Lösung sein, noch unnötige Annahmen bezüglich der
+                    sonstigen Tools & Bibliotheken treffen.
+
+                    Das Java 8-basierte Microframework setzt auf die NIO Client-Bibliothek
+                    Netty für die asynchrone Verarbeitung der HTTP-Requests.
+
+                    Zahlreiche Zusatzmodule bieten optionale Integrationen
+                    z.B. für Guice, Groovy, Jackson oder Spring Boot.
+                </aside>
+            </section>
+
+
+            <section data-markdown>
+                <textarea data-template>
+                    ### Ratpack – Asynchrone Verarbeitung
+                    _Handler_ können (asynchron) Requests beantworten <br>
+                    oder an bestehende bzw. ad-hoc erzeugte Handler delegieren
+
+                    Ratpack verarbeitet und liefert dazu _Promises_
+
+                    ```java
+                    public void createGroceryList(Context ctx) {
+                        // Asynchron auf Parsen warten: Rückgabe = Promise
+                        ctx.parse(GroceryList.class).then(newList -> {
+                            ctx.render(json(repository.createList(newList)));
+                        });
+                    }
+                    ```
+                </textarea>
+                <aside class="notes" data-markdown="">
+                    Für die asynchrone Verarbeitung setzt Ratpack auf Promises.
+
+                    Der Handler für das Anlegen muss erst einmal darauf warten,
+                    dass die Daten vollständig angekommen sind. Daher erhält der
+                    Handler also nicht das konkrete GroceryList-Objekt, sondern
+                    nur ein Promis als Platzhalter.
+                </aside>
+            </section>
+
+
+            <section>
+                <!--  @formatter:off -->
+                <div data-markdown style="font-size: 80%;">
+                ### Ratpack – Handler Factory
+                ```java
+                public static void main(String... args) throws Exception {
+                  ObjectMapper objectMapper = ModelSerializer.buildConfiguredObjectMapper();
+                  GroceryService service = new GroceryService();
+
+                  RatpackServer.start(server -> server
+                      .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true).port(8080))
+                      .registryOf(r -> r.add(objectMapper))
+                      .handlers(chain -> chain
+                          .prefix("list", nested -> {
+                            nested.path(ctx -> ctx.byMethod(method -> {
+                              method.post(() -> service.createGroceryList(ctx));
+                              method.get(() -> service.getAllGroceryLists(ctx));
+                            }));
+                            nested.path(":id", ctx -> ctx.byMethod(method -> {
+                              method.put(() -> service.updateGroceryList(ctx));
+                              method.get(() -> service.getGroceryList(ctx));
+                              method.delete(() -> service.deleteGroceryList(ctx));
+                            }));
+                          })
+                          .files(f -> f.indexFiles("index.html"))
+                      )
+                  );
+                }
+                ```
+                Recht verwirrend und wenig intuitiv.
+                </div>
+                <!--  @formatter:on -->
+                <aside class="notes" data-markdown="">
+                </aside>
+            </section>
+
+
+            <section data-markdown class="small">
+                <textarea data-template>
+                    | Feld                  | Wert |
+                    | ---:                  | ---  |
+                    | Personality           | Asynchron, non-blocking, reaktiv |
+                    | Overall Grade         | C |
+                    | Code Fun              | [.x....] |
+                    | Minimalism/Fullstack  | [..x...] |
+                    | Bytecode Size         | Requests/s, Bundles |
+                    | Comment
+                    * Interessanter Ansatz & Konzept
+                    * Asynchronen Programmierung in Kombination mit vielen Lambda-Ausdrücke begrenzt intuitiv
+                    * Problematisch: *Viele* Lücken in der Dokumentation
+                    * Komplexität vs. Gewinn?
+                </textarea>
+
+                <aside class="notes" data-markdown>
+                    * xxx
+                </aside>
+            </section>
+
+
+        </section>
+
+
+        <!--
+            === Spring Boot ========================================================================
+        -->
+        <section>
 
             <section data-background-color="#fff" class="center">
-                <div class="right">
+                <img class="tgap plain" src="img/logo-spring.png" width="818"/>
+                <h3 class="tgap"><em><i>Start für den Platzhirsch</i></em></h3>
+
+                <aside class="notes" data-markdown="">
+                    xxxx
+                </aside>
+            </section>
+
+
+            <section data-background-color="#fff">
+                <div class="right" style="width: 30%; float: right">
                     <h2 class="large">Datenblatt</h2>
-                    <p>Reaktiv &amp; Asynchron</p>
-                    <p class="decent subline x-small">hohe Ähnlichkeit mit Vert.X</p>
-                    <p class="x-small">Basis: Netty &amp; Promises</p>
+                    <p class="subline tgap"><i>CoC für Spring<br>= Full-stack<br>
+                        Auswahl an „Starters"<br>
+                        Maven-zentrisch</i></p>
+                    <p class="x-small"><i>Ziele</i> <br>
+                        Möglichst viel Autokonfiguration<br>
+                        Standalone Apps<br>
+                        „Opinionated“ Vorlagen<br>
+                    </p>
+                    <p class="x-small"><i>Hier gewählt</i> <br>Spring 5 mit WebFlux (reaktiv)</p>
 
-                    <p class="x-small"> Module: Guice, Groovy,<br> Jackson, Spring Boot</p>
-
-                    <p class="decent x-small">1.4.6 (April 2017)</p>
-                    <p class="decent subline x-small">APL2</p>
-
-                    <p class="x-small"><br>https://ratpack.io/</p>
-
+                    <p class="decent x-small tgapxl">
+                        2.0.0 (März 2018), APL2<br>
+                        <a href="https://projects.spring.io/spring-boot/">
+                            https://projects.spring.io/
+                        </a>
+                    </p>
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 960px; height: 560px; margin-top: 26px;">
-                    <iframe style="width: 940px; height: 560px;" src="https://ratpack.io/"></iframe>
+                <div class="abs" style="position: absolute; z-index: 1; width: 800px; height: 560px; margin-top: 26px;">
+                    <!--<iframe style="width: 940px; height: 560px;" src="https://projects.spring.io/spring-boot/"></iframe>-->
+                    <div style="width: 900px; height: 560px; overflow-x: hidden;">
+                        <img class="plain" src="img/website-springboot.png"
+                             style="max-width: 100%; max-height: inherit;"
+                             alt="Website screenshot">
+                    </div>
                 </div>
+
+                <aside class="notes" data-markdown="">
+                </aside>
+            </section>
+
+            <section data-markdown="">
+                <textarea data-template>
+                    ### Spring Boot 2 – Spring 5 – WebFlux
+
+                    ```java
+                    @RestController
+                    @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+                    public class GroceryListController {
+
+                        @GetMapping(path = "/list")
+                        Flux&lt;GroceryList> listStream() {
+                            return repository.getLists();
+                        }
+
+                        @PutMapping(value = "/list/{id}",
+                                    consumes = MediaType.APPLICATION_JSON_VALUE)
+                        public Mono&lt;GroceryList> updateList(
+                                    @PathVariable(value = "id") UUID id,
+                                    @RequestBody GroceryList updatedList) {
+                            return repository.updateList(id, updatedList);
+                        }
+
+                     …
+                    ```
+                </textarea>
+                <aside class="notes" data-markdown="">
+                    * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
+                    * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
+                    * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
+                </aside>
+            </section>
+
+
+            <section data-markdown="">
+                <textarea data-template>
+                    ### WebFlux – `index.html` als `/` ausliefern
+
+                    ```java
+                    /**
+                     * Dirty hack to redirect / to /index.html.
+                     * @see https://github.com/spring-projects/spring-boot/issues/9785
+                     */
+                    @Component
+                    public class RedirectToIndexHtmlWebFilter implements WebFilter {
+                      public Mono<Void> filter(ServerWebExchange exchg, WebFilterChain chain) {
+                        if (exchg.getRequest().getURI().getPath().equals("/")) {
+                           return chain.filter(exchg.mutate().request(
+                                     exchg.getRequest().mutate().path("/index.html").build()
+                                  ).build());
+                        }
+                        return chain.filter(exchg);
+                      }
+                    }
+                    ```
+                    Ohne Google kann einfaches auch kompliziert sein.
+                </textarea>
+                <aside class="notes" data-markdown="">
+                    * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
+                    * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
+                    * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
+                </aside>
+            </section>
+
+
+            <section data-markdown class="small">
+                <textarea data-template>
+                    | Feld                  | Wert |
+                    | ---:                  | ---  |
+                    | Personality           | Mainstream, Full-stack. Kein "Micro" – eher ganze Landschaft |
+                    | Overall Grade         | B- |
+                    | Code Fun              | [..x...] |
+                    | Minimalism/Fullstack  | [.....x] |
+                    | Bytecode Size         | Requests/s, Bundles |
+                    | Comment
+                    * Viel Automagie. Hohe Komplexität & Lernkurve
+                    * Detailanforderungen können schnell Expertenwissen erfordern
+                    * Höchstes Niveau an Support & Verbreitung
+                    * Umfangreiche Dokumentation
+                </textarea>
+
+                <aside class="notes" data-markdown>
+                    * xxx
+                </aside>
             </section>
 
         </section>
 
-        <section data-background="img/mf-article.png" data-background-color="#fff">
-        </section>
-
-
-        <section data-markdown="">
-                <textarea data-template>
-                ## Disziplinen (?)
-                * Performance
-                * Bytegröße
-                * Codegröße / Easiness
-                * Bossability (would my boss say yes) / Riskieness
-                * single JAR
-                </textarea>
-        </section>
-
+        <!--
+            === Outro   ============================================================================
+        -->
         <section>
-            <h2>Das Schlachtfeld</h2>
+            <section>
+                <h2>Das Schlachtfeld</h2>
 
-            <div class="center">
-                <p data-markdown>
-                    ##### „Einkaufsliste“
-                    - RESTful CRUD Application
-                    - Frontend: `ng-admin`
-                    - Backend: Kandidat
-                </p>
-                <div>
-                    <img src="overview.png"/>
-                    <img src="edit.png"/>
+                <div class="center">
+                    <p data-markdown>
+                        ##### „Einkaufsliste“
+                        - RESTful CRUD Application
+                        - Frontend: `ng-admin`
+                        - Backend: Kandidat
+                    </p>
+                    <div>
+                        <img src="overview.png"/>
+                        <img src="edit.png"/>
+                    </div>
+
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <section data-markdown="">
+                <textarea data-template>
+                    ## Fazit
 
-
-        <section>
-            <h2>Weitere Materialien QR-CODES?</h2>
-            <ul>
-                <li>Pippo (http://www.pippo.ro/)</li>
-                <li>Javalite (http://javalite.io/)</li>
-                <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/
-                    <br> microframeworks-showcase/</a></li>
-            </ul>
-
-        </section>
+                    * Leichtigkeit macht Spaß!
+                    * Favouriten: Spark, Jodd
+                    * Risiko: Traktion & Stabilität. Geringe Verbreitung.
+                    * Gegenstrategie: Überschaubare Umfang, Gute Verständlichkeit;
+                      Bereitschaft & Fähigkeit selber Bugs zu lösen.
+                </textarea>
+            </section>
 
 
+            <section>
+                <h2>Weitere Materialien QR-CODES?</h2>
+                <ul>
+                    <li>Pippo (http://www.pippo.ro/)</li>
+                    <li>Javalite (http://javalite.io/)</li>
+                    <li><a href="https://github.com/bentolor/microframeworks-showcase/">https://github.com/bentolor/
+                        <br> microframeworks-showcase/</a></li>
+                </ul>
 
-        <section>
+                * Alle gezeigten Microframeworks
 
-            <section class="center">
-                <h1>To the battleground</h1>
+                * Kotlin & Kolin-Vortrag
+                * Project Lombok
             </section>
 
             <section>
                 <h3>ng-admin (1)</h3>
                 <pre><code style="font-size: .8em;">
-    var myApp = angular.module('myApp', ['ng-admin']);
-    myApp.config(['NgAdminConfigurationProvider',
-                    function (NgAdminConfigurationProvider) {
+var myApp = angular.module('myApp', ['ng-admin']);
+myApp.config(['NgAdminConfigurationProvider',
+                function (NgAdminConfigurationProvider) {
 
-        var nga = NgAdminConfigurationProvider;
-        var admin = nga.application('My Grocery Lists');
+    var nga = NgAdminConfigurationProvider;
+    var admin = nga.application('My Grocery Lists');
 
-        var configureFields = function (view) {
-            return view.fields([
-                nga.field('id').editable(false),
-                nga.field('comment'),
-                nga.field('settled', 'boolean'),
-                nga.field('date', 'date'),
-                nga.field('shoppingItems', 'embedded_list')
-                    .targetFields([
-                        nga.field('quantity', 'number'),
-                        nga.field('unit', 'choice').choices([
-                            {value: 'pcs', label: 'pieces'},
-                            {value: 'kg', label: 'kilogram'},
-                            {value: 'g', label: 'gram'},
-                            {value: 'l', label: 'litre'}
-                        ]),
-                        nga.field('name', 'string')
-                    ])
-            ]);
-        };
+    var configureFields = function (view) {
+        return view.fields([
+            nga.field('id').editable(false),
+            nga.field('comment'),
+            nga.field('settled', 'boolean'),
+            nga.field('date', 'date'),
+            nga.field('shoppingItems', 'embedded_list')
+                .targetFields([
+                    nga.field('quantity', 'number'),
+                    nga.field('unit', 'choice').choices([
+                        {value: 'pcs', label: 'pieces'},
+                        {value: 'kg', label: 'kilogram'},
+                        {value: 'g', label: 'gram'},
+                        {value: 'l', label: 'litre'}
+                    ]),
+                    nga.field('name', 'string')
+                ])
+        ]);
+    };
 </code></pre>
             </section>
             <section>
                 <h3>ng-admin (2)</h3>
 
                 <pre><code style="font-size: .8em;">
-        // lists entity
-        var list = nga.entity('list');
+    // lists entity
+    var list = nga.entity('list');
 
-        list.listView()
-            .fields([
-                nga.field('comment'),
-                nga.field('settled', 'boolean'),
-                nga.field('date', 'date')])
-            .listActions(['show', 'edit', 'delete'])
-            .title("My shopping lists");
+    list.listView()
+        .fields([
+            nga.field('comment'),
+            nga.field('settled', 'boolean'),
+            nga.field('date', 'date')])
+        .listActions(['show', 'edit', 'delete'])
+        .title("My shopping lists");
 
-        configureFields(list.editionView())
-            .title('Edit "{{ entry.values.comment }}"')
-            .actions(['show', 'list', 'delete']);
-        configureFields(list.showView())
-            .title('View "{{ entry.values.comment }}"');
-        configureFields(list.creationView());
+    configureFields(list.editionView())
+        .title('Edit "{{ entry.values.comment }}"')
+        .actions(['show', 'list', 'delete']);
+    configureFields(list.showView())
+        .title('View "{{ entry.values.comment }}"');
+    configureFields(list.creationView());
 
-        admin.addEntity(list);
+    admin.addEntity(list);
 
-        nga.configure(admin);
-    }]);
+    nga.configure(admin);
+}]);
 </code></pre>
-            </section>
-
-            <section>
-                <iframe style="width: 900px; height:640px;" src="http://localhost:8080/"></iframe>
             </section>
 
         </section>
