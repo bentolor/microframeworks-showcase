@@ -336,11 +336,12 @@
                     </p>
                 </div>
 
-                <div class="abs" style="position: absolute; z-index: 1; width: 820px; height: 560px; margin-top: 26px;">
+                <div class="abs" style="position: absolute; z-index: 1; width: 820px; height: 560px; margin-top: 26px; overflow-x: hidden;">
                     <!--<iframe style="width: 810px; height: 560px; overflow-x: hidden;"-->
                     <!--src="http://sparkjava.com/"></iframe>-->
-                    <iframe style="width: 810px; height: 560px; overflow-x: hidden;"
-                            src="img/website-sparkjava.png"></iframe>
+                    <img style="width: 810px; height: 2743px; max-height: inherit;"
+                         class="plain"
+                            src="img/website-sparkjava.png">
                 </div>
 
                 <!--  @formatter:off -->
@@ -609,8 +610,6 @@ public class HelloWorld {
                     <p class="subline tgap"><i>CoC<br>
                         MVC<br>
                         Stateless<br></i></p>
-
-
                     <p>Full-Stack</p>
                     <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, …</p>
                     <p class="subline decent x-small">Daher nicht wirklich „Micro“</p>
