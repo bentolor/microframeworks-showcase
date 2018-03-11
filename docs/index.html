@@ -34,6 +34,9 @@
     <!-- Custom, overriding CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <script src="js/chartist.min.js"></script>
+
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -185,7 +188,7 @@
             <section>
                 <img src="img/ben-avatar.png" alt="Ben's Avatar" class="plain"
                      style="position: absolute; left: 180px; top: 410px; transform: scale(6);">
-                <div style="position: absolute; left: 320px; top: 155px">
+                <div style="position: absolute; left: 320px; top: 155px;">
                     <div class="bubble">
                         <h4>Java Microframeworks:</h4>
                         <i>„Elegante, flexible auf <b>ein Thema</b> fokussierte Rahmenwerke
@@ -321,7 +324,7 @@
                     <!--src="http://sparkjava.com/"></iframe>-->
                     <img style="width: 810px; height: 2743px; max-height: inherit;"
                          class="plain"
-                            src="img/website-sparkjava.png">
+                         src="img/website-sparkjava.png">
                 </div>
 
                 <!--  @formatter:off -->
@@ -452,7 +455,7 @@ public class HelloWorld {
                             Zergliederung, Fehlerbehandlung
                             Antwortseiten in Entwicklerverantwortung
                         </p>
-                        <p >
+                        <p>
                             Dokumentation könnte umfassender & gründlicher sein.
                             Code aber gut verständlich & debugbar
                         </p>
@@ -475,7 +478,7 @@ public class HelloWorld {
 
                     <!-- Req/s -->
                     <div class="reqdev">39</div>
-               </div>
+                </div>
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
@@ -752,13 +755,13 @@ public class HelloWorld {
                     * CoC
                     * MVC
                     * Client-Side Sessions
-                    <span class="decent" >&rightarrow; einfache Skalierbarkeit</span>
+                    <span class="decent">&rightarrow; einfache Skalierbarkeit</span>
 
                     ##### Kombination bewährter Technologien
 
                     * Backend: Servlets, Guice, JPA, Flyway, …
-                    * Frontend: Freemarker <span class="decent" >(HTML)</span>
-                    / Jackson <span class="decent" >(XML, Jason)</span>
+                    * Frontend: Freemarker <span class="decent">(HTML)</span>
+                    / Jackson <span class="decent">(XML, Jason)</span>
                 </textarea>
 
                 <aside class="notes" data-markdown="">
@@ -930,7 +933,7 @@ myApp.config(['NgAdminConfigurationProvider',
 
 
             <section data-background-color="#fff">
-                <div class="right" style="width: 30%; float: right">
+                <div class="right" style="width: 30%; float: right;">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>Komplettes<br>Baukastensystem</i></p>
                     <p class="subline x-small"><span class="decent">an Mikro-Frameworks & Tools (!)</span></p>
@@ -1301,7 +1304,7 @@ myApp.config(['NgAdminConfigurationProvider',
 
 
             <section data-background-color="#fff">
-                <div class="right" style="width: 30%; float: right">
+                <div class="right" style="width: 30%; float: right;">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>CoC für Spring<br>= Full-stack<br>
                         Auswahl an „Starters"<br>
@@ -1322,7 +1325,8 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <div class="abs" style="position: absolute; z-index: 1; width: 800px; height: 560px; margin-top: 26px;">
-                    <!--<iframe style="width: 940px; height: 560px;" src="https://projects.spring.io/spring-boot/"></iframe>-->
+                    <!--<iframe style="width: 940px; height: 560px;"
+                    src="https://projects.spring.io/spring-boot/"></iframe>-->
                     <div style="width: 900px; height: 560px; overflow-x: hidden;">
                         <img class="plain" src="img/website-springboot.png"
                              style="max-width: 100%; max-height: inherit;"
@@ -1378,7 +1382,7 @@ myApp.config(['NgAdminConfigurationProvider',
                      */
                     @Component
                     public class RedirectToIndexHtmlWebFilter implements WebFilter {
-                      public Mono<Void> filter(ServerWebExchange exchg, WebFilterChain chain) {
+                      public Mono&lt;Void> filter(ServerWebExchange exchg, WebFilterChain chain) {
                         if (exchg.getRequest().getURI().getPath().equals("/")) {
                            return chain.filter(exchg.mutate().request(
                                      exchg.getRequest().mutate().path("/index.html").build()
@@ -1454,11 +1458,6 @@ myApp.config(['NgAdminConfigurationProvider',
                 </aside>
             </section>
 
-            <section>
-                <img src="img/benchmark-spring5.jpg" alt="Spring 5 Benchmark Plot"
-                style="width: 50%">
-            </section>
-
         </section>
 
 
@@ -1466,20 +1465,69 @@ myApp.config(['NgAdminConfigurationProvider',
           === Demo App: Benchmarking =================================================================
         -->
         <section>
-            <section data-markdown>
-                <textarea data-template>
-                    ### Benchmark Crunchdown (Bytecode)
+            <section>
+                <h3>Benchmark Crunchdown <br>(Bytecode Size)</h3>
 
-                    * Chart Bytecode
-                </textarea>
+                <div class="ct-chart" id="bytechart"></div>
+                <script>
+                    new Chartist.Bar('#bytechart', {
+                        labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
+                        series: [[2.7, 9.5, 25, 4.9, 16, 3.9]]
+                    }, {
+                        width: 900,
+                        height: 500,
+                        seriesBarDistance: 10,
+                        horizontalBars: true,
+                        onlyInteger: true,
+                        axisY: {
+                            offset: 200
+                        },
+                        axisX: {
+                            offset: 60,
+                            scaleMinSpace: 150
+                        }
+                    });
+                </script>
             </section>
 
-            <section data-markdown>
-                <textarea data-template>
-                    ### Benchmark Crunchdown (Request/s)
+            <section>
+                <h3>Benchmark Crunchdown <br>(Request Duration)</h3>
 
-                    * Chart Req./s
-                </textarea>
+                <div class="ct-chart" id="reqchart"></div>
+                <script>
+                    new Chartist.Bar('#reqchart', {
+                        labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
+                        series: [
+                            [81-39,  87-31, 2,  81-45, 20, 81-33],
+                            [39,     31,    80, 45,    78, 33],
+                            [39,     31,    25, 45,    149, 33]
+                        ]
+                    }, {
+                        width: 1000,
+                        height: 500,
+                        high: 300,
+                        stackBars: true,
+                        horizontalBars: true,
+                        onlyInteger: true,
+                        axisY: {
+                            offset: 200
+                        },
+                        axisX: {
+                            offset: 120,
+                            scaleMinSpace: 100
+                        }
+                    });
+                </script>
+            </section>
+
+            <section>
+                <img src="img/benchmark-spring5.jpg" alt="Spring 5 Benchmark Plot"
+                     style="width: 50%">
+            </section>
+
+            <section>
+                <img src="img/benchmark-pippo.jpg" alt="Pippo Benchmark Plot"
+                     style="width: 50%">
             </section>
 
         </section>
@@ -1491,27 +1539,38 @@ myApp.config(['NgAdminConfigurationProvider',
 
             <section data-markdown class="small">
                 <textarea data-template>
-                    ### Weitere Contenders
-                    | Framework     | Kommentar |
-                    | ------------: | --------- |
-                    | [Pippo.ro](http://www.pippo.ro/)   | Routen oder Controller-Ansatz. Modular. Vergleichbar mit Spark. |
-                    | [Javalite.io](http://javalite.io/)  | Controller, Freemarker Views, DB Migration. Microframework-Version von Ninja. |
-                    | [jooby.org](https://jooby.org/)    | Routen oder Controller-Ansatz. Ähnlichkeiten zum Spark. |
-                    | [Bootique.io](https://bootique.io/)| Controller-basiert. Sehr viele Module & Integrationen. Potentieller Sweet-Spot zwischen Spark und Ninja. |
+### Weitere Contenders
+| Framework     | Kommentar |
+| ------------: | --------- |
+| [Pippo.ro](http://www.pippo.ro/)   | Routen oder Controller-Ansatz. Modular. <br>Vergleichbar mit Spark. <br>  Sehr schlecht dokumentiert. |
+| [Javalite.io](http://javalite.io/)  | Controller, Freemarker Views, DB Migration. <br> Microframework-Version von Ninja. |
+| [jooby.org](https://jooby.org/)    | Routen oder Controller-Ansatz. <br>Ähnlichkeiten zum Spark. |
+| [Bootique.io](https://bootique.io/)| Controller-basiert. Sehr viele Module & Integrationen. <br> Potentieller Sweet-Spot zwischen Spark und Ninja. |
                 </textarea>
             </section>
 
 
             <section data-markdown>
+                <!-- Bild mit Klempner -->
                 <textarea data-template>
                     ## Fazit
 
                     * Leichtigkeit macht Spaß!
-                    * Favouriten: Spark, Jodd
                     * Risiko: Traktion & Stabilität. Geringe Verbreitung.
                     * Gegenstrategie: Überschaubare Umfang, Gute Verständlichkeit;
                       Bereitschaft & Fähigkeit selber Bugs zu lösen.
                 </textarea>
+
+                <aside class="notes" data-markdown="">
+                    Wir haben es bereits in der Eingangsdemo gesehen: Weniger kann richtig Spaß machen!
+
+                    Risiko bei allen Kandidation: Traktion & Stabilität und ihre geringe Verbreitung.
+
+                    Gegenstrategie kann nur sein, sich Kandidaten mit überschaubarem Umfang
+                    und guter Verständlichkeit auszusuchen wie z.B. Spark kombiniert mit der
+                    Bereitschaft & Fähigkeit selber Bugs zu lösen.
+                </aside>
+
             </section>
 
 

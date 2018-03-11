@@ -650,3 +650,14 @@ SECTION.scorecard > DIV .reqdev {
 .orange {
     color: sandybrown;
 }
+
+/* -------- Charts ----- */
+.ct-series .ct-bar {
+    stroke: red;
+    stroke-width: 40px;
+}
+.ct-chart-bar {
+    background-color: rgba(200,200,200,0.8);
+}
+SPAN.ct-label {
+}
