@@ -262,7 +262,6 @@
         </section>
 
 
-
         <!--
           === Demo App: Architektur ==================================================================
         -->
@@ -352,19 +351,13 @@
                 <!--  @formatter:on -->
             </section>
 
-
-            <section data-markdown="">
-                <textarea data-template>
-                    ## Video
-
-                    * build.gradle schreiben
-                    * Helloworld schreiben
-                    * Starten
-                    * Terminal: /hello und /greet/Guests in Curl
-                </textarea>
+            <section data-background-video="img/screencast-hellospark.webm"
+                     data-background-video-loop="true"
+                     data-background-size="contain"
+                     data-background-color="#111414">
             </section>
 
-            <section>
+            <!--<section>
                 <h2>Quick-Start #1 <code>build.gradle</code></h2>
 
                 <pre><code>apply plugin: 'java'
@@ -375,8 +368,8 @@ repositories {
 }
 
 dependencies {
-    mainClassName = 'bentolor.sparkjava.HelloWorld'
-    compile         'com.sparkjava:spark-core:2.3'
+    mainClassName = 'bentolor.HelloSpark'
+    compile         'com.sparkjava:spark-core:2.5'
 }</code></pre>
             </section>
 
@@ -398,7 +391,7 @@ public class HelloWorld {
     }
 
 }</code></pre>
-            </section>
+            </section>-->
 
             <section data-markdown>
                 <textarea data-template>
@@ -441,21 +434,65 @@ public class HelloWorld {
             </section>
 
 
-            <section data-markdown class="small">
-                <textarea data-template>
-                    | Feld                  | Wert |
-                    | ---:                  | ---  |
-                    | Personality           | Elegant, Minimalistisch, Sinatra-inspiriert. Zentrale Strukturierung: Routen. Deklaratives Muster. Dazu: Filter, Transformer, optionale Template Engines – That's it! |
-                    | Overall Grade         | A- |
-                    | Code Fun              | [....X.] |
-                    | Minimalism/Fullstack  | [X.....] |
-                    | Bytecode Size         | Requests/s, Bundles |
-                    | Comment
-                    * Sehr schnell erste Ergebnisse. Macht Spaß in der Verwendung!
-                    * Minimalismus bedeutet aber auch: sinnvolle Zergliederung, Fehlerbehandlung, effiziente Antwortseiten-Generierung
-                      liegen in der Hand des Entwicklers
-                    * Dokumentation könnte umfassender & gründlicher sein. Code aber gut verständlich & debugbar.
-                </textarea>
+            <section class="scorecard">
+                <div>
+                    <!-- Name & Logo -->
+                    <div class="name" style="">
+                        <h4><img src="img/logo-spark.svg">Spark Java</h4>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="personality">
+                        <p class="small lh1">
+                            Elegant &amp; Minimalistisch
+                            <br>Sinatra-inspiriert. Deklarativ.
+                        </p>
+                        <p class="x-small decent subline" style="margin: -.9em 0; ">
+                            <br>Strukturierung: Routen, Filter, Transformer,
+                            <br>optional Template Engines – That's it!
+                        </p>
+                    </div>
+
+                    <!-- Bundles -->
+                    <div class="bundles decent">
+                        <p class="x-small subline"><br>Jetty 9, slf4j</p>
+                    </div>
+
+                    <!-- Comment -->
+                    <div class="comment small">
+                        <p>
+                            Sehr schnell erste Ergebnisse.
+                            <br>Macht Spaß in der Verwendung!
+                        </p>
+                        <p>
+                            Minimalismus bedeutet aber auch: <br>
+                            Zergliederung, Fehlerbehandlung
+                            Antwortseiten in Entwicklerverantwortung
+                        </p>
+                        <p >
+                            Dokumentation könnte umfassender & gründlicher sein.
+                            Code aber gut verständlich & debugbar
+                        </p>
+                    </div>
+
+                    <!-- Position indexes -->
+                    <div class="micro">|&nbsp;</div>
+                    <div class="fun">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="boss">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</div>
+
+
+                    <!-- Bytecode -->
+                    <div class="bytecode"><b>2,7</b></div>
+
+                    <!-- Req/s -->
+                    <div class="req">4,9</div>
+
+                    <!-- Avg. Req -->
+                    <div class="reqavg">81</div>
+
+                    <!-- Req/s -->
+                    <div class="reqdev">39</div>
+               </div>
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
@@ -601,7 +638,6 @@ public class HelloWorld {
                     Kein reinrassiges Microframework.
                 </aside>
             </section>
-
 
 
             <section class="small left">
@@ -754,21 +790,59 @@ public class HelloWorld {
             </section>
 
 
-            <section data-markdown class="small">
-                <textarea data-template>
-                    | Feld                  | Wert |
-                    | ---:                  | ---  |
-                    | Personality           | Full Stack, Umfassende Konventionen, MVC, Play!-inspired. Client-side Sessions, daher einfache Skalierbarkeit |
-                    | Overall Grade         | B- |
-                    | Code Fun              | [...x..] |
-                    | Minimalism/Fullstack  | [.....x] |
-                    | Bytecode Size         | Requests/s, Bundles |
-                    | Comment
-                    * Sehr umfassend. Kombiniert viele etablierte Frameworks.
-                    * Architektur sehr stark vorgegeben. Wenig Flexibilität / Modularität
-                    * Umgehen von Detailproblemen durch monolithischen Ansatz teils schwer
-                    * Von Verbreitung eher Nische gegenüber Dropwizard/Spring Boot/Play!
-                </textarea>
+            <section class="scorecard">
+                <div>
+                    <!-- Name & Logo -->
+                    <div class="name" style="">
+                        <h4><img src="img/logo-ninja.png">Ninja</h4>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="personality">
+                        <p class="small lh1">
+                            Full Stack &amp; MVC
+                            <br>Umfassende Konventionen
+                            <br>Play!-inspired
+                            Client-side Session
+                        </p>
+                        <p class="x-small decent subline" style="margin:  0;">
+                            daher einfache Skalierbarkeit
+                        </p>
+                    </div>
+
+                    <!-- Bundles -->
+                    <div class="bundles decent">
+                        <p class="xx-small subline">Jetty 9, Guice, Guava, Logback, Jackson,
+                            <br>Woodstox, 6x commons-*, joda-time, ehcache,
+                            <br>memcached, flyway, freemarker, hibernate, prettytime, slf4j</p>
+                    </div>
+
+                    <!-- Comment -->
+                    <div class="comment small">
+                        <p>Sehr umfassend. <br>Kombiniert viele etablierte Frameworks.</p>
+                        <p>Architektur sehr stark vorgegeben. Wenig Flexibilität / Modularität</p>
+                        <p>Umgehen von Detailproblemen durch monolithischen Ansatz teils schwer</p>
+                        <p>Von Verbreitung eher Nische gegenüber Dropwizard/Spring Boot/Play!</p>
+                    </div>
+
+                    <!-- Position indexes -->
+                    <div class="micro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="fun">&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="boss">&nbsp;&nbsp;|&nbsp;</div>
+
+
+                    <!-- Bytecode -->
+                    <div class="bytecode"><b>25</b></div>
+
+                    <!-- Req/s -->
+                    <div class="req">4,8</div>
+
+                    <!-- Avg. Req -->
+                    <div class="reqavg">82</div>
+
+                    <!-- Req/s -->
+                    <div class="reqdev red">127</div>
+                </div>
 
                 <aside class="notes" data-markdown>
                     * xxx
@@ -855,8 +929,6 @@ myApp.config(['NgAdminConfigurationProvider',
             </section>
             -->
         </section>
-
-
 
 
         <!--
@@ -986,21 +1058,54 @@ myApp.config(['NgAdminConfigurationProvider',
             </section>
 
 
-            <section data-markdown class="small">
-                <textarea data-template>
-                    | Feld                  | Wert |
-                    | ---:                  | ---  |
-                    | Personality           | Extrem Leichtgewichtig, Modularität & KISS. Trotz 1,7MB weit mehr als nur Web-Framework. Geringe Verbreitung. |
-                    | Overall Grade         | A+ |
-                    | Code Fun              | [....x.] |
-                    | Minimalism/Fullstack  | [.x....] |
-                    | Bytecode Size         | Requests/s, Bundles |
-                    | Comment
-                    * Große Breite & bei geringer Größe & Einfachheit. Microframework at it's best!
-                    * Engagierter Maintainer – aktuell aber in der Sinnkrise
-                    * Breaking changes.
-                    * In komplexeren Fällen ggf. Rückgriff auf umfassendere Lösungen notwendig
-                </textarea>
+            <section class="scorecard">
+                <div>
+                    <!-- Name & Logo -->
+                    <div class="name" style="">
+                        <h4><img src="img/logo-jodd.png">Jodd (Madvoc)</h4>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="personality">
+                        <p class="small lh1">
+                            Ausgeprägt <br>Leichtgewichtig / Modular / KISS
+                        </p>
+                        <p class="x-small decent subline" style="margin:  0;">
+                            Trotz 1,7MB weit mehr als nur Web-Framework. Geringe Verbreitung.
+                        </p>
+                    </div>
+
+                    <!-- Bundles -->
+                    <div class="bundles decent">
+                        <p class="xx-small subline"><br>nichts!</p>
+                    </div>
+
+                    <!-- Comment -->
+                    <div class="comment small">
+                        <p>Große Breite <br>bei geringer Größe & Einfachheit.</p>
+                        <p>Microframework at it's best!</p>
+                        <p>Öfters Breaking changes. Engagierter Maintainer – aktuell aber in der Sinnkrise</p>
+                        <p>In komplexeren Fällen ggf. Rückgriff auf umfassendere Lösungen notwendig</p>
+                    </div>
+
+                    <!-- Position indexes -->
+                    <div class="micro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="fun">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="boss">&nbsp;|&nbsp;</div>
+
+
+                    <!-- Bytecode -->
+                    <div class="bytecode"><b>4,9</b></div>
+
+                    <!-- Req/s -->
+                    <div class="req">4,9</div>
+
+                    <!-- Avg. Req -->
+                    <div class="reqavg">81</div>
+
+                    <!-- Req/s -->
+                    <div class="reqdev">45</div>
+                </div>
 
                 <aside class="notes" data-markdown>
                     * xxx
@@ -1137,21 +1242,56 @@ myApp.config(['NgAdminConfigurationProvider',
             </section>
 
 
-            <section data-markdown class="small">
-                <textarea data-template>
-                    | Feld                  | Wert |
-                    | ---:                  | ---  |
-                    | Personality           | Asynchron, non-blocking, reaktiv |
-                    | Overall Grade         | C |
-                    | Code Fun              | [.x....] |
-                    | Minimalism/Fullstack  | [..x...] |
-                    | Bytecode Size         | Requests/s, Bundles |
-                    | Comment
-                    * Interessanter Ansatz & Konzept
-                    * Asynchronen Programmierung in Kombination mit vielen Lambda-Ausdrücke begrenzt intuitiv
-                    * Problematisch: *Viele* Lücken in der Dokumentation
-                    * Komplexität vs. Gewinn?
-                </textarea>
+            <section class="scorecard">
+                <div>
+                    <!-- Name & Logo -->
+                    <div class="name">
+                        <h4><img src="img/logo-ratpack.png">Ratpack</h4>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="personality">
+                        <p class="lh1">
+                            Asynchron <br> non-blocking <br> reaktiv
+                        </p>
+                        <p class="x-small decent subline" style="margin:  0;">
+                        </p>
+                    </div>
+
+                    <!-- Bundles -->
+                    <div class="bundles decent">
+                        <p class="x-small subline"><br>Netty, Jackson, Javassist, SnakeYaml, slf4j</p>
+                    </div>
+
+                    <!-- Comment -->
+                    <div class="comment small">
+                        <p>Interessanter Ansatz & Konzept</p>
+                        <p>Problematisch: viele Lücken in der Dokumentation</p>
+                        <p class="decent">Asynchronen Programmierung
+                            in Kombination mit vielen Lambda-Ausdrücke begrenzt
+                            intuitiv.</p>
+                        <p>Komplexität vs. Gewinn?</p>
+
+                    </div>
+
+                    <!-- Position indexes -->
+                    <div class="micro">&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="fun">&nbsp;|</div>
+                    <div class="boss">&nbsp;|&nbsp;</div>
+
+
+                    <!-- Bytecode -->
+                    <div class="bytecode"><b>9,5</b></div>
+
+                    <!-- Req/s -->
+                    <div class="req">4,5</div>
+
+                    <!-- Avg. Req -->
+                    <div class="reqavg">87</div>
+
+                    <!-- Req/s -->
+                    <div class="reqdev">31</div>
+                </div>
 
                 <aside class="notes" data-markdown>
                     * xxx
@@ -1275,29 +1415,68 @@ myApp.config(['NgAdminConfigurationProvider',
             </section>
 
 
-            <section data-markdown class="small">
-                <textarea data-template>
-                    | Feld                  | Wert |
-                    | ---:                  | ---  |
-                    | Personality           | Mainstream, Full-stack. Kein "Micro" – eher ganze Landschaft |
-                    | Overall Grade         | B- |
-                    | Code Fun              | [..x...] |
-                    | Minimalism/Fullstack  | [.....x] |
-                    | Bytecode Size         | Requests/s, Bundles |
-                    | Comment
-                    * Viel Automagie. Hohe Komplexität & Lernkurve
-                    * Detailanforderungen können schnell Expertenwissen erfordern
-                    * Höchstes Niveau an Support & Verbreitung
-                    * Umfangreiche Dokumentation
-                </textarea>
+            <section class="scorecard">
+                <div>
+                    <!-- Name & Logo -->
+                    <div class="name" style="">
+                        <h4><img src="img/logo-spring.png">Spring Boot</h4>
+                    </div>
+
+                    <!-- Personality -->
+                    <div class="personality">
+                        <p class="small lh1">
+                            Mainstream. Full-stack.
+                        </p>
+                        <p class="x-small decent subline" style="margin:  0;">
+                            Kein "Micro" – eher ganze Landschaft
+                        </p>
+                    </div>
+
+                    <!-- Bundles -->
+                    <div class="bundles decent">
+                        <p class="xx-small subline">Spring Boot, Spring Web/Beans/Core/JCL,
+                            <br>WebFlux, Reactor/ReactiveStreams, Netty
+                            <br>Hibernate Validator, slf4j, SnakeYaml, Logback, Jackson</p>
+                    </div>
+
+                    <!-- Comment -->
+                    <div class="comment small">
+                        <p>Viel Automagie. <br>Hohe Komplexität & Lernkurve</p>
+                        <p>Detailanforderungen können schnell Expertenwissen erfordern</p>
+                        <p>Höchstes Niveau an <br>Support & Verbreitung</p>
+                        <p>Umfangreiche Dokumentation</p>
+                    </div>
+
+                    <!-- Position indexes -->
+                    <div class="micro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="fun">&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="boss">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+
+
+                    <!-- Bytecode -->
+                    <div class="bytecode"><b>16</b></div>
+
+                    <!-- Req/s -->
+                    <div class="req orange">4,1</div>
+
+                    <!-- Avg. Req -->
+                    <div class="reqavg orange">98</div>
+
+                    <!-- Req/s -->
+                    <div class="reqdev red">149</div>
+                </div>
 
                 <aside class="notes" data-markdown>
                     * xxx
                 </aside>
             </section>
 
-        </section>
+            <section>
+                <img src="img/benchmark-spring5.jpg" alt="Spring 5 Benchmark Plot"
+                style="width: 50%">
+            </section>
 
+        </section>
 
 
         <!--
@@ -1396,13 +1575,13 @@ myApp.config(['NgAdminConfigurationProvider',
         slideNumber: true,
         mouseWheel: true,
         controls: false,
-        fragments: false,
+        fragments: true,
         width: 1280,
         height: 720,
         margin: 0.1,
         maxScale: 10,
         center: false,
-        // parallaxBackgroundImage: 'https://images.unsplash.com/photo-1502990313206-7f37a9514bea',
+        parallaxBackgroundImage: 'https://images.unsplash.com/photo-1502990313206-7f37a9514bea',
         // 'http://jamescroft.co.uk/wp-content/uploads/2015/01/217-L6YVU1.jpg',
         parallaxBackgroundSize: '4177px 2118px',
 

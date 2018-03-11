@@ -1,7 +1,6 @@
 /*@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Montserrat+Alternates);*/
 /*@import url(https://fonts.googleapis.com/css?family=Rajdhani:400,700,600,500,300);*/
 
-
 /* devanagari */
 @font-face {
     font-family: 'Rajdhani';
@@ -10,6 +9,7 @@
     src: local('Rajdhani Light'), local('Rajdhani-Light'), url(../lib/font/Rajdhani-Light.woff2) format('woff2');
     unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
 }
+
 /* latin */
 @font-face {
     font-family: 'Rajdhani';
@@ -18,6 +18,7 @@
     src: local('Rajdhani Light'), local('Rajdhani-Light'), url(../lib/font/Rajdhani-Light-latin.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 /* latin */
 @font-face {
     font-family: 'Rajdhani';
@@ -26,6 +27,7 @@
     src: local('Rajdhani'), local('Rajdhani-Regular'), url(../lib/font/Rajdhani-Regular.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 /* latin */
 @font-face {
     font-family: 'Rajdhani';
@@ -34,6 +36,7 @@
     src: local('Rajdhani Semibold'), local('Rajdhani-Semibold'), url(../lib/font/Rajdhani-Semibold-latin.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 /* latin */
 @font-face {
     font-family: 'Rajdhani';
@@ -42,6 +45,7 @@
     src: local('Rajdhani Bold'), local('Rajdhani-Bold'), url(../lib/font/Rajdhani-Bold-latin.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 /* devanagari */
 @font-face {
     font-family: 'Rajdhani';
@@ -68,6 +72,7 @@
     src: local('Montserrat-Bold'), url(../lib/font/Montserrat-Bold.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 /* latin */
 @font-face {
     font-family: 'Montserrat Alternates';
@@ -86,20 +91,22 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-
-
-
 /* Absatzabstand */
 .reveal p {
     margin: .4em 0 .2em 0;
 }
+
 .reveal p p {
     margin: 0;
 }
 
-.reveal .subline {
+.reveal .subline, .reveal .subline p {
     margin: -0.2em 0 .4em 0;
     line-height: 0.92;
+}
+
+.reveal .lh1, .reveal .lh1 p {
+    line-height: 1em;
 }
 
 /* Text links*/
@@ -109,8 +116,6 @@
 .reveal ol, .reveal dl, .reveal ul {
     margin: 0 0 0 1.6em;
 }
-
-
 
 /* Decent regular text.*/
 .reveal {
@@ -143,7 +148,6 @@
     color: #1b91ff !important;
 }
 
-
 /* Prägnantere Überschriften-Font. */
 .reveal h1,
 .reveal h2,
@@ -173,7 +177,6 @@
     letter-spacing: -0.03em;
 }
 
-
 .reveal h5 {
     font-size: 100%;
     margin: 1em 0 .3em 0;
@@ -189,6 +192,7 @@
     text-decoration: underline;
     margin: 0.4em 0 0 0;
 }
+
 .reveal h6 + p {
     margin: 0 0 .2em 0;
 }
@@ -243,6 +247,7 @@
 .reveal .right, #rightsection {
     text-align: right;
 }
+
 .reveal .left {
     text-align: left;
 }
@@ -254,15 +259,16 @@
     display: inline-block;
 }
 
-.reveal .x-large p, .reveal .x-large li, .reveal p.x-large, .reveal  div.x-large, .reveal  span.x-large, .reveal .x-large code {
+.reveal .x-large p, .reveal .x-large li, .reveal p.x-large, .reveal div.x-large, .reveal span.x-large, .reveal .x-large code {
     font-size: 168%;
 }
 
-.reveal .large p,.reveal .large li,.reveal .large,.reveal  div.large,.reveal  span.large,.reveal  .large code {
+.reveal .large p, .reveal .large li, .reveal .large, .reveal div.large, .reveal span.large, .reveal .large code {
     font-size: 124%;
 }
 
-.reveal .small li, .reveal div.small,.reveal span.small, .reveal .small code, .reveal .small, .reveal .small li {
+.reveal .small li, .reveal div.small, .reveal span.small, .reveal .small code,
+.reveal .small, .reveal .small li, .reveal .small p {
     font-size: 86%;
 }
 
@@ -270,7 +276,7 @@
     font-size: 72%;
 }
 
-.reveal .x-small p,.reveal  .x-small li, .reveal .x-small {
+.reveal .x-small p, .reveal .x-small li, .reveal .x-small {
     font-size: 64% !important;
 }
 
@@ -279,8 +285,10 @@
 }
 
 .reveal pre.xx-small, .reveal pre.x-small, .reveal pre.small {
-    width: 100%; margin: 0;
+    width: 100%;
+    margin: 0;
 }
+
 .reveal .xx-small {
     font-size: 50% !important;
 }
@@ -289,7 +297,6 @@
     font-size: 50%;
     padding: 10px
 }
-
 
 /* --- Darstellung Tweaks ----------------------------------------------- */
 
@@ -314,7 +321,6 @@
     box-shadow: none;
     -webkit-filter: invert(100%) hue-rotate(180deg) saturate(255); filter: invert(100%)  hue-rotate(180deg) saturate(255);
 }*/
-
 
 /* Top & bottom gaps */
 .reveal .tgap {
@@ -495,12 +501,10 @@ A.c-ref > code {
     background: olivedrab !important;
 }
 
-
 /* --------- Code Style tweaks ----------------------------*/
 .reveal PRE .hljs-keyword {
     font-weight: 700;
 }
-
 
 #exxcellent-logo {
     position: fixed;
@@ -510,6 +514,139 @@ A.c-ref > code {
     z-index: 10;
     height: 28px;
     /* prevent logo gradient banding? */
-    -webkit-filter: drop-shadow(0px 0px 1px rgba(255,255,255,.3));
+    -webkit-filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, .3));
     opacity: .5;
+}
+
+/* ----------- Scorecard ------------- */
+
+SECTION.scorecard {
+    height: 720px;
+    width: 1280px;
+    padding: 0 !important;
+}
+
+SECTION.scorecard > DIV {
+    background-image: url('../img/scorecard-sheet.png');
+    background-size: contain;
+    height: 720px;
+    width: 970px;
+    margin: 0 auto;
+    box-shadow: 30px 35px 35px rgba(0, 0, 0, 0.7);
+}
+
+SECTION.scorecard > DIV DIV {
+    position: absolute;
+}
+
+SECTION.scorecard > DIV .name {
+    text-align: left;
+    left: 200px;
+    top: 36px;
+    width: 500px;
+    height: 80px;
+}
+
+SECTION.scorecard > DIV .name IMG {
+    max-height: 40px;
+    vertical-align: center;
+    margin: 0 1em 0 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+SECTION.scorecard > DIV .personality {
+    text-align: left;
+    left: 200px;
+    top: 130px;
+    width: 520px;
+    height: 170px;
+}
+
+SECTION.scorecard > DIV .bundles {
+    text-align: left;
+    left: 200px;
+    top: 326px;
+    width: 520px;
+    height: 60px;
+}
+
+SECTION.scorecard > DIV .comment {
+    text-align: left;
+    left: 194px;
+    top: 400px;
+    width: 540px;
+    height: 270px;
+    line-height: 1em;
+}
+
+SECTION.scorecard > DIV .comment p {
+    line-height: 1em;
+}
+
+SECTION.scorecard > DIV .micro {
+    left: 814px;
+    top: 140px;
+}
+
+SECTION.scorecard > DIV .micro, SECTION.scorecard > DIV .fun, SECTION.scorecard > DIV .boss {
+    left: 814px;
+    top: 140px;
+    font-size: 168%;
+    font-weight: bolder;
+    margin: -0.2em 0 .4em 0;
+    line-height: 0.92;
+    color: royalblue;
+}
+
+SECTION.scorecard > DIV .fun {
+    top: 210px;
+}
+
+SECTION.scorecard > DIV .boss {
+    top: 294px;
+}
+
+SECTION.scorecard > DIV .bytecode {
+    text-align: left;
+    left: 754px;
+    top: 457px;
+    width: 100px;
+    height: 70px;
+    font-size: 124%;
+}
+
+SECTION.scorecard > DIV .req {
+    text-align: left;
+    left: 934px;
+    top: 457px;
+    width: 100px;
+    height: 70px;
+    font-size: 124%;
+}
+
+SECTION.scorecard > DIV .reqavg {
+    text-align: left;
+    left: 774px;
+    top: 610px;
+    width: 100px;
+    height: 70px;
+    font-size: 124%;
+}
+
+SECTION.scorecard > DIV .reqdev {
+    text-align: left;
+    width: 100px;
+    height: 70px;
+    font-size: 124%;
+    left: 970px;
+    top: 604px;
+}
+
+.red {
+    color: orangered;
+}
+.orange {
+    color: sandybrown;
 }
