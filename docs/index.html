@@ -278,27 +278,6 @@
                 <!--  @formatter:on -->
 
             </section>
-
-            <section data-markdown>
-                <textarea data-template>
-                    ## Showcase Architektur
-
-                    * Bild: Hervorgehoben CRUD Services
-                    * REST Operationen
-
-                    Eventuell als Overlay: Konstruktionspapier & über Einkaufswagen
-                </textarea>
-
-                <!--  @formatter:off -->
-                <aside class="notes" data-markdown="">
-                    Unsere Beispiel-Applikation stellt eine klassische Singe-Page Applikation mit RESTful
-                    Backend da. Wir benötigen also ein Backend, dass HTTP-Aufrufe auf entsprechende CRUD-
-                    Controllerlogik mapped.
-
-                    Schauen wir uns mal an, wie das mit unserme ersten Kandidaten gelingt.
-                </aside>
-                <!--  @formatter:on -->
-            </section>
         </section>
 
 
@@ -395,15 +374,17 @@ public class HelloWorld {
 }</code></pre>
             </section>-->
 
-            <section data-markdown>
-                <textarea data-template>
+            <section class="left center">
+                <div data-markdown style="width: 46%; margin: 0 auto;">
                     ## Kern-Konzepte
 
-                    * Zentrale Strukturierung: Routen
-                    * Deklarativ / DSL  `methode(pfad, type, callback)`
-                    * zusätzlich: Filter & Transformer; optionaler Template Engine Support, mehr nicht!
-                    * Minimalistisch
-                </textarea>
+                    1. *DSL* zur Definition von *Routen*   <!-- -->
+                    `methode(pfad, type, callback)`
+                    2. zusätzlich: Filter & Transformer
+                    3. optional: Template Engine Support
+
+                    *Mehr nicht!*
+                </div>
             </section>
 
             <section data-markdown>
@@ -684,7 +665,7 @@ public class HelloWorld {
 
             <section data-markdown>
                 <textarea data-template>
-                    ### Ninja – Routen
+                    ## Ninja – Routen
                     ```java
                     package conf;
 
@@ -711,7 +692,7 @@ public class HelloWorld {
             <section>
                 <!--  @formatter:off -->
                 <div data-markdown style="width: 980px;">
-                    ### Ninja – Controller
+                    ## Ninja – Controller
                     ```java
                     package controllers;
 
@@ -733,11 +714,10 @@ public class HelloWorld {
                             ? json().render(match.get());
                             : notFound().render(new Message(id + " not found"));
                       }
-                      …
                     ```
                 </div>
                 <!--  @formatter:on -->
-                <div class="abs emphasize" style="top: 100px; left: 910px; width: 35%;">
+                <div class="abs emphasize" style="top: 132px; left: 910px; width: 35%;">
                     <p style="text-align: left; line-height: .92em; font-size: 72%;">
                         <span class="fragment">&leftarrow; Immer: <code>controllers</code><br></span>
                         <br>
@@ -766,16 +746,19 @@ public class HelloWorld {
             </section>
 
 
-            <section data-markdown>
+            <section data-markdown class="center">
                 <textarea data-template>
                     ## Kern-Konzepte
+                    * CoC
+                    * MVC
+                    * Client-Side Sessions
+                    <span class="decent" >&rightarrow; einfache Skalierbarkeit</span>
 
-                    * Client-Side Sessions (!)
-                    * Stateless &  Share nothing! Dadurch gut skalierbar
-                    * Web/RESTful friendly
-                    * Setzt auf mature Standard-Technologien:  Servlets, Guice, JPA, Flyway migrations
-                    * Volle Entwicklungsumgebung: Hotereload, Selenium Tess, CI Support
-                    * Frontend: Freemarker (HTML) / Jackson (XML, Jason)
+                    ##### Kombination bewährter Technologien
+
+                    * Backend: Servlets, Guice, JPA, Flyway, …
+                    * Frontend: Freemarker <span class="decent" >(HTML)</span>
+                    / Jackson <span class="decent" >(XML, Jason)</span>
                 </textarea>
 
                 <aside class="notes" data-markdown="">
