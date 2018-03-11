@@ -650,6 +650,16 @@ SECTION.scorecard > DIV .reqdev {
 .orange {
     color: sandybrown;
 }
+.underline {
+    text-decoration: underline;
+}
+
+.shadow-down {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
+}
+.shadow-up {
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.7) !important;
+}
 
 /* -------- Charts ----- */
 .ct-series .ct-bar {
@@ -661,3 +671,4 @@ SECTION.scorecard > DIV .reqdev {
 }
 SPAN.ct-label {
 }
+

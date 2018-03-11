@@ -167,7 +167,7 @@
                      style="max-width: 84%;"
                      class="plain">
                 <p class="fragment">
-                    <span class="decent">Entscheidend:</span> Geringe Komplexität, Größe & Aufwand
+                    <span class="underline">Entscheidend:</span> <em>Geringe Komplexität/Aufwand</em> sowie <em>geringe Größe</em>
                 </p>
 
                 <!--  @formatter:off -->
@@ -270,16 +270,24 @@
         -->
         <section>
             <section data-background-image="img/igor-ovsyannykov-520422-unsplash.jpg">
-                <img src="img/note-pad-1425759.png" alt="Einkaufsliste" class="plain abs fragment"
-                     style="left: 210px; top: 400px; transform: scale(16) rotate(-3deg);">
+                <img src="img/note-pad-1425759.png" alt="Einkaufsliste"
+                     class="plain abs fragment fade-right shadow-down"
+                     style="left: 200px; top: 300px; transform: scale(17) rotate(-3deg);">
 
-                <!--  @formatter:off -->
+                <img src="img/grocery-architecture-plain.png" alt="Microservice Architektur"
+                     class="plain abs fragment fade-in shadow-up"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
+                <img src="img/grocery-architecture-rest.png" alt="Microservice Architektur"
+                     class="plain abs fragment fade-in"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
                 <aside class="notes" data-markdown>
                     * Als Vergleichsgrundlage dient uns eine kleine Anwendung zur Verwaltung von
-                    Einkaufslisten
+                    Einkaufslisten.
+                    * Mann kann Einkaufslisten mit ihren Punkten anlegen, verändern, lesen und löschen.
+                    * Sprich: In unserem Beispiel geht es um ein klassisches RESTful CRUD Backend.
                 </aside>
-                <!--  @formatter:on -->
-
             </section>
         </section>
 
@@ -293,7 +301,7 @@
                 <h3 class="tgap"><em><i>Eleganter Zündfunken</i></em></h3>
 
                 <!--  @formatter:off -->
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Unser erster Kandidate ist Spark Java – nicht mit Apache Spark zu verwechseln!
                 </aside>
                 <!--  @formatter:on -->
@@ -397,7 +405,6 @@ public class HelloWorld {
                     ```java
                     get("/greet/:name", "text/html", (req, res) -> {
                         String name = req.params("name");
-
                         Map&lt;String, String&gt; values = new HashMap&lt;&gt;();
                         values.put("name", name != null ? name : "Anon");
                         return new JadeTemplateEngine().render(
@@ -406,16 +413,16 @@ public class HelloWorld {
                     });
                     ```
 
-                    ##### Jade4j Template
+                    ##### z.B. mit Jade4j Template
                     ```
                     doctype html
                     html
                         body
                             h1 Welcome to my Microservice
-                            p Dear #{name}, welcome to my web-based Microservicer endpoint
+                            p Dear #{name}, welcome to my web-based Microservice endpoint
                     ```
 
-                    Template Engines: Velocity, Freemarker, Mustache, Handlebars, Jade, Thymeleaf und 5 weitere Exoten
+                    <span class="small">Oder:    Velocity, Freemarker, Mustache, Handlebars, Thymeleaf & 5 weitere </span>
                 </textarea>
             </section>
 
@@ -499,17 +506,28 @@ public class HelloWorld {
           === Demo App: Model     =============================================================
         -->
         <section>
-            <section data-markdown>
-                <textarea data-template>
-                    ## Showcase Architektur
-                    * Bild: Hervorgehoben: Model
-                </textarea>
+            <section data-background-image="img/igor-ovsyannykov-520422-unsplash.jpg">
+                <img src="img/note-pad-1425759.png" alt="Einkaufsliste"
+                     class="plain abs fade-right    shadow-down"
+                     style="left: 200px; top: 300px; transform: scale(17) rotate(-3deg);">
 
-                <aside class="notes" data-markdown="">
+                <img src="img/grocery-architecture-plain.png" alt="Microservice Architektur"
+                     class="plain abs shadow-up"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
+                <img src="img/grocery-architecture-model.png" alt="Microservice Architektur"
+                     class="plain abs fragment fade-in"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
+                <aside class="notes" data-markdown>
                     Zurück zu unserer Beispiel Anwendung: Nachdem wir die Routen haben, geht es an das Model.
                     Wie können wir hier Prägnanz erreichen? Dazu greifen wir zu Lombok.
+
+                    Die Persitenz machen wir einfach durch Serialisierung/Deserialisierung
+                    des Models als JSON File.
                 </aside>
             </section>
+
 
 
             <section class="container">
@@ -552,20 +570,8 @@ public class HelloWorld {
                 </div>
                 <!--  @formatter:on -->
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * xxx
-                </aside>
-            </section>
-
-            <section data-markdown>
-                <textarea data-template>
-                    ## Showcase Architektur
-                    * Bild: Hervorgehoben: Persistenz
-                </textarea>
-
-                <aside class="notes" data-markdown="">
-                    Die Persitenz machen wir einfach durch Serialisierung/Deserialisierung
-                    des Models als JSON File.
                 </aside>
             </section>
 
@@ -581,7 +587,7 @@ public class HelloWorld {
                 <img class="tgap plain" src="img/logo-ninja.png" width="818"/>
                 <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
                     Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
                     sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.
@@ -654,7 +660,7 @@ public class HelloWorld {
                     * *I18N:* `conf/messages_XX.properties`
                 </div>
                 <!--  @formatter:on -->
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Convention over Configuration (CoC) und MVC haben in Ninja einen hohen Stellenwert.
                     Das beginnt mit sehr konkreten Erwartungshaltungen in welchen Klassen und Paketen
                     die Anwendungslogik zu finden ist.
@@ -686,7 +692,7 @@ public class HelloWorld {
                     }
                     ```
                 </textarea>
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * Fixes Paket `conf`
                     * Controllermethode mit Java 8 Method references
                 </aside>
@@ -742,7 +748,7 @@ public class HelloWorld {
                     </p>
                 </div>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * Controller müssen `Result` Objekte zurückgeben
                     * Injection
                 </aside>
@@ -764,7 +770,7 @@ public class HelloWorld {
                     / Jackson <span class="decent">(XML, Jason)</span>
                 </textarea>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Ninja ist serverseitige Zustandslos! D.h. keine Mittel für Server-seitige Session.
                     Stattdessen alle Zustandsinformationen als Cookie (auch verschlüsselt) auf dem Client.
 
@@ -842,10 +848,27 @@ public class HelloWorld {
           === Demo App: UI ===========================================================================
         -->
         <section>
-            <section data-markdown="">
-                <textarea data-template>
-                    ## Architektur: UI - Teil
-                </textarea>
+            <section data-background-image="img/igor-ovsyannykov-520422-unsplash.jpg">
+                <img src="img/note-pad-1425759.png" alt="Einkaufsliste"
+                     class="plain abs fade-right    shadow-down"
+                     style="left: 200px; top: 300px; transform: scale(17) rotate(-3deg);">
+
+                <img src="img/grocery-architecture-plain.png" alt="Microservice Architektur"
+                     class="plain abs shadow-up"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
+                <img src="img/grocery-architecture-ui.png" alt="Microservice Architektur"
+                     class="plain abs fragment fade-in"
+                     style="left: 800px; top: 440px; transform: scale(18) rotate(2deg);">
+
+                <aside class="notes" data-markdown>
+                    Zurück zu unsere Demo-Anwendung:
+                    
+                    Wie machen wir nun eigentlich die Oberfläche?
+
+                    Ganz einfach – dazu kommt ein kleines Angular-basiertes Framework Namens
+                    _ng-admin_ zum Einsatz.
+                </aside>
             </section>
 
             <section>
@@ -926,7 +949,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <img src="img/logo-jodd.png" class="plain tgap" width="1016"/>
                 <h3 class="tgap"><em><i>Floppytaugliches Baukastensystem</i></em></h3>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * xxx
                 </aside>
             </section>
@@ -960,7 +983,7 @@ myApp.config(['NgAdminConfigurationProvider',
                     </div>
                 </div>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Jodd legt viel Wert auf seine schlanke Linie und hat bis vor kurzem komplett
                     sogar noch in das 1,44MB Korsett früherer 3,5" Disketten gepasst.
 
@@ -977,7 +1000,7 @@ myApp.config(['NgAdminConfigurationProvider',
                     <br><span class="decent subline">(Validierung, HTTP, Utils, CSS, …)</span>
                 </p>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     IoC-Container Petite, die AOP-Engine Proxetta, der SQL-basierte O/R-Mapper
                     DbOom, VTor für Bean-Validierungen und weitere Helferlein wie z.B. zur HTML-Verarbeitung.
                 </aside>
@@ -1110,7 +1133,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <img class="tgap plain" src="img/logo-ratpack.png" width="818"/>
                 <h3 class="tgap"><em><i>Reaktiver Entertainer</i></em></h3>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Der vorletzte Vertreter in unserer Riege gehört zu den
                     Anhänger der Reaktiven Programmierung und hat damit
                     konzeptionelle Gemeinsamkeiten z.B. mit Vert.X.
@@ -1145,7 +1168,7 @@ myApp.config(['NgAdminConfigurationProvider',
                     </div>
                 </div>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Hohe Skalierbarkeit und vereinfachte Entwicklung der Event-basierenden
                     Programmierung asynchroner Anwendungen gehören zu den primären Design-Zielen
                     von Ratpack.
@@ -1180,7 +1203,7 @@ myApp.config(['NgAdminConfigurationProvider',
                     }
                     ```
                 </textarea>
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Für die asynchrone Verarbeitung setzt Ratpack auf Promises.
 
                     Der Handler für das Anlegen muss erst einmal darauf warten,
@@ -1223,7 +1246,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 Recht verwirrend und wenig intuitiv.
                 </div>
                 <!--  @formatter:on -->
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                 </aside>
             </section>
 
@@ -1297,7 +1320,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <img class="tgap plain" src="img/logo-spring.png" width="818"/>
                 <h3 class="tgap"><em><i>Start für den Platzhirsch</i></em></h3>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     xxxx
                 </aside>
             </section>
@@ -1334,11 +1357,11 @@ myApp.config(['NgAdminConfigurationProvider',
                     </div>
                 </div>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                 </aside>
             </section>
 
-            <section data-markdown="">
+            <section data-markdown>
                 <textarea data-template>
                     ### Spring Boot 2 – Spring 5 – WebFlux
 
@@ -1363,7 +1386,7 @@ myApp.config(['NgAdminConfigurationProvider',
                      …
                     ```
                 </textarea>
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
                     * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
                     * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
@@ -1371,7 +1394,7 @@ myApp.config(['NgAdminConfigurationProvider',
             </section>
 
 
-            <section data-markdown="">
+            <section data-markdown>
                 <textarea data-template>
                     ### WebFlux – `index.html` als `/` ausliefern
 
@@ -1394,7 +1417,7 @@ myApp.config(['NgAdminConfigurationProvider',
                     ```
                     Ohne Google kann einfaches auch kompliziert sein.
                 </textarea>
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
                     * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
                     * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
@@ -1561,7 +1584,7 @@ myApp.config(['NgAdminConfigurationProvider',
                       Bereitschaft & Fähigkeit selber Bugs zu lösen.
                 </textarea>
 
-                <aside class="notes" data-markdown="">
+                <aside class="notes" data-markdown>
                     Wir haben es bereits in der Eingangsdemo gesehen: Weniger kann richtig Spaß machen!
 
                     Risiko bei allen Kandidation: Traktion & Stabilität und ihre geringe Verbreitung.
