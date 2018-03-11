@@ -4,7 +4,7 @@ This Java/Gradle based repository illustrates a selection of Java-based
 microframeworks. 
  
 It implements a functionally identical grocery list application with [Spark](http://sparkjava.com),
-[Ninja](https://www.ninjaframework.org), [Ratpack](https://ratpack.io), [Jodd](https://jodd.org), [Pippo](http://www.pippo.ro), [JavaLite](http://javalite.io), and a few others. 
+[Ninja](http://www.ninjaframework.org), [Ratpack](https://ratpack.io), [Jodd](https://jodd.org), [Pippo](http://www.pippo.ro), [JavaLite](http://javalite.io), and a few others. 
 
 It was originally meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all) but is also the basis for my talk [Schlank in den Service: Der große Java-Microframework-Test!](https://programm.javaland.eu/2018/#/scheduledEvent/549567) on the Javaland conference 2018.
 
@@ -92,7 +92,7 @@ Run the demo with `gradle :ratpack:run` and access [http://localhost:8080/](http
 
 ### Option #2: Using IntelliJ IDEA
 Open the project using IntelliJ IDEA and execute the _Ninja: Run Example_ run configuration.
-
+``
 ### Option #3: As standalone JAR
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `ratpack/`
 directory to leverage from the example `grocerylists.json`.
