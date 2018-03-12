@@ -540,16 +540,16 @@ SECTION.scorecard > DIV DIV {
 
 SECTION.scorecard > DIV .name {
     text-align: left;
-    left: 200px;
+    left: 190px;
     top: 36px;
-    width: 500px;
+    width: 550px;
     height: 80px;
 }
 
 SECTION.scorecard > DIV .name IMG {
     max-height: 40px;
     vertical-align: center;
-    margin: 0 1em 0 0;
+    margin: 0 .6em 0 0;
     border: none;
     background: none;
     box-shadow: none;
@@ -594,7 +594,7 @@ SECTION.scorecard > DIV .micro, SECTION.scorecard > DIV .fun, SECTION.scorecard 
 }
 
 SECTION.scorecard > DIV .micro {
-    left: 810px;
+    left: 800px;
     top: 130px;
 }
 

@@ -411,7 +411,7 @@ public class HelloWorld {
                     });
                     ```
 
-                    ##### z.B. mit Jade4j Template
+                    ##### z.B. mit Jade4j Template `greet.jade`
                     ```
                     doctype html
                     html
@@ -420,7 +420,7 @@ public class HelloWorld {
                             p Dear #{name}, welcome to my web-based Microservice endpoint
                     ```
 
-                    <span class="small">Oder:    Velocity, Freemarker, Mustache, Handlebars, Thymeleaf & 5 weitere </span>
+                    <span class="small"><i>Alternativ:</i>  Velocity, Freemarker, Mustache, Handlebars, Thymeleaf & 5 weitere …</span>
                 </textarea>
             </section>
 
@@ -487,6 +487,10 @@ public class HelloWorld {
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
+                    * Das erste Microframework haben wir schon kennengelernt.
+                    Nun geht es an die Bewertung.
+                    *  Vorstellung Scoresheets …
+                    ---
                     * Wie Sinatra: Routen das zentrale Strukturierungsmittel der DSL
                     * Via Routen werden HTTP-Anfragen auf Callbacks umgeleitet.
                         * Diese verarbeiten und beantworten die Requests
@@ -1509,6 +1513,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <h3>Benchmark Crunchdown <br>(Bytecode Size)</h3>
 
                 <div class="ct-chart" id="bytechart"></div>
+                <span class="decent">All-in-one JAR</span>
                 <script>
                     new Chartist.Bar('#bytechart', {
                         labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
@@ -1517,6 +1522,7 @@ myApp.config(['NgAdminConfigurationProvider',
                         width: 900,
                         height: 500,
                         seriesBarDistance: 10,
+                        reverseData: true,
                         horizontalBars: true,
                         onlyInteger: true,
                         axisY: {
@@ -1534,6 +1540,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <h3>Benchmark Crunchdown <br>(Request Duration)</h3>
 
                 <div class="ct-chart" id="reqchart"></div>
+                <code class="x-small">$ ab -n 400000 -c 400 "http://localhost:8080/list?_page=1&_…"</code>
                 <script>
                     new Chartist.Bar('#reqchart', {
                         labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
@@ -1546,6 +1553,7 @@ myApp.config(['NgAdminConfigurationProvider',
                         width: 1000,
                         height: 500,
                         high: 300,
+                        reverseData: true,
                         stackBars: true,
                         horizontalBars: true,
                         onlyInteger: true,
