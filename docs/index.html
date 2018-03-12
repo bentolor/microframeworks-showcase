@@ -58,7 +58,7 @@
           === Title ===============================================================================
         -->
 
-        <section >
+        <section>
             <a href="https://www.exxcellent.de" style="width: 320px; position: absolute; top: 0; left: 0;">
                 <img data-src="img/logo-exxcellent-transparent.png"
                      class="plain" alt="eXXcellent solutions GmbH"
@@ -158,7 +158,7 @@
                     ##### Woher stammt der Begriff „Microframework“?
                     * Ursprünglich aus der Javascript-Welt. Eh schon kleinteilig.
                     * Bestimmte Bibliotheken wie jQuery wurden zum Standard.
-                      Jede Mini-Website -> 100kB+ initial payload
+                    Jede Mini-Website -> 100kB+ initial payload
                     * Gegenbewegung: Minimalismus. **„Nur das nötigste!“** – jedes Byte zählt
                 </aside>
             </section>
@@ -170,7 +170,8 @@
                      style="max-width: 84%;"
                      class="plain">
                 <p class="fragment">
-                    <span class="underline">Entscheidend:</span> <em>Geringe Komplexität/Aufwand</em> sowie <em>geringe Größe</em>
+                    <span class="underline">Entscheidend:</span> <em>Geringe Komplexität/Aufwand</em> sowie <em>geringe
+                    Größe</em>
                 </p>
 
                 <!--  @formatter:off -->
@@ -279,7 +280,7 @@
           === Spark ==================================================================================
         -->
         <section>
-            <section  class="center">
+            <section class="center">
                 <img src="img/logo-spark.svg" class="plain tgap" width="600"/>
                 <h3 class="tgap"><em><i>Eleganter Zündfunken</i></em></h3>
 
@@ -291,7 +292,7 @@
                 </aside>
             </section>
 
-            <section >
+            <section>
                 <div class="right">
                     <h2 class="large">Datenblatt</h2>
 
@@ -344,15 +345,15 @@
                      data-background-size="contain">
                 <aside class="notes" data-markdown>
                     1. Beginne mit einem leeren Projekt
-                       Arbeiten mit _Gradle_, legen dazu ein neues Gradle Buildfile an.
+                    Arbeiten mit _Gradle_, legen dazu ein neues Gradle Buildfile an.
                     2. Da wir **Standalone** Arbeiten wollen &rightarrow; `application` Plugin,  <!-- -->
-                       Holen uns als einige Dependency `spark-core`  <!-- -->
-                       … und beginnen mit unsere Anwendung
+                    Definieren die Einstiegsklasse, holen uns als einige Dependency `spark-core`
+                    … und beginnen mit unsere Anwendung
 
                     ---
                     1. Spark = **Deklarativ.** Sprich wir definieren Routen
-                        * Also Pfad, welche Inhalte wir darüber ausliefern und einen Handler der die Route bedient.
-                        * Für etwas mehr Spass auch ein Beispiel mit URL Parameter
+                    * Also Pfad, welche Inhalte wir darüber ausliefern und einen Handler der die Route bedient.
+                    * Für etwas mehr Spass auch ein Beispiel mit URL Parameter
                     2. Wir bauen & starten. **Das entspricht einem einfachen Start der `main`-Methode!**
                     … und testen unseren Microservice. Fertig!
 
@@ -412,7 +413,7 @@ public class HelloWorld {
                 </div>
                 <aside class="notes" data-markdown="">
                     * DSL zur Definition von **HTTP Routen** wie `GET`,`POST`,`PUT` etc. mit den
-                      _klasssichen HTTP Mitteln (Parameter, Sessions, …)_.
+                    _klasssichen HTTP Mitteln (Parameter, Sessions, …)_.
                     * Spark bundlet Jetty 9. Logging. Sonst keine weiteren Abhängigkeiten.
                     * Neben Routen **ergänzende Detailstrukturierungsmittel** wie Filter, Transformer
                     * **Auch Antworterstellung erst mal nicht Bestandteil! Dafür gibt es aber Extension**
@@ -452,9 +453,9 @@ public class HelloWorld {
                 <aside class="notes" data-markdown>
                     Foo bar.
                     * Verschiedene Templating-Extensions binden dritte Template Engines ein und machen diese
-                      für Antworten verfügbar
+                    für Antworten verfügbar
                     * **Entweder:** man übergibt an der Route einen Transformer mit, der die Rückhabe des Callbacks
-                      passend rendert
+                    passend rendert
                     * **Oder:** wir machen es wie hier und geben direkt den gerenderten Inhalt zurück
                     * Das `ModelAndView`-Objekt enthält die in das einzusetzende Daten und den Namen des
                     anzuwendenden Templates
@@ -574,7 +575,6 @@ public class HelloWorld {
             </section>
 
 
-
             <section class="container">
                 <!--
                     ```groovy
@@ -618,7 +618,7 @@ public class HelloWorld {
                 <aside class="notes" data-markdown>
                     * Für mehr Effizienz in diesem Bereich greifen wir zu Lombok.
                     * Kein Extra Payload/Runtime! APT-Prozess der Bytecode verändert.
-                      **Erzeugt hier Getter/Setter plus Konstruktor.**
+                    **Erzeugt hier Getter/Setter plus Konstruktor.**
                     * Unterstützt gängige IDEs und hat einige weitere Mittel.
 
                     #### Alternative Anwendung: Kotlin verwenden
@@ -638,7 +638,7 @@ public class HelloWorld {
         -->
         <section>
 
-            <section  class="center">
+            <section class="center">
                 <!--suppress CheckImageSize -->
                 <img class="tgap plain" src="img/logo-ninja.png" width="818"/>
                 <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
@@ -651,7 +651,7 @@ public class HelloWorld {
             </section>
 
 
-            <section >
+            <section>
                 <div class="right">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>CoC<br>
@@ -807,6 +807,9 @@ public class HelloWorld {
                         <br>
                         <br>
                         <span class="fragment">&leftarrow; URL Parameter<br></span>
+                        <br>
+                        <br>
+                        <span class="fragment">&leftarrow; Utility Methoden für <code>Result</code><br></span>
                     </p>
                 </div>
 
@@ -822,13 +825,12 @@ public class HelloWorld {
             </section>
 
 
-            <section class="center">
-                <!--  @formatter:off -->
-                <div data-markdown>
+            <section data-markdown class="center">
+                <textarea data-template>
                     ## Kern-Konzepte
                     * Convention over Configuration <span class="decent">(CoC)</span>
                     * Model–View–Controller <span class="decent">(MVC)</span>
-                    * Client-Side Sessions
+                    * <span class="fragment highlight-blue">Client-Side Sessions</span>
                     <span class="decent">&rightarrow; einfache Skalierbarkeit</span>
 
                     ##### Kombination bewährter Technologien
@@ -836,18 +838,21 @@ public class HelloWorld {
                     * <span class="decent">Backend:</span> Servlets, Guice, JPA, Flyway, …
                     * <span class="decent">Frontend:</span> Freemarker <span class="decent">(HTML)</span>
                     / Jackson <span class="decent">(XML, Jason)</span>
-                </div>
-                <!--  @formatter:on -->
 
-                <aside class="notes" data-markdown>
-                    Ninja ist serverseitige Zustandslos! D.h. keine Mittel für Server-seitige Session.
-                    Stattdessen alle Zustandsinformationen als Cookie (auch verschlüsselt) auf dem Client.
+                    NOTE:
+                    Die Reichweiter der Konventionen haben wir gesehen, ebenfalls wie konsequent der MVC-Ansatz
+                    umgesetzt ist.
+
+                    ---
+                    Ninja ist **serverseitige Zustandslos!** D.h. keine Mittel für Server-seitige Session.
+                    Stattdessen alle Zustandsinformationen als Cookie (auch verschlüsselt) auf dem Client
+                    (max 64kb).
 
                     Nachteil: Session kann nur sehr kleine Datenmengen speichern.
 
                     Vorteil: Ninja-Applikationen inhärent horizontal skalierbar. Einfach weitere Server
                     hinter dem Loadbalancer aufstellen genügt!
-                </aside>
+                </textarea>
             </section>
 
 
@@ -906,9 +911,21 @@ public class HelloWorld {
                 </div>
 
                 <aside class="notes" data-markdown>
-                    * geringe Bossability, da Nische
-                    * Engt Mittel stark ein ("strongly opinionated")
-                    * **Ausreißer Antwortzeiten!**
+                    Ninja ist ganz klar ein Full-Stack Framework das mit viel Konventionen
+                    versucht Kürze im Sourcecode zu gewinnnen, mit 25MB aber nicht unbedingt
+                    eine zu schlanke Bytecodelinie hat.
+
+                    Interessant ist der _Share-nothing_ Ansatz der zur leichten Skalierbarkeit zwingt.
+
+                    Die Bestandteile sind alles solide Technologien.
+
+                    * Von Verbreitung her Nische, daher geringe Bossability. Schwer gegenüber
+                    Platzhirschen zu vertreten.
+                    * Nochmals verstärkt durch großen Umfang und mangelnde Flexiblität.
+                    Der Aufbau und die Mittel sind stark vorgegeben und engen ein ("strongly opinionated").
+                    Das macht das Ausbrechen schwer. Das machen viele andere besser.
+
+                    * _Ausreißer Antwortzeiten!_ (1,1s Ausreiser. verm. GC).
                 </aside>
             </section>
 
@@ -934,7 +951,7 @@ public class HelloWorld {
 
                 <aside class="notes" data-markdown>
                     Zurück zu unsere Demo-Anwendung:
-                    
+
                     Wie machen wir nun eigentlich die Oberfläche?
 
                     Ganz einfach – dazu kommt ein kleines Angular-basiertes Framework Namens
@@ -949,21 +966,25 @@ public class HelloWorld {
                             border-top: 2px solid #111;
                             padding: 6px 32px; color: #fff;
                             background-color: rgba(33,33,33,0.7);"
-                    class="fade-in">
+                     class="fade-in">
                     GUI in <b>64 Zeilen</b> mit <i>ng-admin</i> :
                     <a href="https://github.com/marmelab/ng-admin"
-                        style="color: #ccf; text-decoration: underline;">
+                       style="color: #ccf; text-decoration: underline;">
                         https://github.com/marmelab/ng-admin
                     </a>
                 </div>
 
                 <aside class="notes" data-markdown>
                     * Dazu ist nur 1 HTML Seite erforderlich: `index.html`
-                    * **64 Zeilen:** Definition Felder, Views.
+                    * **64 Zeilen:** Definition Felder, Anwenden auf Views.
                     * Darin binden wir ng-admin ein und konfigurieren und
                     Details des Erscheinungsbilds für die Views
                     * Mit einem funktionsfähigen Backend können wir damit
                     vollständige Datenverwaltung machen.
+
+                    Bietet auch Mehrwerte wie **Batch-Operationen** etc.
+
+                    Also Falls jemand mal eine schnelle CRUD-G:UI braucht: _ng-admin_
                 </aside>
             </section>
 
@@ -1036,23 +1057,25 @@ myApp.config(['NgAdminConfigurationProvider',
         -->
         <section>
 
-            <section  class="center">
+            <section class="center">
                 <img src="img/logo-jodd.png" class="plain tgap" width="1016"/>
                 <h3 class="tgap"><em><i>Floppytaugliches Baukastensystem</i></em></h3>
 
                 <aside class="notes" data-markdown>
-                    Obowhl der kleinste, betrachtete Kandidat ist Jodd kein reines Microframework,
-                    denn es ist mehr eine Umfangreiche Sammlung vieler Teile. Einer davon Madvoc als
-                    Controller-basiertes Web Framework.
+                    Obwohl der kleinste, betrachtete Kandidat ist Jodd *kein reines Microframework,*
+                    denn es ist mehr eine *umfangreiche Sammlung* vieler Teile.
+
+                    Einer daraus – _Madvoc_ – stellt ein Controller-basiertes Web Framework bereit,
+                    dass wir uns näher anschauen wollen.
                 </aside>
             </section>
 
 
-            <section >
+            <section>
                 <div class="right" style="width: 30%; float: right;">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>Komplettes<br>Baukastensystem</i></p>
-                    <p class="subline x-small"><span class="decent">an Mikro-Frameworks & Tools (!)</span></p>
+                    <p class="subline x-small"><span class="decent">an Microframeworks &amp; Tools !</span></p>
                     <p class="small">
                         IoC, AOP,<br>
                         Bean-Validation,<br>
@@ -1063,6 +1086,7 @@ myApp.config(['NgAdminConfigurationProvider',
 
                     <p class="decent x-small tgapxl">
                         4.2.0 (März 2018), APL2<br>
+                        Start: 2009<br>
                         <a href="http://sparkjava.com">https://jodd.org/</a>
                     </p>
                 </div>
@@ -1127,10 +1151,14 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
                 <!--  @formatter:on -->
                 <aside class="notes" data-markdown>
-                    * Injection am Feld, Parameter
+                    * Injection am Feld, Parameter durch jodd IoC Container _Petite_
                     * `@RestAction` konfiguriert Rückgabeserialisierung = JSON
-                    * `@MadvocAction` würde URL Konventionen einschalten. Haben wir abder dediziert überschrieben.
-                    * JSON Serialisierung durch `jodd-json`.
+                    * JSON Serialisierung durch `jodd-json`
+                    * `@MadvocAction` würde URL Konventionen einschalten. Haben wir aber dediziert überschrieben.
+
+                    ---
+                    Ansonsten wirkt die API relativ klassische Controllerbasiert. Ähnlich wie
+                    wir es auch in Ninja gesehen haben.
                 </aside>
             </section>
 
@@ -1201,9 +1229,9 @@ myApp.config(['NgAdminConfigurationProvider',
                     </div>
 
                     <!-- Position indexes -->
-                    <div class="micro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
-                    <div class="fun">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
-                    <div class="boss">&nbsp;|&nbsp;</div>
+                    <div class="micro">&nbsp;|</div>
+                    <div class="fun">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="boss">|</div>
 
 
                     <!-- Bytecode -->
@@ -1220,7 +1248,13 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * Trotz großem Umfang ausgeprägtes "Micro"framework
+                    * Geringe Bossability, da teilweise breaking changes in der Vergangenheit
+                    und der Maintainer aufgrund harscher Kritik in einer Sinnkrise steckt.
+                    Zukunft des Projektes unklar.
+                    * **Schade!** denn die Modularität mit dem Minimalismus und doch recht
+                    großem Leistungsumfang bei sehr sehr geringer Größe hat einen ganz eigenen
+                    Charme.
                 </aside>
             </section>
 
@@ -1232,19 +1266,19 @@ myApp.config(['NgAdminConfigurationProvider',
         -->
         <section>
 
-            <section  class="center">
+            <section class="center">
                 <img class="tgap plain" src="img/logo-ratpack.png" width="818"/>
                 <h3 class="tgap"><em><i>Reaktiver Entertainer</i></em></h3>
 
                 <aside class="notes" data-markdown>
                     Der vorletzte Vertreter in unserer Riege gehört zu den
-                    Anhänger der Reaktiven Programmierung und hat damit
-                    konzeptionelle Gemeinsamkeiten z.B. mit Vert.X.
+                    Anhänger der **Reaktiven Programmierung** und hat damit
+                    **konzeptionelle Gemeinsamkeiten z.B. mit Vert.X**.
                 </aside>
             </section>
 
 
-            <section >
+            <section>
                 <div class="right" style="float: right; width: 28%;">
                     <h2 class="large">Datenblatt</h2>
                     <p>Reaktiv, Asynchron<br>
@@ -1258,6 +1292,7 @@ myApp.config(['NgAdminConfigurationProvider',
 
                     <p class="decent x-small tgapxl">
                         1.5.3 (März 2018), APL2<br>
+                        Start: 2012<br>
                         <a href="https://ratpack.io/">https://ratpack.io/</a>
                     </p>
                 </div>
@@ -1272,19 +1307,20 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <aside class="notes" data-markdown>
-                    Hohe Skalierbarkeit und vereinfachte Entwicklung der Event-basierenden
-                    Programmierung asynchroner Anwendungen gehören zu den primären Design-Zielen
+                    **Hohe Skalierbarkeit** und vereinfachte Entwicklung der **Event-basierenden
+                    Programmierung asynchroner Anwendungen** gehören zu den primären Design-Zielen
                     von Ratpack.
 
                     Dazu will Ratpack ganz im Sinne eines Microframework weder eine
-                    komplette Full-Stack Lösung sein, noch unnötige Annahmen bezüglich der
+                    komplette Full-Stack Lösung sein und **keine unnötige Annahmen** bezüglich der
                     sonstigen Tools & Bibliotheken treffen.
+
+                    **Zahlreiche Zusatzmodule bieten optionale Integrationen**
+                    z.B. für Guice, Groovy, Jackson oder Spring Boot.
 
                     Das Java 8-basierte Microframework setzt auf die NIO Client-Bibliothek
                     Netty für die asynchrone Verarbeitung der HTTP-Requests.
 
-                    Zahlreiche Zusatzmodule bieten optionale Integrationen
-                    z.B. für Guice, Groovy, Jackson oder Spring Boot.
                 </aside>
             </section>
 
@@ -1295,9 +1331,10 @@ myApp.config(['NgAdminConfigurationProvider',
                     _Handler_ können (asynchron) Requests beantworten <br>
                     oder an bestehende bzw. ad-hoc erzeugte Handler delegieren
 
-                    Ratpack verarbeitet und liefert dazu _Promises_
+                    _Jede Anfrage wird letztlich durch eine Kette von Handlern verarbeitet._
 
                     ```java
+                    // Unser Handler für POST /list
                     public void createGroceryList(Context ctx) {
                         // Asynchron auf Parsen warten: Rückgabe = Promise
                         ctx.parse(GroceryList.class).then(newList -> {
@@ -1305,22 +1342,35 @@ myApp.config(['NgAdminConfigurationProvider',
                         });
                     }
                     ```
-                </textarea>
-                <aside class="notes" data-markdown>
+
+                    Für die Asynchronität verarbeitet und liefert Ratpack _Promises_
+
+                    NOTE:
+                    Handler stellen das zentrale Konstrukt zum Verarbeiten von HTTP-Anfragen
+                    in Ratpack dar. Jeder Handler kann entweder den Request beantworten,
+                    ihn an den nächsten Handler weitergeben oder ad hoc neue in die
+                    Verarbeitungskette einfügen und sofort an diese delegieren.
+
+                    **Jede Anfrage wird letztlich also nur durch eine Kette von Handlern verarbeitet.**
+
                     Für die asynchrone Verarbeitung setzt Ratpack auf Promises.
 
                     Der Handler für das Anlegen muss erst einmal darauf warten,
                     dass die Daten vollständig angekommen sind. Daher erhält der
                     Handler also nicht das konkrete GroceryList-Objekt, sondern
                     nur ein Promis als Platzhalter.
-                </aside>
+
+                    **Aber:** Das hier ist nur ein einfaches Beispiel!
+
+                    Das geht schon z.B. los beim Anlegen/Konfigurieren der Routen…
+                </textarea>
             </section>
 
 
             <section>
                 <!--  @formatter:off -->
                 <div data-markdown style="font-size: 80%;">
-                ### Ratpack – Handler Factory
+                ### Ratpack – Handler Factory (statische Routen)
                 ```java
                 public static void main(String... args) throws Exception {
                   ObjectMapper objectMapper = ModelSerializer.buildConfiguredObjectMapper();
@@ -1330,8 +1380,10 @@ myApp.config(['NgAdminConfigurationProvider',
                       .serverConfig(configBldr -> configBldr.baseDir(BaseDir.find()).development(true).port(8080))
                       .registryOf(r -> r.add(objectMapper))
                       .handlers(chain -> chain
+                              // 1. URL: /list
                           .prefix("list", nested -> {
                             nested.path(ctx -> ctx.byMethod(method -> {
+                              // 2. POST   ---> Delegation an unseren vorherigen Handler! ---
                               method.post(() -> service.createGroceryList(ctx));
                               method.get(() -> service.getAllGroceryLists(ctx));
                             }));
@@ -1346,11 +1398,49 @@ myApp.config(['NgAdminConfigurationProvider',
                   );
                 }
                 ```
-                Recht verwirrend und wenig intuitiv.
+                **Verschachtelte Entscheidungslogik:** Recht verwirrend und wenig intuitiv.
                 </div>
                 <!--  @formatter:on -->
                 <aside class="notes" data-markdown>
+                    Beim Anwendungsstart gilt es, innerhalb der **Launch Configuration**
+                    die **Handler Factory zu erstellen.**
                 </aside>
+            </section>
+
+
+            <section data-markdown>
+                <textarea data-template>
+                    ### Ratpack – dynamisches Re-routing
+
+                    Zur Laufzeit dynamische Delegation an andere Handler<br>
+                    z.B. basierend auf der Request-URL
+                    ```java
+                    public class Router implements Handler {
+                      private final Handler fooHandler = new FooHandler();
+                      private final Handler barHandler = new BarHandler();
+
+                      public void handle(Context context) {
+                        String path = context.getRequest().getPath();
+                        if (path.equals("foo")) {
+                          context.insert(fooHandler);
+                        } else if (path.equals("bar")) {
+                          context.insert(barHandler);
+                        } else {
+                          context.next();
+                        }
+                      }
+                    }
+                    ```
+
+                    NOTE:
+                    Hier sieht man ein Biespiel, wie zur Requestverarbeitung dynamisch
+                    weitere Handler in die Verarbeitungskette injiziert werden.
+
+                    Es war vorhin schon schwer zu verstehen.
+                    … Und nun auch noch hierbei noch den Überblick zu behalten
+
+                    **Man merkt: Ich bin kein großer Freund dieses Ansatzes**
+                </textarea>
             </section>
 
 
@@ -1387,9 +1477,9 @@ myApp.config(['NgAdminConfigurationProvider',
                     </div>
 
                     <!-- Position indexes -->
-                    <div class="micro">&nbsp;&nbsp;&nbsp;|</div>
+                    <div class="micro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
                     <div class="fun">&nbsp;|</div>
-                    <div class="boss">&nbsp;|&nbsp;</div>
+                    <div class="boss">|</div>
 
 
                     <!-- Bytecode -->
@@ -1406,7 +1496,14 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * **Interessantes Konzept** – aber was sind die Vorteile?
+                    * Wenn wir mal für unser Mini-Beispiel sehen, dann sind diese nicht ersichtlich:
+                    **ausgeprägtes Mittelfeld**
+                    * Verschärfend kommt hinzu, dass die Dokumentation viele Lücken läßt.
+                    Einfache Dinge, die in anderen Frameworks gar keiner Erklärung bedürfen,
+                    werden erklärt. Aber schon komplexere Lösungen erfordern Eigenrecherche.
+
+                    **Fazit: Ingenieursspielzeug!**
                 </aside>
             </section>
 
@@ -1419,17 +1516,22 @@ myApp.config(['NgAdminConfigurationProvider',
         -->
         <section>
 
-            <section  class="center">
+            <section class="center">
                 <img class="tgap plain" src="img/logo-spring.png" width="818"/>
                 <h3 class="tgap"><em><i>Start für den Platzhirsch</i></em></h3>
 
                 <aside class="notes" data-markdown>
-                    xxxx
+                    Zeit, dass wir uns dem letzten Kandidaten und zugleich dem
+                    Platzhirschen auf dem Platz zuwenden. „Spring Boot“.
+
+                    Und zwar betrachten wir hierbei die erst vor kurzem brandneu erschienene
+                    **Spring Boot 2** in Kombination mit Spring 5 und dem neuen, reaktiven
+                    Web-Framework **Spring WebFlux**
                 </aside>
             </section>
 
 
-            <section >
+            <section>
                 <div class="right" style="width: 30%; float: right;">
                     <h2 class="large">Datenblatt</h2>
                     <p class="subline tgap"><i>CoC für Spring<br>= Full-stack<br>
@@ -1461,6 +1563,14 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <aside class="notes" data-markdown>
+                    Spring Boot ist vorrangig eine Konventionssammlung für das komplette
+                    Spring Framework. Als nutzer wähle ich **durch Auswahl**  und Kombination
+                    entsprechender **Starter** aus, **welches Default-Verhalten** ich wünsche.
+
+                    Schon in diesem Punkt flexibler als z.B. Ninja.
+
+                    Spring Boot möchte also **opinionated Vorlagen** für **Standalone** Webapps
+                    bieten.
                 </aside>
             </section>
 
@@ -1488,18 +1598,28 @@ myApp.config(['NgAdminConfigurationProvider',
 
                      …
                     ```
-                </textarea>
-                <aside class="notes" data-markdown>
-                    * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
+
+                    NOTE:
+                    * API sehr **nahe am alten Spring MVC**.
+                    *  Dabei sind`Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
+                    * Mit `@RestController`, welche ein Alias für Spring Web Annotation `Controller`
+                    und `ResponseBody` ist, markieren wir die Klasse für die Autoerkennung.
+                    * `produces` erklärt, dass wir JSON-Werte zurückgeben möchten. **In echtem
+                    reaktiver Manier würden wir hier eher einen Stream zurückgeben wollen!**
+                    * Der Rest sehr analog anderen Controller-basierten Ansätzen die wir bereits gesehen haben.
+
+                    ---
                     * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
                     * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
-                </aside>
+                </textarea>
             </section>
 
 
             <section data-markdown>
                 <textarea data-template>
                     ### WebFlux – `index.html` als `/` ausliefern
+
+                    Ohne Google kann einfaches auch kompliziert sein.
 
                     ```java
                     /**
@@ -1518,13 +1638,18 @@ myApp.config(['NgAdminConfigurationProvider',
                       }
                     }
                     ```
-                    Ohne Google kann einfaches auch kompliziert sein.
+
+                    NOTE:
+                    Die Aufgabe war einfach: Wir möchten einfach '/' auf '/index.html' umrouten.
+                    Ohne Stackoverflow und Google habe ich das allerdings nicht hinbekommen.
+
+                    Das Beispiel belegt, **das Spring Boot viel Komplexität hinter einfacher
+                    Oberfläche versteckt, aber bereits einfachste "Sonderfälle" schnell extremes
+                    Expertenwissen erforderlich machen.**
+
+                    **Etwas, was in echten Microframeworks nicht notwendig ist**, da dort die
+                    Lösung in der Regel einfach und komplett überschaubar ist.
                 </textarea>
-                <aside class="notes" data-markdown>
-                    * `Flux` & `Mono` = Reactive Streams Implementierung _Reactor_
-                    * Haben heute schon elegantere APIs gesehen; Altlasten aus Spring MVC
-                    * Prägnanz fehlt, wir z.B. das zusätzlich notwendige `consumes`
-                </aside>
             </section>
 
 
@@ -1580,7 +1705,19 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * Spring Boot – sei der initiale Code-Aufwand noch so gering - ist **ganz klar
+                    kein Microframework** sondern eindeutig Fullstack mit einer ganzen Landschaft.
+
+                    **Dafür ist es absolut Mainstream: Daher maximale Punktezahl bei der _Bossability!_**.
+
+                    Viel Automagie – zur Behersschung muss man das Spring Framework doch vollständiger
+                    erfasst haben. Nichts was eben mal auf die Schnelle geht.
+
+                    ---
+                    Auffällig war nicht nur der der schlechteste Durchsatz, sondern insbesondere
+                    die Ausreisser in den Antwortzeiten. Sehen wir nacher noch.
+
+                    Was den Bytecode-Umfang anbetrifft: Kein Ruhmesblatt – aber hätte fast mehr erwartet.
                 </aside>
             </section>
 
@@ -1596,6 +1733,14 @@ myApp.config(['NgAdminConfigurationProvider',
 
                 <div class="ct-chart" id="bytechart"></div>
                 <span class="decent">All-in-one JAR</span>
+
+                <aside class="notes" data-markdown>
+                    * Größe = singe `.JAR` als Standalone für unsere Demo-App.
+                    * Spark, Jodd, Pippo sind als echte Microframeworks auch beim
+                    Umfang "Micro".
+                    * Teilweise in die Größe spielt rein: Manchmal Jetty, manchmal Undertow.
+                </aside>
+
                 <script>
                     new Chartist.Bar('#bytechart', {
                         labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
@@ -1623,13 +1768,29 @@ myApp.config(['NgAdminConfigurationProvider',
 
                 <div class="ct-chart" id="reqchart"></div>
                 <code class="x-small">$ ab -n 400000 -c 400 "http://localhost:8080/list?_page=1&_…"</code>
+
+                <aside class="notes" data-markdown>
+                    * Wir haben einfach 0,4 Mio Requests auf die Einkaufslistenliste mit parallel 400
+                    Nutzern getestet. Die URL-Parameter sind ohne Effekt aber zu Zwecken um die Request-
+                    Verarbeitung zu testen drin.
+                    * Rot (hell+dunkel) = Mittelwert. Hellrot+Gelb = Feld der Standardabweichung
+                    * Wer möchte kann auch gerne die Referenzanwendungen austesten und eigenen
+                    Experiemten/Tests wagen. Dafür das `benchmark.sh`.
+
+                    ---
+                    **Wichtig: Die Benchmarks sind nicht das Maß aller Dinge sondern meehr Quick & Dirty!**
+                    Es spielen doch noch einige andere Faktoren wie verwendeter Servelet-Container
+                    (Jetty, Undertow, Netty) oder Serialisierungsbibliothek mit rein. Also nicht normiert.
+                    Zudem keinerlei Tuning.
+                </aside>
+
                 <script>
                     new Chartist.Bar('#reqchart', {
                         labels: ["Spark", "Ratpack", "Ninja", "Jodd", "Spring 5", "Pippo"],
                         series: [
-                            [81-39,  87-31, 2,  81-45, 20, 81-33],
-                            [39,     31,    80, 45,    78, 33],
-                            [39,     31,    25, 45,    149, 33]
+                            [81 - 39, 87 - 31, 2, 81 - 45, 20, 81 - 33],
+                            [39, 31, 80, 45, 78, 33],
+                            [39, 31, 25, 45, 149, 33]
                         ]
                     }, {
                         width: 1000,
@@ -1653,11 +1814,20 @@ myApp.config(['NgAdminConfigurationProvider',
             <section>
                 <img src="img/benchmark-spring5.jpg" alt="Spring 5 Benchmark Plot"
                      style="width: 50%">
+                <aside class="notes" data-markdown>
+                    Hier das Spring Boot Beispiel mit seinen kontinuierlich Hohen Außreisern.
+                    Ich vermute GC.
+                </aside>
             </section>
 
             <section>
                 <img src="img/benchmark-pippo.jpg" alt="Pippo Benchmark Plot"
                      style="width: 50%">
+                <aside class="notes" data-markdown>
+                    Zum Vergleich Pippo, das wir heute nicht näher betrachtet haben:
+
+                    Sehr schön: Nach anfänglichem Start sehr stabile, geringe Antwortzeiten.
+                </aside>
             </section>
 
         </section>
@@ -1684,7 +1854,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 <!-- Bild mit Klempner -->
                 <div class="small subline abs left fragment"
                      style="width: 600px; left: 720px;">
-                     <h3>Micro macht Spaß!</h3>
+                    <h3>Micro macht Spaß!</h3>
 
                     <span class="fragment">
                         <em>Risiken:</em><br>Traktion, Stabilität, geringe Verbreitung<br>
@@ -1696,17 +1866,17 @@ myApp.config(['NgAdminConfigurationProvider',
                         Fokus: Micro &amp; gute Verständlichkeit;
                         Bereitschaft, Bugs ggf. selbst zu lösen
                     </span>
-                <div>
+                    <div>
 
-                <aside class="notes" data-markdown>
-                    Wir haben es bereits in der Eingangsdemo gesehen: Weniger kann richtig Spaß machen!
+                        <aside class="notes" data-markdown>
+                            Wir haben es bereits in der Eingangsdemo gesehen: Weniger kann richtig Spaß machen!
 
-                    Risiko bei allen Kandidation: Traktion & Stabilität und ihre geringe Verbreitung.
+                            Risiko bei allen Kandidation: Traktion & Stabilität und ihre geringe Verbreitung.
 
-                    Gegenstrategie kann nur sein, sich Kandidaten mit überschaubarem Umfang
-                    und guter Verständlichkeit auszusuchen wie z.B. Spark kombiniert mit der
-                    Bereitschaft & Fähigkeit selber Bugs zu lösen.
-                </aside>
+                            Gegenstrategie kann nur sein, sich Kandidaten mit überschaubarem Umfang
+                            und guter Verständlichkeit auszusuchen wie z.B. Spark kombiniert mit der
+                            Bereitschaft & Fähigkeit selber Bugs zu lösen.
+                        </aside>
 
             </section>
 
@@ -1725,7 +1895,9 @@ myApp.config(['NgAdminConfigurationProvider',
                     * [Javalite.io](http://javalite.io/)
                     * [bootique.io](https://bootique.io/)
                     ---
-                    * [REST Service w/o any Framework](https://www.stubbornjava.com/posts/lightweight-embedded-java-rest-server-without-a-framework) only with
+                    * [REST Service w/o any
+                    Framework](https://www.stubbornjava.com/posts/lightweight-embedded-java-rest-server-without-a-framework)
+                    only with
                     [Undertow container](http://undertow.io/)
                 </div>
                 <div data-markdown class="threecol small">
@@ -1740,7 +1912,8 @@ myApp.config(['NgAdminConfigurationProvider',
                 <div data-markdown class="threecol small">
                     ###### Vom Autor
                     * [*@bentolor*](http://twittter.com/bentolor)
-                    * [*Java++*: Effiziente &amp; sichere JVM-Entwicklung mit Kotlin](https://bentolor.github.io/kotlin-talk/)
+                    * [*Java++*: Effiziente &amp; sichere JVM-Entwicklung mit
+                    Kotlin](https://bentolor.github.io/kotlin-talk/)
                     * [`idea-cli-inspector`](https://github.com/bentolor/idea-cli-inspector)
 
                     <!--sponsored by [![exxcellent Logo](img/logo-exxcellent-transparent.png)]-->
@@ -1748,7 +1921,7 @@ myApp.config(['NgAdminConfigurationProvider',
                 </div>
 
                 <div class="abs small"
-                        style="padding: 0 .8em; width: 720px; left:420px;top: 460px;
+                     style="padding: 0 .8em; width: 720px; left:420px;top: 460px;
                         background-color: rgba(120,120,180, 0.2);
                         border: 1px solid #333;">
 
