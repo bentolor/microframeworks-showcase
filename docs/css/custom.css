@@ -529,10 +529,9 @@ SECTION.scorecard {
 SECTION.scorecard > DIV {
     background-image: url('../img/scorecard-sheet.png');
     background-size: contain;
-    height: 720px;
-    width: 970px;
+    height: 730px;
+    width: 984px;
     margin: 0 auto;
-    box-shadow: 30px 35px 35px rgba(0, 0, 0, 0.7);
 }
 
 SECTION.scorecard > DIV DIV {
@@ -585,14 +584,8 @@ SECTION.scorecard > DIV .comment p {
     line-height: 1em;
 }
 
-SECTION.scorecard > DIV .micro {
-    left: 814px;
-    top: 140px;
-}
-
 SECTION.scorecard > DIV .micro, SECTION.scorecard > DIV .fun, SECTION.scorecard > DIV .boss {
-    left: 814px;
-    top: 140px;
+    left: 816px;
     font-size: 168%;
     font-weight: bolder;
     margin: -0.2em 0 .4em 0;
@@ -600,12 +593,17 @@ SECTION.scorecard > DIV .micro, SECTION.scorecard > DIV .fun, SECTION.scorecard 
     color: royalblue;
 }
 
+SECTION.scorecard > DIV .micro {
+    left: 810px;
+    top: 130px;
+}
+
 SECTION.scorecard > DIV .fun {
-    top: 210px;
+    top: 208px;
 }
 
 SECTION.scorecard > DIV .boss {
-    top: 294px;
+    top: 290px;
 }
 
 SECTION.scorecard > DIV .bytecode {
@@ -670,5 +668,6 @@ SECTION.scorecard > DIV .reqdev {
     background-color: rgba(200,200,200,0.8);
 }
 SPAN.ct-label {
+    color: #333;
 }
 
