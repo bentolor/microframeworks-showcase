@@ -671,3 +671,59 @@ SPAN.ct-label {
     color: #333;
 }
 
+/* ---- Speaker bubble ---- */
+DIV.bubble {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    padding: 32px;
+    background: #CEE8F7;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: #e114ce solid 6px;
+}
+
+DIV.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 30px 90px 30px 0;
+    border-color: transparent #CEE8F7;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -89px;
+    top: 271px;
+}
+
+DIV.bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 35px 95px 35px 0;
+    border-color: transparent #e114ce;
+    display: block;
+    width: 0;
+    z-index: 0;
+    left: -101px;
+    top: 266px;
+}
+
+/* -------- Logog grid Kandidate ------ */
+.logogrid {
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: auto auto auto;
+}
+
+.logogrid DIV {
+    height: 200px;
+    display: inline;
+}
+.logogrid DIV IMG {
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}

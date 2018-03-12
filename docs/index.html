@@ -123,17 +123,17 @@
 
             <!--  @formatter:off -->
             <aside class="notes" data-markdown>
-                * Freue mich heute hier zu sein und das stilvolle Ambiente genießen zu dürfen!
-                * Java Plattform: Beeindruckende Plattform; wahnsinnig viele, attraktive & leistungsfähige
-                Tools, Frameworks & freie Lösungen
-                * Lange Historie führt teils auch zu vielen Verwachsungen, Bloat, Schwerfälligkeiten
+                * Freue mich heute hier, in diesem stilvolle Ambiente sein zu dürfen
+                * **Java Plattform**
+                    * Beeindruckende Plattform
+                    * **wahnsinnig viele**, attraktive & leistungsfähige Tools, Frameworks & freie Lösungen
+                * *Lange Historie* führt teils auch zu vielen **Verwachsungen**, Bloat, Schwerfälligkeiten
                     * Kennt z.B. jemand die [FizzBuzz Enterprise Edition](http://www.fizzbuzz.enterprises/)?
                     * _ made by serious businessmen for serious business_
                     * %3==0: Fizz, %5=0: Buzz in 89 Java Klassen und 3,8kLOC
-                * Trend weg vom Monolithen zu kleineren, besser managebaren Einheiten
-                * Setzt natürlich eine gewisse Leichtigkeit voraus.
-                * Gelingt das auch unter Java?
-                * Das wollen wir herausfinden und in dieser Session ein paar Inspirationen sammeln
+                * Trend weg vom Monolithen zu **kleineren, besser managebaren Einheiten**
+                    * Gelingt das auch unter Java?
+                    * Das wollen wir herausfinden und in dieser Session ein paar Inspirationen sammeln
             </aside>
             <!--  @formatter:on -->
         </section>
@@ -155,8 +155,11 @@
                 <!--<iframe src="http://microjs.com/" style="width: 1000px; height: 600px;"></iframe>-->
 
                 <aside class="notes" data-markdown>
-                    * Ursprünglich aus der Javascript-Welt
-                    * _Weniger ist mehr!_
+                    ##### Woher stammt der Begriff „Microframework“?
+                    * Ursprünglich aus der Javascript-Welt. Eh schon kleinteilig.
+                    * Bestimmte Bibliotheken wie jQuery wurden zum Standard.
+                      Jede Mini-Website -> 100kB+ initial payload
+                    * Gegenbewegung: Minimalismus. **„Nur das nötigste!“** – jedes Byte zählt
                 </aside>
             </section>
 
@@ -172,14 +175,17 @@
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
-                    * In einer Microservice-Architektur wird eine komplexe Anwendungslogik aus
+                    ### Nur das Nötigste…
+                    … auch für Microservice Architekturen sinnvoll!
+
+                    * Microservice-Architektur: komplexe Anwendungslogik aus
                     voneinander unabhängigen, wiederverwendbaren Prozessen zusammengesetzt
-                    * Die einzelnen Dienste sind dabei weitestgehend voneinander entkoppelt und klein
-                    * In einer voll-ausgebauten Microservice Architektur sind teils auch
-                    elementare Dienste wie Peristenz separate Services
-                    * Ziel ist es dabei natürlich, am Ende möglichst einfache und leichte Module zu haben
-                    die für sich einzeln gut gut steuerbar und betreibbar sind.
-                    * *Geringe Komplexität und Gewicht sind essentielle Kernqualitäten*.
+                    * Die _einzelnen Dienste_ sind dabei weitestgehend voneinander _entkoppelt_ und _klein_
+                        * In voller Ausbaustufe sind teils auch elementare Dienste wie Peristenz separat
+                    * Ziel des Musters ist, am Ende **besser managebare und wiederverwendbare** Einzelteile zu haben.
+
+                    &rightarrow; **Geringe Komplexität  &amp; Gewicht sowie schnelle Ergebnis**
+                    sind essentielle Kernqualitäten.
                 </aside>
                 <!--  @formatter:on -->
 
@@ -196,70 +202,34 @@
                             einer <b>schlankere Source- und/oder Bytecode</b>-Linie“</i>
                     </div>
                 </div>
-                <style>
-                    DIV.bubble {
-                        position: relative;
-                        width: 800px;
-                        height: 300px;
-                        padding: 32px;
-                        background: #CEE8F7;
-                        -webkit-border-radius: 10px;
-                        -moz-border-radius: 10px;
-                        border-radius: 10px;
-                        border: #e114ce solid 6px;
-                    }
-
-                    DIV.bubble:after {
-                        content: '';
-                        position: absolute;
-                        border-style: solid;
-                        border-width: 30px 90px 30px 0;
-                        border-color: transparent #CEE8F7;
-                        display: block;
-                        width: 0;
-                        z-index: 1;
-                        left: -89px;
-                        top: 271px;
-                    }
-
-                    DIV.bubble:before {
-                        content: '';
-                        position: absolute;
-                        border-style: solid;
-                        border-width: 35px 95px 35px 0;
-                        border-color: transparent #e114ce;
-                        display: block;
-                        width: 0;
-                        z-index: 0;
-                        left: -101px;
-                        top: 266px;
-                    }
-                </style>
+                <aside class="notes" data-markdown="">
+                    #### Meine, abgewandelte Definition von Microframework
+                    * Begriff nicht ganz scharf.
+                    * Im Angloamerikanischen zunehmen: a) _nur_ Webframework b) _ohne Alles_
+                    * Wir: **Auf ein Thema** und **leichtgewichtig in Verwendeung und/oder Bytecode**
+                </aside>
             </section>
 
             <section class="center">
-                <style>
-                    .logogrid {
-                        display: grid;
-                        grid-gap: 64px;
-                        grid-template-columns: auto auto auto;
-                    }
-
-                    .logogrid DIV {
-                        height: 200px;
-                        display: inline;
-                    }
-                </style>
                 <h2><u>Die Kandidaten</u></h2>
+
                 <div class="logogrid" style="margin-top: 90px;">
-                    <div><img src="img/logo-jodd.png" alt="Jodd" class="plain"></div>
-                    <div><img src="img/logo-ninja.png" alt="Ninja" class="plain"></div>
-                    <div><img src="img/logo-ratpack.png" alt="Ratpack" class="plain"
-                              style="margin-top: -12px;"></div>
-                    <div><img src="img/logo-spark.svg" alt="Spark Java" class="plain"
+                    <div><img src="img/logo-jodd.png" alt="Jodd"></div>
+                    <div><img src="img/logo-ninja.png" alt="Ninja"></div>
+                    <div><img src="img/logo-ratpack.png" alt="Ratpack" style="margin-top: -12px;"></div>
+                    <div><img src="img/logo-spark.svg" alt="Spark Java"
                               style="transform: scale(1.7); margin-top: -21px;"></div>
-                    <div><img src="img/logo-spring.png" alt="Spring 5" class="plain"></div>
+                    <div><img src="img/logo-spring.png" alt="Spring 5"></div>
                 </div>
+
+                <aside class="notes" data-markdown>
+                    ### Unser Kandidatenfeld
+                    * Nur eine __Auswahl__ für __verschiedene Stile/Vertreter__
+                    * Schau soll uns **Inspiration** und Gegenüberstellung liefern
+
+                    _Aber worüber vergleichen?_
+                </aside>
+
             </section>
 
         </section>
@@ -285,8 +255,21 @@
                 <aside class="notes" data-markdown>
                     * Als Vergleichsgrundlage dient uns eine kleine Anwendung zur Verwaltung von
                     Einkaufslisten.
-                    * Mann kann Einkaufslisten mit ihren Punkten anlegen, verändern, lesen und löschen.
-                    * Sprich: In unserem Beispiel geht es um ein klassisches RESTful CRUD Backend.
+                    * Wir wollen Einkaufslisten anlegen können und online darauf jederzeit
+                    Einkaufspositionen **anlegen, lesen, verändern oder wieder löschen** können.
+                    * Sprich: In unserem Beispiel geht es um eine **klassische CRUD Anwendung**.
+
+                    ---
+                    Wie wir die einzelnen Teile effizient realisieren, lernen wir im Verlauf unserer
+                    Reise durch die Kandidaten
+
+                    ---
+                    Ganz im Sinne eines Microframeworks soll unsere Anwendung dem RESTful Pattern
+                    folgen.
+
+                    Im ersten Schritt geht es also darum, **die CRUD Operationen auf HTTP-Routen zu mappen**.
+                    Sprich ganz klassisch wird Anlegen zu einem HTTP `POST`, lesen zu einem `GET`, Update zu `PUT`
+                    usw.
                 </aside>
             </section>
         </section>
@@ -300,11 +283,12 @@
                 <img src="img/logo-spark.svg" class="plain tgap" width="600"/>
                 <h3 class="tgap"><em><i>Eleganter Zündfunken</i></em></h3>
 
-                <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
-                    Unser erster Kandidate ist Spark Java – nicht mit Apache Spark zu verwechseln!
+                    Werfen wir einen Blick auf unseren ersten Kandidaten!
+
+                    Hier handelt es sich um den eleganten Zündfunken „Spark Java“ –
+                    bitte nicht mit Apache Spark für Cluster Computing verwechseln!
                 </aside>
-                <!--  @formatter:on -->
             </section>
 
             <section >
@@ -322,6 +306,7 @@
 
                     <p class="decent x-small tgapxl">
                         2.7.1 (Nov. 2017), APL2<br>
+                        Start: ~Feb. 2013<br>
                         <a href="http://sparkjava.com">http://sparkjava.com/</a>
                     </p>
                 </div>
@@ -337,14 +322,45 @@
 
                 <!--  @formatter:off -->
                 <aside class="notes" data-markdown>
-                    * spirituellen Wurzeln im Ruby-Framework Sinatra
-                    * Unter Kotlin ergänzende DSL (Geschmackssache)
+                    Spark Java richtet sich an Java 8 & Ergänzungen für Kotlin.
+
+                    * Spark Java hat seine spirituellen Wurzeln im Ruby-Framework Sinatra
+                    * Fokus: **Minimaler Boilerplate** & **Ausdrucksstärke**
+                    * Richtet sich an **Standalone-Applikationen**
+                    * Wie alle Kandidaten hier: _Freizügige APL2-Lizenz_
+                    * **~5 Jahre alt**
+                    * Kotlin ergänzende DSL (Geschmackssache)
+
+                    _Randnotiz: Spezielle Kotlin-Versionen unnötig. Oft nur extra Komfort bzw. reduzierter DSLs.
+                    So auch hier! Einige Kandidaten haben Kotlin Addons._
+
+                    ---
+                    ### Jetzt: Eindrücke in Coding Demo!
                 </aside>
                 <!--  @formatter:on -->
             </section>
 
             <section data-background-video="img/screencast-hellospark.webm"
                      data-background-size="contain">
+                <aside class="notes" data-markdown>
+                    1. Beginne mit einem leeren Projekt
+                       Arbeiten mit _Gradle_, legen dazu ein neues Gradle Buildfile an.
+                    2. Da wir **Standalone** Arbeiten wollen &rightarrow; `application` Plugin,  <!-- -->
+                       Holen uns als einige Dependency `spark-core`  <!-- -->
+                       … und beginnen mit unsere Anwendung
+
+                    ---
+                    1. Spark = **Deklarativ.** Sprich wir definieren Routen
+                        * Also Pfad, welche Inhalte wir darüber ausliefern und einen Handler der die Route bedient.
+                        * Für etwas mehr Spass auch ein Beispiel mit URL Parameter
+                    2. Wir bauen & starten. **Das entspricht einem einfachen Start der `main`-Methode!**
+                    … und testen unseren Microservice. Fertig!
+
+                    **Sehr elegant & Prägnant**. Kein Boiler-Code. Server **startet implizit.**
+                    Belange kann man optional **konfigurieren** (Port, SSL, …).
+
+                    **Ich denke das Beispiel spricht für sich!**
+                </aside>
             </section>
 
             <!--<section>
@@ -394,10 +410,18 @@ public class HelloWorld {
 
                     *Mehr nicht!*
                 </div>
+                <aside class="notes" data-markdown="">
+                    * DSL zur Definition von **HTTP Routen** wie `GET`,`POST`,`PUT` etc. mit den
+                      _klasssichen HTTP Mitteln (Parameter, Sessions, …)_.
+                    * Spark bundlet Jetty 9. Logging. Sonst keine weiteren Abhängigkeiten.
+                    * Neben Routen **ergänzende Detailstrukturierungsmittel** wie Filter, Transformer
+                    * **Auch Antworterstellung erst mal nicht Bestandteil! Dafür gibt es aber Extension**
+                </aside>
             </section>
 
-            <section data-markdown>
-                <textarea data-template>
+            <section>
+                <!--  @formatter:off -->
+                <div data-markdown>
                     ## Templating
 
                     ```java
@@ -420,8 +444,27 @@ public class HelloWorld {
                             p Dear #{name}, welcome to my web-based Microservice endpoint
                     ```
 
-                    <span class="small"><i>Alternativ:</i>  Velocity, Freemarker, Mustache, Handlebars, Thymeleaf & 5 weitere …</span>
-                </textarea>
+                    <span class="small"><i>Alternativ:</i>  Velocity, Freemarker, Mustache,
+                        Handlebars, Thymeleaf & 5 weitere …</span>
+                </div>
+                <!--  @formatter:on -->
+
+                <aside class="notes" data-markdown>
+                    Foo bar.
+                    * Verschiedene Templating-Extensions binden dritte Template Engines ein und machen diese
+                      für Antworten verfügbar
+                    * **Entweder:** man übergibt an der Route einen Transformer mit, der die Rückhabe des Callbacks
+                      passend rendert
+                    * **Oder:** wir machen es wie hier und geben direkt den gerenderten Inhalt zurück
+                    * Das `ModelAndView`-Objekt enthält die in das einzusetzende Daten und den Namen des
+                    anzuwendenden Templates
+
+                    ---
+                    Im Beispiel sehen wir z.B: die Jade4j Templating Engine die besonders kompakte Notation für
+                    HTML Inhalte erlaubt. Im Beispiel wird am Platzhalter der Wert für `name` eingesetzt.
+
+                    Andere Engine wie Freemarker & Co. bieten natürlich deutlich mehr Logik.
+                </aside>
             </section>
 
 
@@ -489,14 +532,17 @@ public class HelloWorld {
                 <aside class="notes" data-markdown>
                     * Das erste Microframework haben wir schon kennengelernt.
                     Nun geht es an die Bewertung.
-                    *  Vorstellung Scoresheets …
+                    *  **Vorstellung Scoresheet:**
+                        * _Bossability, Micro, Fun_
+                        * Performance: Gesamtbytecode meiner Referenz-Lösung als Single-JAR &amp; Durchsatz (ungetuned)
                     ---
-                    * Wie Sinatra: Routen das zentrale Strukturierungsmittel der DSL
-                    * Via Routen werden HTTP-Anfragen auf Callbacks umgeleitet.
+                    * Wie Sinatra: **DSL für Routen** das zentrale Strukturierungsmittel
+                    * Über Routen werden HTTP-Anfragen auf Callbacks umgeleitet.
                         * Diese verarbeiten und beantworten die Requests
-                    * Ansonsten nur noch Filter, Transformer: Fertig! --> Elegant & Minimalistisch
-                    * sinnvolle Zergliederung der Logik, Fehlerbehandlung oder die Art um die Antwortseiten
-                      zu erzeugen, überlässt Spark vollständig dem Entwickler (optionale Templating Engines)
+                        * Ansonsten nur noch Filter, Transformer: Fertig! --> Elegant & Minimalistisch
+                    * sinnvolle _Zergliederung der Logik,_ _Fehlerbehandlung_ oder die Art um die Antwortseiten
+                      zu erzeugen, überlässt Spark vollständig dem Entwickler (optional Templating Engines)
+                    * Doku ist "okay". Code aber gut überschaubar.
                 </aside>
                 <!--  @formatter:on -->
 
@@ -523,10 +569,7 @@ public class HelloWorld {
 
                 <aside class="notes" data-markdown>
                     Zurück zu unserer Beispiel Anwendung: Nachdem wir die Routen haben, geht es an das Model.
-                    Wie können wir hier Prägnanz erreichen? Dazu greifen wir zu Lombok.
-
-                    Die Persitenz machen wir einfach durch Serialisierung/Deserialisierung
-                    des Models als JSON File.
+                    Wie können wir hier Prägnanz erreichen?
                 </aside>
             </section>
 
@@ -573,7 +616,18 @@ public class HelloWorld {
                 <!--  @formatter:on -->
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * Für mehr Effizienz in diesem Bereich greifen wir zu Lombok.
+                    * Kein Extra Payload/Runtime! APT-Prozess der Bytecode verändert.
+                      **Erzeugt hier Getter/Setter plus Konstruktor.**
+                    * Unterstützt gängige IDEs und hat einige weitere Mittel.
+
+                    #### Alternative Anwendung: Kotlin verwenden
+                    Bringt z.B. _Data Classes_. Darüber hinaus aber ein Phletora an weiteren Effizenzfeatures
+                    bei vollständiger Kompatiblität. Mehr dazu z.B. einen Talk am Ende verlinkt.
+
+                    #### Persistenz
+                    Die Persitenz machen wir einfach durch Serialisierung/Deserialisierung
+                    des Models als JSON File.
                 </aside>
             </section>
 
@@ -590,7 +644,7 @@ public class HelloWorld {
                 <h3 class="tgap"><em><i>Spion mit Konventionen</i></em></h3>
 
                 <aside class="notes" data-markdown>
-                    Ein ziemliches Kontrastprogramm stellt dagegen unser nächster Kandidat dar:
+                    Ein **ziemliches Kontrastprogramm** stellt dagegen unser nächster Kandidat dar:
                     Ninja will ein Universalkämpfer für die produktive Erstellung von Webanwendungen
                     sein und ähnelt vom Konzept eher dem Play!-Framework aus Scala.
                 </aside>
@@ -605,9 +659,10 @@ public class HelloWorld {
                         Stateless<br></i></p>
                     <p>Full-Stack</p>
                     <p class="decent subline x-small">Hibernate, Guice, Jackson, <br>Flyway, Ehcache, …</p>
-                    <p class="subline decent x-small">Daher nicht wirklich „Micro“</p>
+                    <p class="subline decent x-small">Nicht wirklich „Micro“</p>
 
                     <p class="decent x-small tgapxl">6.2.2 (Jan. 2018), APL2<br>
+                        Start: Juli 2012<br>
                         <a href="http://www.ninjaframework.org/">http://www.ninjaframework.org/</a>
                     </p>
                 </div>
@@ -622,12 +677,15 @@ public class HelloWorld {
                 </div>
 
                 <aside class="notes" data-markdown>
-                    Für fast alle Schichten vom Frontend bis hin zur Datenbank bringt Ninja
+                    Für **fast alle Schichten vom Frontend bis hin zur Datenbank** bringt Ninja
                     bereits eine integrierte Auswahl an Lösungen mit.
 
-                    Mit Jackson für JSON, Hibernate für O/R-Mapping & Validierung,
-                    Guice zur CDI und weitere Tools wie Flyway, Ehcache und Joda Time.
-                    Kein reinrassiges Microframework.
+                    Mit _Jackson_ für JSON, _Hibernate_ für O/R-Mapping & Validierung,
+                    _Guice_ zur CDI und weitere Tools wie _Flyway, Ehcache_ und Joda Time.
+
+                    Kein „echtes“ Microframework nach Wikipedia, sondern auf wenig Code ausgerichtet. *6 Jahre alt.*
+
+                    **Wichtigste Punkt: CoC** und **Gute Skalierbarkeit durch Stateless**
                 </aside>
             </section>
 
@@ -668,7 +726,8 @@ public class HelloWorld {
                     die Anwendungslogik zu finden ist.
 
                     * Routen stets in der Klasse `conf.Routes`, Controller im `controllers`-Paket
-                    und View als Freemarker-Template in `views/CONTROLLER/METHOD.ftl.html`.
+                    * View als Freemarker-Template in `views/CONTROLLER/METHOD.ftl.html`. Eine dedizierte
+                    Zuordnung wie bei Spark gesehen also nicht notwendig.
                     * Persistenz CDI, I18N, Bean Validation und Serialisierung/Deserialisierung
                     sind ebenfalls eng über Konventionen in den Stack eingebaut
                 </aside>
@@ -693,11 +752,12 @@ public class HelloWorld {
                       }
                     }
                     ```
+
+                    <aside class="notes">
+                    * Fixes Paket `conf`.
+                    * Controllermethode mit "Java 8 Method References"
+                    </aside>
                 </textarea>
-                <aside class="notes" data-markdown>
-                    * Fixes Paket `conf`
-                    * Controllermethode mit Java 8 Method references
-                </aside>
             </section>
 
             <section>
@@ -751,14 +811,20 @@ public class HelloWorld {
                 </div>
 
                 <aside class="notes" data-markdown>
+                    * fixes Controller Paket
+                    * Guice CDI
                     * Controller müssen `Result` Objekte zurückgeben
-                    * Injection
+                    * Fest verdrahtet: wleche View
+                    * Input Parsing: Automatische Deserialisierung
+                    * Mapping von URL Parametern auf Aufrurfparameter
+                    * Utility Methoden für Rückgabesteuerung (Code, JSON, …)
                 </aside>
             </section>
 
 
-            <section data-markdown class="center">
-                <textarea data-template>
+            <section class="center">
+                <!--  @formatter:off -->
+                <div data-markdown>
                     ## Kern-Konzepte
                     * Convention over Configuration <span class="decent">(CoC)</span>
                     * Model–View–Controller <span class="decent">(MVC)</span>
@@ -770,7 +836,8 @@ public class HelloWorld {
                     * <span class="decent">Backend:</span> Servlets, Guice, JPA, Flyway, …
                     * <span class="decent">Frontend:</span> Freemarker <span class="decent">(HTML)</span>
                     / Jackson <span class="decent">(XML, Jason)</span>
-                </textarea>
+                </div>
+                <!--  @formatter:on -->
 
                 <aside class="notes" data-markdown>
                     Ninja ist serverseitige Zustandslos! D.h. keine Mittel für Server-seitige Session.
@@ -839,7 +906,9 @@ public class HelloWorld {
                 </div>
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * geringe Bossability, da Nische
+                    * Engt Mittel stark ein ("strongly opinionated")
+                    * **Ausreißer Antwortzeiten!**
                 </aside>
             </section>
 
@@ -890,6 +959,7 @@ public class HelloWorld {
 
                 <aside class="notes" data-markdown>
                     * Dazu ist nur 1 HTML Seite erforderlich: `index.html`
+                    * **64 Zeilen:** Definition Felder, Views.
                     * Darin binden wir ng-admin ein und konfigurieren und
                     Details des Erscheinungsbilds für die Views
                     * Mit einem funktionsfähigen Backend können wir damit
@@ -971,7 +1041,9 @@ myApp.config(['NgAdminConfigurationProvider',
                 <h3 class="tgap"><em><i>Floppytaugliches Baukastensystem</i></em></h3>
 
                 <aside class="notes" data-markdown>
-                    * xxx
+                    Obowhl der kleinste, betrachtete Kandidat ist Jodd kein reines Microframework,
+                    denn es ist mehr eine Umfangreiche Sammlung vieler Teile. Einer davon Madvoc als
+                    Controller-basiertes Web Framework.
                 </aside>
             </section>
 
@@ -1006,7 +1078,7 @@ myApp.config(['NgAdminConfigurationProvider',
 
                 <aside class="notes" data-markdown>
                     Jodd legt viel Wert auf seine schlanke Linie und hat bis vor kurzem komplett
-                    sogar noch in das 1,44MB Korsett früherer 3,5" Disketten gepasst.
+                    sogar noch in das 1,44MB Korsett früherer 3,5" Disketten gepasst. Heute **1,7MB**.
 
                     Dabei handelt es sich bei Jodd gar nicht um ein einzelnes Framework,
                     sondern eher um eine ganze Sammlung verschiedener Micro-Komponenten.
@@ -1024,12 +1096,15 @@ myApp.config(['NgAdminConfigurationProvider',
                 <aside class="notes" data-markdown>
                     IoC-Container Petite, die AOP-Engine Proxetta, der SQL-basierte O/R-Mapper
                     DbOom, VTor für Bean-Validierungen und weitere Helferlein wie z.B. zur HTML-Verarbeitung.
+
+                    #### Wir betrachten heute nur Madvoc!
                 </aside>
             </section>
 
 
-            <section data-markdown class="">
-                <textarea data-template>
+            <section>
+                <!--  @formatter:off -->
+                <div data-markdown>
                     ### Jodd – Madvoc: Controller
 
                     ```java
@@ -1049,15 +1124,20 @@ myApp.config(['NgAdminConfigurationProvider',
                     * Injection von Parametern und Servlet-Werten via `jodd-petite` IoC
                     * Automatische Konvertierung/Serialisierung via `jodd-json`
                     * `Action` optional – dann URL-Pfade via Konventionen
-                </textarea>
+                </div>
+                <!--  @formatter:on -->
                 <aside class="notes" data-markdown>
-                    * xxx
+                    * Injection am Feld, Parameter
+                    * `@RestAction` konfiguriert Rückgabeserialisierung = JSON
+                    * `@MadvocAction` würde URL Konventionen einschalten. Haben wir abder dediziert überschrieben.
+                    * JSON Serialisierung durch `jodd-json`.
                 </aside>
             </section>
 
 
-            <section data-markdown class="">
-                <textarea data-template>
+            <section>
+                <!--  @formatter:off -->
+                <div data-markdown>
                     ### Jodd – Limitationen in der Praxis
 
                     *Problem:* JSON Serialisierung/Deserialisierung weitestgehend fix.<br>
@@ -1078,7 +1158,9 @@ myApp.config(['NgAdminConfigurationProvider',
                         private final int status;
                         …
                     ```
-                </textarea>
+                </div>
+                <!--  @formatter:on -->
+
                 <aside class="notes" data-markdown>
                     Als Workaround haben wir eine Wrapper-Klasse `JsonResult` geschaffen,
                     die über eine Annotation Madvoc anweist, nicht nach einer passenden
