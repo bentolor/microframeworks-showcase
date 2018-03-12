@@ -5,7 +5,8 @@
 
 `logo-*`:: Trademark owner
 
-`igor-ovsyannykov-520422-unsplash.jpg`,`r_-r-507738-unsplash-white.jpg`:: Unsplash
+`igor-ovsyannykov-520422-unsplash.jpg`,`r_-r-507738-unsplash-white.jpg`,
+`david-siglin-87978-unsplash.jpg`:: Unsplash
 
 `note-pad-1425759.png`:: freeimages.xom
 
