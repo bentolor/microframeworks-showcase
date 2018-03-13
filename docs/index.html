@@ -409,7 +409,7 @@ public class HelloWorld {
                     2. zusätzlich: Filter & Transformer
                     3. optional: Template Engine Support
 
-                    *Mehr nicht!*
+                    *That's it!*
                 </div>
                 <aside class="notes" data-markdown="">
                     * DSL zur Definition von **HTTP Routen** wie `GET`,`POST`,`PUT` etc. mit den
@@ -830,14 +830,8 @@ public class HelloWorld {
                     ## Kern-Konzepte
                     * Convention over Configuration <span class="decent">(CoC)</span>
                     * Model–View–Controller <span class="decent">(MVC)</span>
-                    * <span class="fragment highlight-blue">Client-Side Sessions</span>
-                    <span class="decent">&rightarrow; einfache Skalierbarkeit</span>
-
-                    ##### Kombination bewährter Technologien
-
-                    * <span class="decent">Backend:</span> Servlets, Guice, JPA, Flyway, …
-                    * <span class="decent">Frontend:</span> Freemarker <span class="decent">(HTML)</span>
-                    / Jackson <span class="decent">(XML, Jason)</span>
+                    * <span class="fragment highlight-blue">Client-Side Sessions, Stateless Server</span>
+                    <br><span class="decent fragment">&rightarrow; einfache Skalierbarkeit</span>
 
                     NOTE:
                     Die Reichweiter der Konventionen haben wir gesehen, ebenfalls wie konsequent der MVC-Ansatz
@@ -852,6 +846,12 @@ public class HelloWorld {
 
                     Vorteil: Ninja-Applikationen inhärent horizontal skalierbar. Einfach weitere Server
                     hinter dem Loadbalancer aufstellen genügt!
+
+                    ##### Kombination bewährter Technologien
+
+                    * <span class="decent">Backend:</span> Servlets, Guice, JPA, Flyway, …
+                    * <span class="decent">Frontend:</span> Freemarker <span class="decent">(HTML)</span>
+                    / Jackson <span class="decent">(XML, Jason)</span>
                 </textarea>
             </section>
 
