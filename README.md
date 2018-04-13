@@ -171,7 +171,9 @@ Spring Boot 2 – Spring 5 – WebFlux
 ==================================
 ![Spring Logo](https://upload.wikimedia.org/wikipedia/en/2/20/Pivotal_Java_Spring_Logo.png)
       
-[Spring Boot](https://projects.spring.io/spring-boot/) favors convention over configuration and is designed to get you up and running as quickly as possible. Spring WebFlux is the reactive successor of Spring MVC and a is fully non-blocking, back pressure-supporting web framework.
+[Spring Boot](https://projects.spring.io/spring-boot/) favors convention over configuration and is designed to get 
+you up and running as quickly as possible. Spring WebFlux is the reactive successor of Spring MVC and a is fully 
+non-blocking, back pressure-supporting web framework.
 
  
                       
@@ -182,7 +184,8 @@ Starting the demo application
 Run the demo with `gradle :spring5:run` and access [http://localhost:8080/](http://localhost:8080/).
 
 ### Option #2: Using IntelliJ IDEA
-Open the project using IntelliJ IDEA and execute the _Spring 5: Run Example_ run configuration. Potentially this requires IDEA Ultimate Edition. 
+Open the project using IntelliJ IDEA and execute the _Spring 5: Run Example_ run configuration. Potentially this 
+requires IDEA Ultimate Edition. 
 
 ### Option #3: As standalone JAR
 Let gradle build the all-in-one UberJAR and directly execute it with Java (preferrably in the `spring5/`
@@ -191,3 +194,19 @@ directory to leverage from the example `grocerylists.json`.
      gradlew :spring5:shadowJar
      cd spring5
      java -jar build/libs/spring5-1.0-SNAPSHOT-all.jar      
+
+
+Developing hints
+================
+
+This project uses Gradle 4.6+ as build tool and IDEA IntelliJ inspections together with my 
+[idea-cli-inspector](https://github.com/bentolor/idea-cli-inspector/) tool for quality assurance.
+
+The great [Travis CI](https://www.travis-ci.org/bentolor/microframeworks-showcase/) service acts as 
+CI service executing Tests and IDEA inpsection.
+
+If you want to perform the IDEA Inspections within your own IDE:
+
+* Select Analyze > Inspect Code … 
+* The select Custom Scope: "Showcase Sources" & include test sources
+* As inspection profile `exxcellent-2017` should be preselected.
