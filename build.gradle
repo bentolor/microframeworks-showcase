@@ -10,8 +10,8 @@ subprojects {
     apply plugin: 'net.ltgt.apt'
 
     sourceCompatibility = 1.8
-    group 'bentolor.microframeworks'
-    version '1.0-SNAPSHOT'
+    group = 'bentolor.microframeworks'
+    version = '1.0-SNAPSHOT'
 
     repositories {
         mavenCentral()

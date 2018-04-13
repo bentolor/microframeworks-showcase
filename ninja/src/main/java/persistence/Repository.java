@@ -62,6 +62,7 @@ public class Repository {
     }
 
     public GroceryLists getLists() {
+        //noinspection AssignmentOrReturnOfFieldWithMutableType
         return groceryLists;
     }
 

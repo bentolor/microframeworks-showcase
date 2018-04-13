@@ -35,7 +35,8 @@ public class ModelSerializer {
     }
 
     private static Gson buildConfiguredObjectMapper() {
-        return new GsonBuilder().setDateFormat("yyyy-MM-dd").registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
+        return new GsonBuilder().setDateFormat("yyyy-MM-dd")
+                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
     }
 
 

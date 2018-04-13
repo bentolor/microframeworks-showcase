@@ -19,7 +19,7 @@ scope: showcase-sources
 #       For the sake of performance better disable these inspections within your 
 #       inspection profile. This here is a last-resort mechanism if you want them
 #       to appear in your IDE but not your CI process
-#skip: TodoComment,Annotator
+skip: unused,CyclicPackageDependency
 
 # Ignore issues affecting source files matching given regex. Example ".*/generated/.*".
 #
@@ -29,6 +29,7 @@ scope: showcase-sources
 #       This here is a last-resort mechanism if you have no other options to supress 
 #       specific places/warning.
 #skipfile: .*/generated/.*,src/main/Foo.java
+skipfile: .*/*.ftl.html
 
 # Target directory to place the IDEA inspection XML result files. Default: target/inspection-results
 #resultdir: target/inspection-results

@@ -8,8 +8,8 @@ It implements a functionally identical grocery list application with [Spark](htt
 
 It was originally meant as supplement for my [article on heise developer online (german)](https://www.heise.de/developer/artikel/Die-Hitparade-der-Java-Microframeworks-Ein-Blick-auf-Spark-Ninja-Jodd-und-Ratpack-3080688.html?seite=all) but is also the basis for my talk [Schlank in den Service: Der große Java-Microframework-Test!](https://programm.javaland.eu/2018/#/scheduledEvent/549567) on the Javaland conference 2018.
 
-![Grocery list overview](docs/overview.png)
-![Grocery list edit](docs/edit.png)
+![Grocery list overview](docs/img/overview.png)
+![Grocery list edit](docs/img/edit.png)
 
 
 Prerequisites [![Build Status](https://www.travis-ci.org/bentolor/microframeworks-showcase.svg?branch=master)](https://www.travis-ci.org/bentolor/microframeworks-showcase)

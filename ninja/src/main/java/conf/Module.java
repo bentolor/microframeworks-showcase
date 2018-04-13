@@ -26,6 +26,7 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+@SuppressWarnings("ClassNameSameAsAncestorName")
 @Singleton
 public class Module extends AbstractModule {
 

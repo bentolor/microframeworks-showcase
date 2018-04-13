@@ -29,6 +29,7 @@ public class AppWebApplication extends WebApp {
 
     @Override
     protected void configureMadvoc(MadvocConfig madvocConfig) {
+        super.configureMadvoc(madvocConfig);
         // set the root package to be where the index action is
         madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
     }

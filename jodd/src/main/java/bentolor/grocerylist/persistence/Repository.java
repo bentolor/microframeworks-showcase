@@ -25,6 +25,7 @@ import java.util.UUID;
 /**
  * A minimalistic, file-based persistence repository for {@link GroceryLists}.
  */
+@SuppressWarnings("SynchronizedMethod")
 public class Repository {
 
     private final File dataFile;
@@ -60,6 +61,7 @@ public class Repository {
     }
 
     public GroceryLists getLists() {
+        //noinspection AssignmentOrReturnOfFieldWithMutableType
         return groceryLists;
     }
 

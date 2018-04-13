@@ -19,7 +19,6 @@ import jodd.madvoc.ScopeType;
 import jodd.madvoc.meta.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.io.StringReader;
 
 import static jodd.madvoc.ScopeType.SERVLET;
@@ -29,9 +28,6 @@ public class ListAction {
 
     @In @Scope(ScopeType.SERVLET)
     HttpServletRequest request;
-
-    public ListAction() {
-    }
 
     @Action("/list") @GET
     public JsonResult listAllLists() {
@@ -54,7 +50,7 @@ public class ListAction {
     }
 
     @Action("/list") @POST
-    public JsonResult createList(@In @Scope(SERVLET) String requestBody) throws IOException {
+    public JsonResult createList(@In @Scope(SERVLET) String requestBody) {
         return GroceryService.get().createGroceryList(new StringReader(requestBody));
     }
 

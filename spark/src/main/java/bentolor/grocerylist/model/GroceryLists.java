@@ -33,7 +33,7 @@ public class GroceryLists implements ModelElement, List<GroceryList> {
     private final List<GroceryList> groceryLists;
 
     public GroceryLists() {
-        groceryLists = Collections.synchronizedList(new ArrayList<GroceryList>());
+        groceryLists = Collections.synchronizedList(new ArrayList<>());
     }
 
     public GroceryLists(GroceryList... groceryLists) {
