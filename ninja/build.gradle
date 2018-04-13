@@ -17,4 +17,8 @@ dependencies {
             'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9'
 
     testCompile 'org.ninjaframework:ninja-test-utilities:6.2.2'
+
+    test {
+        useJUnit()
+    }
 }

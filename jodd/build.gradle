@@ -10,5 +10,6 @@ dependencies {
             'com.google.code.gson:gson:2.8.2',
             'io.undertow:undertow-servlet:1.4.22.Final'
 
-    testCompile     'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testImplementation  'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly     'org.junit.jupiter:junit-jupiter-engine:5.0.3'
 }
