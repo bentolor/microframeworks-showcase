@@ -19,7 +19,7 @@ scope: showcase-sources
 #       For the sake of performance better disable these inspections within your 
 #       inspection profile. This here is a last-resort mechanism if you want them
 #       to appear in your IDE but not your CI process
-skip: unused,CyclicPackageDependency
+skip: unused,CyclicPackageDependency,SynchronizedMethod,FieldCanBeLocal,NonFinalUtilityClass
 
 # Ignore issues affecting source files matching given regex. Example ".*/generated/.*".
 #
