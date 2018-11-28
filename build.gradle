@@ -20,8 +20,7 @@ subprojects {
     // Add lombok as compile-only dependency and declare apt-processor
     dependencies {
         compileOnly 'org.projectlombok:lombok:1.16.20'
-
-        apt "org.projectlombok:lombok:1.16.20"
+        annotationProcessor "org.projectlombok:lombok:1.16.20"
     }
 }
 
