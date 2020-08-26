@@ -52,4 +52,10 @@ gradle-app.setting
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
-# Created by .ignore support plugin (hsz.mobi)
+# vscode dictionaries
+.project
+.classpath
+.settings/
+bin/
+.theia/
+.vscode/
