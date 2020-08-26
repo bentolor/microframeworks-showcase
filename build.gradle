@@ -9,7 +9,7 @@ subprojects {
     apply plugin: 'com.github.johnrengelman.shadow'
     apply plugin: 'net.ltgt.apt'
 
-    sourceCompatibility = 1.8
+    sourceCompatibility = 1.11
     group = 'bentolor.microframeworks'
     version = '1.0-SNAPSHOT'
 
