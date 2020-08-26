@@ -3,13 +3,13 @@ dependencies {
     apply plugin: 'application'
     mainClassName = "bentolor.grocerylist.GroceryListResource"
 
-    compile 'com.sparkjava:spark-core:2.9.2',
-            'com.sparkjava:spark-template-jade:2.7.1',
-            'com.google.code.gson:gson:2.8.6'
+    implementation  'com.sparkjava:spark-core:2.9.2',
+                    'com.sparkjava:spark-template-jade:2.7.1',
+                    'com.google.code.gson:gson:2.8.6'
 
     testImplementation  'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly     'org.junit.jupiter:junit-jupiter-engine:5.0.3'
 
-    runtime 'org.slf4j:slf4j-simple:1.7.25'
+    runtimeOnly         'org.slf4j:slf4j-simple:2.0.0-alpha1'
 
 }

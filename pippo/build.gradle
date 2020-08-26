@@ -4,11 +4,11 @@ dependencies {
     mainClassName = "bentolor.grocerylist.GroceryListResource"
 
 
-    compile         'ro.pippo:pippo-undertow:1.13.1',
+    implementation  'ro.pippo:pippo-undertow:1.13.1',
                     'ro.pippo:pippo-controller:1.13.1',
                     'ro.pippo:pippo-gson:1.13.1'
 
-    runtime         'org.slf4j:slf4j-simple:1.7.25'
+    runtimeOnly     'org.slf4j:slf4j-simple:2.0.0-alpha1'
 
     testImplementation  'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly     'org.junit.jupiter:junit-jupiter-engine:5.0.3'
