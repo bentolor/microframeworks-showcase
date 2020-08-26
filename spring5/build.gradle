@@ -10,5 +10,5 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-webflux:2.3.3.RELEASE'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0-RC1'
 }
