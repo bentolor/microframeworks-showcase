@@ -18,7 +18,7 @@ package bentolor.grocerylist;
 import jodd.log.LoggerFactory;
 import jodd.log.impl.SimpleLogger;
 import jodd.madvoc.WebApp;
-import jodd.madvoc.action.MadvocConfigurations;
+import jodd.madvoc.component.RootPackages;
 
 public class AppWebApplication extends WebApp {
 

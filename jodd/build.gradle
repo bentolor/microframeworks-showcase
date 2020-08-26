@@ -7,6 +7,7 @@ dependencies {
     mainClassName = "bentolor.grocerylist.Main"
 
     implementation  'org.jodd:jodd-madvoc:5.1.6',
+                    'org.jodd:jodd-log:5.1.6',
                     'com.google.code.gson:gson:2.8.6',
                     'io.undertow:undertow-servlet:2.1.3.Final'
 
