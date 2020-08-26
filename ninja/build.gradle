@@ -13,10 +13,10 @@ dependencies {
     apply plugin: 'application'
     mainClassName = 'ninja.standalone.NinjaJetty'
 
-    compile 'org.ninjaframework:ninja-standalone:6.2.2',
-            'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9'
+    compile 'org.ninjaframework:ninja-standalone:6.6.1',
+            'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.2'
 
-    testCompile 'org.ninjaframework:ninja-test-utilities:6.2.2'
+    testCompile 'org.ninjaframework:ninja-test-utilities:6.6.1'
 
     test {
         useJUnit()

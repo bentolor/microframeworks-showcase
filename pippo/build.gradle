@@ -4,9 +4,9 @@ dependencies {
     mainClassName = "bentolor.grocerylist.GroceryListResource"
 
 
-    compile         'ro.pippo:pippo-undertow:1.7.0',
-                    'ro.pippo:pippo-controller:1.7.0',
-                    'ro.pippo:pippo-gson:1.7.0'
+    compile         'ro.pippo:pippo-undertow:1.13.1',
+                    'ro.pippo:pippo-controller:1.13.1',
+                    'ro.pippo:pippo-gson:1.13.1'
 
     runtime         'org.slf4j:slf4j-simple:1.7.25'
 
