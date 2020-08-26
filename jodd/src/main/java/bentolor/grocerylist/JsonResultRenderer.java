@@ -19,7 +19,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import jodd.madvoc.ActionRequest;
 import jodd.madvoc.result.ActionResult;
-import jodd.util.net.MimeTypes;
+import jodd.net.MimeTypes;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;

@@ -15,18 +15,19 @@
  */
 package bentolor.grocerylist;
 
-import jodd.madvoc.ScopeType;
+import jodd.madvoc.scope.RequestScope;
+import jodd.madvoc.scope.ServletContextScope;
+import jodd.madvoc.meta.method.*;
 import jodd.madvoc.meta.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.StringReader;
 
-import static jodd.madvoc.ScopeType.SERVLET;
 
 @MadvocAction
 public class ListAction {
 
-    @In @Scope(ScopeType.SERVLET)
+    @In @Scope(ServletContextScope.class)
     HttpServletRequest request;
 
     @Action("/list") @GET
@@ -45,12 +46,12 @@ public class ListAction {
     }
 
     @Action("/list/{id}") @PUT
-    public JsonResult updateList(@In("id") String id, @In @Scope(SERVLET) String requestBody) {
+    public JsonResult updateList(@In("id") String id, @In @Scope(ServletContextScope.class) String requestBody) {
         return GroceryService.get().updateGroceryList(id, new StringReader(requestBody));
     }
 
     @Action("/list") @POST
-    public JsonResult createList(@In @Scope(SERVLET) String requestBody) {
+    public JsonResult createList(@In @Scope(ServletContextScope.class) String requestBody) {
         return GroceryService.get().createGroceryList(new StringReader(requestBody));
     }
 

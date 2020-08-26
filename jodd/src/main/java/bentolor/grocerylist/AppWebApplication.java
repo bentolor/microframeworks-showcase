@@ -17,8 +17,8 @@ package bentolor.grocerylist;
 
 import jodd.log.LoggerFactory;
 import jodd.log.impl.SimpleLogger;
-import jodd.madvoc.MadvocConfig;
 import jodd.madvoc.WebApp;
+import jodd.madvoc.action.MadvocConfigurations;
 
 public class AppWebApplication extends WebApp {
 
@@ -28,9 +28,9 @@ public class AppWebApplication extends WebApp {
     }
 
     @Override
-    protected void configureMadvoc(MadvocConfig madvocConfig) {
-        super.configureMadvoc(madvocConfig);
+    protected void configureDefaults() {
+        super.configureDefaults();
         // set the root package to be where the index action is
-        madvocConfig.getRootPackages().addRootPackageOf(ListAction.class);
+        madvocContainer.lookupComponent(RootPackages.class).addRootPackageOf(ListAction.class);
     }
 }
